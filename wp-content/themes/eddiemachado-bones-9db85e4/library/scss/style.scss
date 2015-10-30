@@ -1,0 +1,731 @@
+/*! Made with Bones: http://themble.com/bones :) */
+
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Main Stylesheet
+
+Here's where the magic happens. Here, you'll see we are calling in
+the separate media queries. The base mobile goes outside any query
+and is called at the beginning, after that we call the rest
+of the styles inside media queries.
+
+Helpful articles on Sass file organization:
+http://thesassway.com/advanced/modular-css-naming-conventions
+
+******************************************************************/
+
+/*********************
+IMPORTING PARTIALS
+These files are needed at the beginning so that we establish all
+our mixins, functions, and variables that we'll be using across
+the whole project.
+*********************/
+
+// normalize: http://necolas.github.io/normalize.css/
+@import "partials/normalize";
+
+// Sass variables
+@import "partials/variables";
+
+// typography
+@import "partials/typography";
+
+// Sass functions
+@import "partials/functions";
+
+// import mixins
+@import "partials/mixins";
+
+// the grid
+@import "partials/grid";
+
+// the base
+@import "partials/base";
+
+/*********************
+IMPORTING MODULES
+Modules are reusable blocks or elements we use throughout the project.
+We can break them up as much as we want or just keep them all in one.
+I mean, you can do whatever you want. The world is your oyster. Unless
+you hate oysters, then the world is your peanut butter & jelly sandwich.
+*********************/
+
+// alert boxes
+@import "modules/alerts";
+
+// buttons
+@import "modules/buttons";
+
+// forms (inputs & labels)
+@import "modules/forms";
+
+/*********************
+BASE (MOBILE) SIZE
+This are the mobile styles. It's what people see on their phones. If
+you set a great foundation, you won't need to add too many styles in
+the other stylesheets. Remember, keep it light: Speed is Important.
+*********************/
+
+// styles in base.scss
+@import "breakpoints/base";
+
+/*********************
+LARGER MOBILE DEVICES
+This is for devices like the Galaxy Note or something that's
+larger than an iPhone but smaller than a tablet. Let's call them
+tweeners.
+*********************/
+@media only screen and (min-width: 481px) {
+
+	// styles in 481up.scss
+	@import "breakpoints/481up";
+
+} // end of media query
+
+/*********************
+TABLET & SMALLER LAPTOPS
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 768px) {
+
+	// styles in 768up.scss
+	@import "breakpoints/768up";
+
+} // end of media query
+
+/*********************
+DESKTOP
+This is the average viewing window. So Desktops, Laptops, and
+in general anyone not viewing on a mobile device. Here's where
+you can add resource intensive styles.
+*********************/
+@media only screen and (min-width: 1030px) {
+
+	// styles in 1030up.scss
+	@import "breakpoints/1030up";
+
+} // end of media query
+
+/*********************
+LARGE VIEWING SIZE
+This is for the larger monitors and possibly full screen viewers.
+*********************/
+@media only screen and (min-width: 1240px) {
+
+	// styles in 1240up.scss
+	@import "breakpoints/1240up";
+
+} // end of media query
+
+/*********************
+RETINA (2x RESOLUTION DEVICES)
+This applies to the retina iPhone (4s) and iPad (2,3) along with
+other displays with a 2x resolution. You can also create a media
+query for retina AND a certain size if you want. Go Nuts.
+*********************/
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+       only screen and (min--moz-device-pixel-ratio: 1.5),
+       only screen and (min-device-pixel-ratio: 1.5) {
+
+	// styles in 2x.scss
+	@import "breakpoints/2x";
+
+} // end of media query
+
+/*********************
+PRINT STYLESHEET
+Feel free to customize this. Remember to add things that won't make
+sense to print at the bottom. Things like nav, ads, and forms should
+be set to display none.
+*********************/
+@media print {
+
+	// styles in print.scss
+	@import "partials/print";
+
+}
+
+/* VARS ==============*/
+
+$dala: "dala floda";
+$ssp: "source sans pro";
+$pt: "PT Serif";
+$black: rgba(51,51,51,1);
+$white: rgba(250,250,250,1);
+
+/* MIXINSSSSS=================*/
+
+@mixin stretchy($space) {
+  @include transition-duration(1.5s);
+		&:hover{
+				@include transition-duration(1.5s);
+				color:$black;
+				text-decoration: none;
+				letter-spacing:$space;
+				opacity:0.8;
+			}
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+
+/*GENERAL */
+
+body, .container, div{
+	background-color:$white !important;
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+}
+
+#content{
+	margin-top:0;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.pads{
+	margin-top:200px;
+}
+
+/* --------------------- QUI SOM ------------*/
+.tit{
+	font-family:$dala;
+	font-size:80px;
+}
+
+.tex{
+	font-family: $ssp;
+	font-size: 20px;	
+}
+
+.qs{
+	margin:7% 0;
+	.image{
+		padding: 2% 0;
+	}
+}
+
+.pa-palab{
+	margin: 15% 0;
+}
+
+/* -------------------- HOME -------------- */
+
+.skrollr-body{
+	background-color:$white;
+}
+
+/*menu*/
+
+#menu-container{
+	position:fixed;
+	height:80px;
+	background-color:$white;
+	z-index:4;
+	width:100%;
+}
+
+.animateddrawer span{
+	height: 0.2em;
+}
+
+#search-icono{
+	display:inline-block;
+	position:relative;
+	right:29%;
+	height:28px;
+}
+
+#sf-btn{
+	background-image:none;
+	background:none;
+	border:none;
+	box-shadow:none;
+	position:relative;
+	top:3px;
+	&:focus{
+		outline:none;
+	}
+}
+
+/* .modal-fullscreen SEARCH FORM */
+
+.modal-fullscreen {
+  background: transparent;
+}
+.modal-fullscreen .modal-content {
+  background: transparent;
+  border: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+.modal-backdrop.modal-backdrop-fullscreen {
+  background: $white;
+}
+.modal-backdrop.modal-backdrop-fullscreen.in {
+  opacity: .97;
+  filter: alpha(opacity=97);
+}
+
+.search-body{
+	padding:0 !important;
+}
+
+/* .modal-fullscreen size: we use Bootstrap media query breakpoints */
+
+.modal-fullscreen .modal-dialog {
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+}
+
+
+a.svg:after {
+  content: ""; 
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+}
+
+.menu-logo{ 
+	margin-top: 25px;
+	margin-left:25px;
+}
+
+.menu-lines {
+	margin:25px 30px 0 0;
+	div{
+	display:inline-block;
+	margin: -15% 0;
+	}
+}
+
+#close-icono{
+	position:absolute;
+	right:44.4px;
+	top:27.8px;
+	z-index:5;
+}
+
+.social-icons{
+	position:absolute;
+	top:25px;
+	left:40px;
+	width:10%;
+	z-index:6;
+	text-align:left;
+	img{
+		padding:15px;
+	}
+}
+
+.navcontent{
+	display:table;
+}
+
+
+.nav-menu {
+	display:table-cell;
+	vertical-align: middle;
+	position:relative;
+	bottom:6%;
+	li{
+	border-bottom:0 !important;
+	line-height: 1;
+		a{
+			font-family: $dala !important;
+			font-size:100px;
+			line-height:110px;
+			@include stretchy(2px);
+		}
+	}
+}
+
+#under-menu{
+	position:absolute;
+	bottom:20px;
+	box-shadow:none;
+	border:none;
+	background:none;
+}
+
+#um li{
+	display:inline-block;
+	font-family:$dala;
+	font-size:20px;
+	padding:2%;
+}
+
+.hentry{
+	border: 0;
+	background-color:$white;
+
+	header{
+		border-bottom:0;
+	}
+	footer{
+		border-top:0;
+	}
+}
+
+#logo{
+	font-family:$dala;
+	font-size:45px;
+	white-space: nowrap;
+	text-align:center;
+	padding-top:60px;
+	padding-bottom:95px;
+}
+
+.main-logo{
+	height:400px;
+	width: 100%;
+	display: table;
+}
+
+
+.hashtag{
+	font-family:$dala;
+	font-size:80px;
+	display:table-cell;
+	vertical-align:middle;
+	text-align:center;
+	color:white;
+	&:hover{
+		color:white;
+	}
+}
+
+.landing{
+	margin-bottom:10%;
+}
+
+
+.imp .title-wrapper{
+	position:relative;
+	top:26px;
+	z-index: 3;
+	background:transparent !important;
+}
+
+.entry-title{
+	text-align:center;
+	font-family: $dala;
+	width:360px;
+	margin: 40px auto 12px;
+	background:none;
+	a{
+		color:$black;
+		font-size:30px;
+		text-decoration:none;
+	}
+}
+
+.imp .entry-title{
+	width:555px;
+	margin:2% auto 1%;
+	a{
+		font-size:55px;
+		line-height: 50px;
+		text-decoration: none;
+		color:$black;
+	}
+}
+
+.posts{
+ margin-top:200px;
+}
+
+.post-wrapper{
+	margin-top:2%;
+}
+
+.post-img{
+	opacity: 0.8;
+	@include transition-duration(1s);
+	&:hover{
+		@include transition-duration(1s);
+		opacity:1;
+	}
+}
+
+.image-wrapper{
+	text-align:center;
+}
+
+.article-footer{
+	text-align:center;
+	padding: 20px;
+	a{
+		font-family:$ssp;
+		color:black;
+		text-transform: capitalize;
+		padding: 0.5% 2%;
+		margin: 0 1%;
+		border: 1.5px solid ;
+		border-radius:5px;
+		@include transition-duration(500ms);
+		&:hover{
+			background-color:none;
+			color:$white;
+			text-decoration: none;
+			@include transition-duration(500ms); 
+		}
+	}
+}
+
+.pagination{
+	display:none;
+}
+
+
+
+/* ================= TAGS ===============*/
+
+#main-tag{
+	margin-top:12%;
+}
+
+.active-tag a{
+	background-color:#333;
+	color:#fff;
+}
+
+.eliminate{
+	text-transform:lowercase;
+	padding-right:1%;
+}
+
+/* ================= SINGLE POST ===============*/
+
+.d-5of7, .wrap{
+	width:100%;
+}
+
+.single-title{
+	font-family:$dala;
+	font-size:55px;
+	padding:3% 0;
+}
+
+.post-text{
+	display:block;
+	clear:both;
+	font-family: $ssp;
+	font-size:20px;
+	padding:4% 0;
+}
+
+.single-post-wrapper{
+	margin-top:60px;
+}
+
+.single-post-img{
+	max-height:80vh;
+}
+
+.navigation{
+	padding:10% 0 5%;
+}
+
+.links{
+	text-align:center;
+	font-size: 100px;
+    font-family: $dala;
+    a{
+    	color: $black;
+    	text-decoration:none;
+    	&:hover{
+    		opacity:0.5;
+    	}
+    }
+}
+
+
+.grid-item { width: 200px; background-color:aqua; }
+.grid-item--width2 { width: 400px; background-color:purple; }
+
+
+
+@media (max-width: 991px) {
+  
+	.post-wrapper{
+		width: 100%;
+
+	}
+}
+
+/*============SEARCH PAGE =========*/
+
+
+#s{
+	height:110px;
+	max-width:100%;
+	font-size:100px;
+	line-height:110px;
+	font-family:$dala;
+	color:$black;
+	background-color:transparent;
+	-webkit-transition:none;
+}
+
+#svert{
+	
+}
+
+#searchsubmit{
+	background-image:none;
+	background:none;
+	border:none;
+	box-shadow:none;
+	&:focus{
+		outline:none;
+	}
+	& img{
+		height:75px;
+		width:auto;
+	}
+}
+
+/*============LEGAL =========*/
+
+.legal-row{
+	padding-top:100px;
+	text-align:center;
+	font-family:$dala;
+}
+
+.legal{
+	font-family:$dala;
+}
+
+.notes-title{
+	font-size:80px;
+}
+
+.nlt{
+	font-size:30px;
+	line-height: 26px;
+	margin-bottom:30px;
+	margin-top:50px;
+	&:first-child{
+		margin-top:80px;
+	}
+}
+
+.nlit{
+	font-style:italic;
+	font-family: $pt;
+	font-size:20px;
+	line-height:26px;
+	margin:25px 0;
+}
+
+.legal p{
+	font-family: $pt;
+	font-size:20px;
+	line-height:26px;
+}
+
+
+/*============CONTACT=========*/
+
+
+.contact-cont, .news-cont, .fourohfour, .no-res-cont{
+	font-family:$dala;
+	font-size:16px;
+	input, textarea{
+		font-family: $dala;
+		max-width:100%;
+		border:1px solid $black;
+		background-color: $white;
+		color:$black;
+		border-radius: 0;
+		margin-bottom: 20px;
+		line-height:37px;
+	}
+	textarea{
+		height:120px;
+	}
+}
+
+.cent{
+	text-align:center;
+	p{
+		margin-bottom: 0;
+	}
+}
+
+.aq{
+	margin-bottom:20px;
+}
+
+.cont-title, .news-title{
+	font-size:30px;
+	padding-bottom:40px;
+	margin:0;
+}
+
+#cont-submit, #news-submit{
+	border:1px solid black;
+	padding:-0.5% 6%;
+	border-bottom:3px solid black;
+	height:40px;
+	width:165px;
+	background-color:$white;
+}
+
+#czech{
+	margin-right:12px;
+}
+
+
+
+.accept{
+	margin-bottom:17px;
+}
+
+.accept>*{
+	display:inline-block;
+}
+
+/*============404=========*/
+
+#ups{
+	font-size:80px;
+}
+
+.four-pad{
+	margin-top:330px;
+}
+
+
+/*============seach NOT FOUND========*/
+
+#nores{
+	font-size:80px;
+	line-height:56px;
+}
+
+#has-searched{
+	font-size:16px;
+	line-height:22px;
+	font-style:italic;
+	margin-top: 10px;
+}
