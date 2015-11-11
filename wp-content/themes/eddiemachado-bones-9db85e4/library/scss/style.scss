@@ -273,10 +273,41 @@ a:focus{
 	top:0;
 }
 
+.animateddrawer.special span{
+	display:block;
+	@include transition-duration(200ms);
+}
+
+.animateddrawer.open span{
+	display:none;
+	@include transition-duration(200ms);
+	width:36px;
+}
+
+.animateddrawer.open:before {
+	 -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    top:13px;
+	width:36px;
+}
+
+.animateddrawer.open:after{
+	-ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    bottom:13px;
+	width:36px;
+}
+
 .animateddrawer span{
 	height: 0.2em;
 	background:$black;
 	opacity:1;
+}
+
+.animateddrawer{
+	@include transition-duration(200ms);
 }
 
 #search-icono{
@@ -367,9 +398,34 @@ object{
 
 #close-icono{
 	position:absolute;
-	right:30px;
+	right:25px;
 	top:25px;
 	z-index:5;
+}
+
+#close-icono-stay{
+	position:absolute;
+	right:25px;
+	top:25px;
+	z-index:5;
+	span{
+		display:none;
+	}
+	&:before {
+	 -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+    top:13px;
+	width:36px;
+	}
+
+	&:after{
+	-ms-transform: rotate(-45deg); /* IE 9 */
+    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+    transform: rotate(-45deg);
+    bottom:13px;
+	width:36px;
+	}
 }
 
 #back-icono{
@@ -381,7 +437,7 @@ object{
 
 .social-icons{
 	position:absolute;
-	top:33px;
+	top:25px;
 	left:25px;
 	z-index:6;
 	text-align:left;
@@ -764,6 +820,7 @@ blockquote{
 	left:60px;
 	bottom:20px;
 	visibility:hidden;
+	z-index: 1;
 	li{
 		display:inline-block;
 		padding:0 10px;
@@ -774,6 +831,20 @@ blockquote{
 	}
 }
 
+#image{
+	z-index:3;
+}
+
+.white-block{
+	height:50px;
+	width:100px;
+	position:absolute;
+	width:150px;
+	top:-10px;
+	left:-50px;
+	z-index:2;
+}
+
 #comp-word{
 	display:none;
 	top:-3px;
@@ -782,12 +853,18 @@ blockquote{
 	font-size:12px;
 	font-family: $ssp;
 	color: rgba(133,133,133,1);
+	z-index: 3;
 
 }
 
 #obj{
 	display:inline;
 	padding-left:45px;
+}
+
+#compartir{
+	z-index:3;
+	position:absolute;
 }
 
 #obj::after{
@@ -1089,7 +1166,7 @@ textarea {
 
 .hover-elem{
 	position:absolute;
-	bottom:24px;
+	top:125px;
 	left:102px;
 	z-index:2;
 	text-align:center;
@@ -1108,6 +1185,10 @@ textarea {
 .prod-entre{
 	padding-top:15px;
 	font-size: 12px;
+	color:$black;
+	&:visited{
+		color:$black;
+	}
 }
 
 .prod-arrow{

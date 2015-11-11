@@ -97,9 +97,23 @@ div.fullscreenmenu.bottom.open {
 	top: 4px;
 	left: 0;
 	opacity: 0.7;
-	-webkit-transition: all 1s ease-in; /* set transition type and time */
-	transition: all 1s ease-in;
+	-webkit-transition: all 200ms ease-in; /* set transition type and time */
+	transition: all 200ms ease-in;
 }
+
+.animateddrawer.open span:before, .animateddrawer.open span:after{
+	-webkit-transition: all 0ms ease-in; /* set transition type and time */
+	transition: all 0ms ease-in;
+}
+
+
+.animateddrawer:hover:before, .animateddrawer:hover:after{
+	width:36px;
+	-webkit-transition: all 200ms ease-in 200ms; /* set transition type and time */
+	transition: all 200ms ease-in 200ms;
+}
+
+
 .animateddrawer:after {
 	top: auto;
 	bottom: 4px;
@@ -109,15 +123,34 @@ div.fullscreenmenu.bottom.open {
 	height: 0.2em; /* height of middle drawer line */
 	background: black;
 	position: absolute;
+	left:0;
 	opacity:0.7;
 	top: 50%;
+	right:-6px;
 	margin-top: -0.1em; /* set this to - half of middle drawer line height */
 	-ms-transform-origin: 50% 50%;
 	-webkit-transform-origin: 50% 50%;
 	transform-origin: 50% 50%;
-	-webkit-transition: all 1s ease-in 1s; /* set transition type and time */
-	transition: all 1s ease-in 1s;
+	-webkit-transition: all 100ms ease-in 100ms; /* set transition type and time */
+	transition: all 100ms ease-in 100ms;
 }
+
+.animateddrawer:hover > span{
+	width:30px;
+	-webkit-transition: all 200ms ease-in 200ms; /* set transition type and time */
+	transition: all 200ms ease-in 200ms;
+}
+
+.animateddrawer:active > span{
+	width:40px;
+}
+
+.animateddrawer:active:before, .animateddrawer:active:after{
+	width:30px;
+	-webkit-transition: all 200ms ease-in 200ms; /* set transition type and time */
+	transition: all 200ms ease-in 200ms;
+}
+
 /* .animateddrawer span::after {
  content: '';
  display: block;

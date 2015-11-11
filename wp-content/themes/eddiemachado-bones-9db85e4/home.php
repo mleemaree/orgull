@@ -107,7 +107,6 @@
 
 
 
-						
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 							<article id="post-<?php the_ID(); ?>" class="post-wrapper infinite-item <?php if (get_field("important")){echo "imp";} ?>"<?php post_class( 'cf' ); ?> role="article">

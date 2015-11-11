@@ -14,6 +14,7 @@
     <?php while( have_rows('productor') ): the_row(); ?>
 
 	<div class="col-xs-12 col-sm-6 col-md-4 productor">
+    <a href="<?php the_sub_field('link'); ?>">
         <div class="row prod-img">
         	<div class="col-xs-12">
         		<img class="prod-imag" src="<?php the_sub_field('imagen');?>" />
@@ -23,14 +24,13 @@
                 </div>
             </div>
         </div>
+    </a>
         <div class="row prod-nom">
         	<div class="col-xs-9">
         		<h3 class="prod-nem"><?php the_sub_field('nom'); ?></h3>
         	</div>
         	<div class="col-xs-3 arrow">
-             <?php $taglink = the_sub_field('tag',202) ?>
-             <?php the_permalink($taglink); ?>
-        		<a href="<?php get_term_link($taglink); ?>" class="has-svg">
+        		<a href="<?php the_sub_field('link'); ?>" class="has-svg">
 					<object class="pull-left prod-arrow" data="<?php echo get_template_directory_uri(); ?>/library/images/prod-arrow.svg" type="image/svg+xml"></object>
                 </a>
         	</div>
@@ -61,14 +61,24 @@
 <?php endif; ?>
 
 <script>
-    $('.productor').mouseenter(function(){
-        $(this).find('.prod-emp, .prod-prof, .prod-nem,.prod-imag').css('opacity', '0.2');
-        $(this).find('.hover-elem').css('opacity','1');
+    $('.productor')
+    .hover(function(){
+        $(this).find('.prod-emp, .prod-prof, .prod-nem,.prod-imag').animate({
+            opacity: 0.2}, 200);
+        $(this).find('.hover-elem').animate({
+            opacity:1,
+            top:'-=50px'            }, 200);
+    },function(){
+        $(this).find('.prod-emp, .prod-prof, .prod-nem,.prod-imag').animate({
+            opacity: 1,
+        }, 200);
+        $(this).find('.hover-elem').animate({
+            opacity:0,
+            top:'+=50px'},200);
     });
-    $('.productor').mouseleave(function(){
-        $(this).find('.prod-emp, .prod-prof, .prod-nem,.prod-imag').css('opacity', '1');
-        $(this).find('.hover-elem').css('opacity','0');
-    });
+
+
+
 </script>
 
 

@@ -41,7 +41,7 @@ $menu_items = wp_get_nav_menu_items($menu_id);
     </ul>
     <?php $img = plugins_url('../images/close.png', __FILE__);?>
     <div class="navcontent">
-        <div ><a href='#' id="close-icono" class="has-svg" onClick='menu1.togglemenu(); return false'><object data="<?php echo get_template_directory_uri(); ?>/library/images/close.svg" type="image/svg+xml"></object></a></div>
+        <div ><a id="close-icono" class='animateddrawer' href='#' onClick='menu1.togglemenu(); return false'><span class="on"></span></a></div>
         <?php
         $menu_list = '<ul id="menu-' . $menu_id . '" class="nav-menu">';
         

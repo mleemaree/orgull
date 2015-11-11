@@ -192,7 +192,12 @@ var s = skrollr.init();
 
 var tween = TweenMax.from($qsorig, 0.5, {x:-50, ease: Power1.easeIn}, 0.2);
 
+//MENU ANIMATIONNSS
 
+$('.animateddrawer').click(function(){
+  $(this).toggleClass('special');
+
+});
    
 //-------------qui som page
  /*TweenMax.to("#camins-img", 6, { 
