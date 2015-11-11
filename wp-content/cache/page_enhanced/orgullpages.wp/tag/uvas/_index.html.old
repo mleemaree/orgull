@@ -1,0 +1,503 @@
+
+
+<!doctype html>
+
+<!--[if lt IE 7]><html lang="en-US" class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
+<!--[if (IE 7)&!(IEMobile)]><html lang="en-US" class="no-js lt-ie9 lt-ie8"><![endif]-->
+<!--[if (IE 8)&!(IEMobile)]><html lang="en-US" class="no-js lt-ie9"><![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en-US" class="no-js"><!--<![endif]-->
+
+	<head>
+		<meta charset="utf-8">
+		<meta name='viewport' content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' />
+
+				<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<title>Orgull Pagès  uvas</title>
+
+				<meta name="HandheldFriendly" content="True">
+		<meta name="MobileOptimized" content="320">
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+				<link rel="apple-touch-icon" href="//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/apple-touch-icon.png">
+		<link rel="icon" href="//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/favicon.png">
+		<!--[if IE]>
+			<link rel="shortcut icon" href="//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/favicon.ico">
+		<![endif]-->
+				<meta name="msapplication-TileColor" content="#f01d4f">
+		<meta name="msapplication-TileImage" content="http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/win8-tile-icon.png">
+            <meta name="theme-color" content="#121212">
+
+		<link rel="pingback" href="//orgullpages.wp/xmlrpc.php">
+
+				<style>.pace .pace-progress, .pace .pace-activity{background:#000000 !important}</style><meta name='robots' content='noindex,follow' />
+<link rel="alternate" type="application/rss+xml" title="Orgull Pagès &raquo; Feed" href="//orgullpages.wp/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Orgull Pagès &raquo; Comments Feed" href="//orgullpages.wp/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Orgull Pagès &raquo; uvas Tag Feed" href="//orgullpages.wp/tag/uvas/feed/" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/orgullpages.wp\/wp-includes\/js\/wp-emoji-release.min.js"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='minimal-css'  href='//orgullpages.wp/wp-content/plugins/wp-pace/methods/../themes/minimal.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wpupg_style1-css'  href='//orgullpages.wp/wp-content/plugins/wp-ultimate-post-grid/css/filter.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wpupg_style2-css'  href='//orgullpages.wp/wp-content/plugins/wp-ultimate-post-grid/css/pagination.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wpupg_style3-css'  href='//orgullpages.wp/wp-content/plugins/wp-ultimate-post-grid/css/grid.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wpupg_style4-css'  href='//orgullpages.wp/wp-content/plugins/wp-ultimate-post-grid/css/layout_base_forced.css' type='text/css' media='all' />
+<link rel='stylesheet' id='googleFonts-css'  href='//fonts.googleapis.com/css?family=Lato%3A400%2C700%2C400italic%2C700italic' type='text/css' media='all' />
+<link rel='stylesheet' id='bones-stylesheet-css'  href='//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/css/style.css' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='bones-ie-only-css'  href='//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/css/ie.css' type='text/css' media='all' />
+<![endif]-->
+<link rel='stylesheet' id='page-transition-animsition-css'  href='//orgullpages.wp/wp-content/plugins/page-transition/css/animsition.min.css' type='text/css' media='all' />
+<script type='text/javascript' src='//orgullpages.wp/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='//orgullpages.wp/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='//orgullpages.wp/wp-content/plugins/wp-pace/methods/../js/pace.js' charset='utf8'></script>
+<script type='text/javascript' src='//orgullpages.wp/wp-content/plugins/page-transition/js/jquery.animsition.min.js'></script>
+<script type='text/javascript' src='//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/js/libs/modernizr.custom.min.js'></script>
+		<script type="text/javascript">
+		jQuery( document ).ready( function($) {
+			$('.animsition').animsition({
+				inClass : 'fade-in',
+				outClass : 'fade-out',
+				inDuration : 400,
+				outDuration : 400,
+				loading : false,
+				touchSupport: false,
+				linkElement: '.animsition-link, a[href]:not([target="_blank"]):not([href^="http://orgullpages.wp/tag/uvas/#"]):not([href^="#"]):not([href*="javascript"]):not([href*=".jpg"]):not([href*=".jpeg"]):not([href*=".gif"]):not([href*=".png"]):not([href*=".mov"]):not([href*=".swf"]):not([href*=".mp4"]):not([href*=".flv"]):not([href*=".avi"]):not([href*=".mp3"]):not([href^="mailto:"]):not([class="no-animation"])'
+			});
+		});
+		</script>
+				
+				
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/bower_components/bootstrap/dist/css/bootstrap.min.css">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+		<!--fullpage.jks ======-->
+
+		
+
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src=" http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+		<!--<script src="//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/js/libs/alton/jquery.alton.js"></script>-->
+		<script src="//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+		<script src="//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/bower_components/skrollr/dist/skrollr.min.js"></script>
+<link rel="stylesheet" href="//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/style.css">
+
+	</head>
+
+	<body class="archive tag tag-uvas tag-6 animsition">
+
+		<div id="menu-container">
+
+				<div id="inner-header">
+
+										<a href="http://orgullpages.wp" class="has-svg">
+						<object id="menu-logo" class="menu-logo pull-left" data="http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/menu-logo.svg" type="image/svg+xml"></object>
+					</a>
+
+
+										
+
+					<nav class="nav pull-right menu-lines" role="navigation">
+
+
+						
+
+    
+
+<button style="z-index:50;" id="sf-btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal-fullscreen">
+    <a href='#' id="search-icono" class="has-svg" onClick='menu1.togglemenu(); return false'><object data="http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/small-search.svg" type="image/svg+xml"></object></a>
+</button>
+
+
+
+<div class="container fullscreenmenu top" id="dc-menu">
+    <ul class="social-icons ment">
+        <li><a href="" class="has-svg" ><object data="http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/facebook-im.svg" type="image/svg+xml"></object></a></li>
+        <li><a href="" class="has-svg" ><object data="http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/twitter-im.svg" type="image/svg+xml"></object></a></li>
+        <li><a href="" class="has-svg" ><object data="http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/instagram.svg" type="image/svg+xml"></object></a></li>    
+    </ul>
+        <div class="navcontent">
+        <div ><a href='#' id="close-icono" class="has-svg" onClick='menu1.togglemenu(); return false'><object data="http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/close.svg" type="image/svg+xml"></object></a></div>
+        <ul id="menu-35" class="nav-menu"><li><a href="http://orgullpages.wp/">Actualitat</a></li><li><a href="http://orgullpages.wp/qui-som/">Quí som</a></li><li><a href="http://orgullpages.wp/productors/">Productors</a></li></ul>    </div>
+
+    <nav id="under-menu" class="navbar navbar-default col-xs-12">
+        <ul id="um">
+           <a href="index.php?page_id=164"><li>Contacte</li></a>
+           <a href="index.php?page_id=171"><li>Newsletter</li></a>
+           <a href="index.php?page_id=188"><li>Notes legals</li></a>
+        </ul>
+
+    </nav>
+
+
+</div> <!-- full screen menu-->
+
+
+<div ><a class='animateddrawer' href='#' onClick='menu1.togglemenu(); return false'><span></span></a></div>
+					</nav>
+
+				</div>
+				</div>
+
+				<!-- Modal fullscreen -->
+<div class="modal modal-fullscreen fade bottom" id="modal-fullscreen" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-body search-body">
+        <div class="search-cont">
+<div class="align">
+    <div class="social-icons">
+        <a href="" class="has-svg" ><object data="http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/facebook-im.svg" type="image/svg+xml"></object></a>
+        <a href="" class="has-svg" ><object data="http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/twitter-im.svg" type="image/svg+xml"></object></a>
+        <a href="" class="has-svg" ><object data="http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/instagram.svg" type="image/svg+xml"></object></a>       
+    </div>
+        <div class="navcontent">
+       <div><a href='#' id="close-icono" class="has-svg" data-dismiss="modal"><object data="http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/close.svg" type="image/svg+xml"></object></a></div>
+        <ul id="menu-" class="nav-menu"></ul>    </div>
+    <div id="searching" class="container pads">
+		<form role="search" method="get" id="searchform" class="searchform" action="//orgullpages.wp/">
+	    	<div id="svert" class="row">
+		    	<div class="col-xs-11">
+			        <label for="s" class="screen-reader-text"></label>
+			        <input type="search" id="s" class="" name="s" value="" autofocus />
+
+			    </div>
+			    <div class="col-xs-1 eglass">
+			        <button type="submit" id="searchsubmit" ><object data="http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/search.svg" type="image/svg+xml"></object></button>
+                </div>
+		    </div>
+	    </form>
+    </div>
+</div>
+</div>
+
+<script>
+     $(document).ready(function () {
+            setTimeout("$('#s').focus();", 500);
+
+        });
+</script>      </div>
+  </div>
+</div>
+
+
+
+			<div id="content" class="container">
+
+
+				<div id="inner-content" class="wrap cf">
+
+						<main id="main-tag" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+
+									<div class="posts">				
+							
+
+							<article id="post-108" class="tag-post-wrapper post-wrapper "class="cf post-108 post type-post status-publish format-standard has-post-thumbnail hentry category-historia tag-manos tag-uvas tag-vino" role="article">
+
+								<header class="article-header">
+
+									<div class="row title">
+										<div class="title-wrapper">
+											<h1 class="entry-title"><a href="http://orgullpages.wp/2015/10/20/bus-di-bea-dolupta-taspiet-incti-dolupta-ipsus-4/" rel="bookmark" title="Bus di bea dolupta taspiet incti dolupta ipsus">Bus di bea dolupta taspiet incti dolupta ipsus</a></h1>
+										</div>
+									</div>
+									<div class="row image">
+										<div class="image-wrapper col-xs-8 col-xs-offset-2">
+
+											<img width="300" height="200" src="//orgullpages.wp/wp-content/uploads/2015/10/Manos-Vendimia-300x200.jpg" class="attachment-medium wp-post-image" alt="Manos-Vendimia" />										</div>
+									</div>
+
+								</header>
+
+
+
+
+
+								<footer class="article-footer cf">
+
+
+                  					                  				
+
+
+									         											  <p class="tags">
+											  											   <span class="tag manos"><a href="http://orgullpages.wp/tag/manos/">manos</a></span>
+											   											  											   <span class="tag uvas"><a href="http://orgullpages.wp/tag/uvas/">uvas</a></span>
+											   											  											   <span class="tag vino"><a href="http://orgullpages.wp/tag/vino/">vino</a></span>
+											   											  											</p>
+											
+
+									   
+																		 </footer>
+							</article>
+
+
+							
+
+							<article id="post-104" class="tag-post-wrapper post-wrapper imp"class="cf post-104 post type-post status-publish format-standard has-post-thumbnail hentry category-historia tag-campo tag-uvas tag-vino" role="article">
+
+								<header class="article-header">
+
+									<div class="row title">
+										<div class="title-wrapper">
+											<h1 class="entry-title"><a href="http://orgullpages.wp/2015/10/20/voloribus-nist-volessunt-molorer-isquas-solo-2/" rel="bookmark" title="Voloribus nist, volessunt molorer isquas solo">Voloribus nist, volessunt molorer isquas solo</a></h1>
+										</div>
+									</div>
+									<div class="row image">
+										<div class="image-wrapper col-xs-8 col-xs-offset-2">
+
+											<img width="300" height="200" src="//orgullpages.wp/wp-content/uploads/2015/10/DSC_3058_fhdr-300x200.jpg" class="attachment-medium wp-post-image" alt="DSC_3058_fhdr" />										</div>
+									</div>
+
+								</header>
+
+
+
+
+
+								<footer class="article-footer cf">
+
+
+                  					                  				
+
+
+									         											  <p class="tags">
+											  											   <span class="tag campo"><a href="http://orgullpages.wp/tag/campo/">campo</a></span>
+											   											  											   <span class="tag uvas"><a href="http://orgullpages.wp/tag/uvas/">uvas</a></span>
+											   											  											   <span class="tag vino"><a href="http://orgullpages.wp/tag/vino/">vino</a></span>
+											   											  											</p>
+											
+
+									   
+																		 </footer>
+							</article>
+
+
+							
+
+							<article id="post-72" class="tag-post-wrapper post-wrapper imp"class="cf post-72 post type-post status-publish format-standard has-post-thumbnail hentry category-historia tag-espanya tag-trabajar tag-uvas" role="article">
+
+								<header class="article-header">
+
+									<div class="row title">
+										<div class="title-wrapper">
+											<h1 class="entry-title"><a href="http://orgullpages.wp/2015/10/20/voloribus-nist-volessunt-molorer-isquas-solo/" rel="bookmark" title="Voloribus nist, volessunt molorer isquas solo">Voloribus nist, volessunt molorer isquas solo</a></h1>
+										</div>
+									</div>
+									<div class="row image">
+										<div class="image-wrapper col-xs-8 col-xs-offset-2">
+
+											<img width="300" height="200" src="//orgullpages.wp/wp-content/uploads/2015/10/DSC_3058_fhdr-300x200.jpg" class="attachment-medium wp-post-image" alt="DSC_3058_fhdr" />										</div>
+									</div>
+
+								</header>
+
+
+
+
+
+								<footer class="article-footer cf">
+
+
+                  					                  				
+
+
+									         											  <p class="tags">
+											  											   <span class="tag espanya"><a href="http://orgullpages.wp/tag/espanya/">espanya</a></span>
+											   											  											   <span class="tag trabajar"><a href="http://orgullpages.wp/tag/trabajar/">trabajar</a></span>
+											   											  											   <span class="tag uvas"><a href="http://orgullpages.wp/tag/uvas/">uvas</a></span>
+											   											  											</p>
+											
+
+									   
+																		 </footer>
+							</article>
+
+
+							
+
+							<article id="post-65" class="tag-post-wrapper post-wrapper imp"class="cf post-65 post type-post status-publish format-standard has-post-thumbnail hentry category-historia tag-ranchero tag-trabajar tag-uvas" role="article">
+
+								<header class="article-header">
+
+									<div class="row title">
+										<div class="title-wrapper">
+											<h1 class="entry-title"><a href="http://orgullpages.wp/2015/10/20/voloribus-nist-vollessunt-molorer-isquas-solo/" rel="bookmark" title="Voloribus nist, vollessunt molorer isquas solo">Voloribus nist, vollessunt molorer isquas solo</a></h1>
+										</div>
+									</div>
+									<div class="row image">
+										<div class="image-wrapper col-xs-8 col-xs-offset-2">
+
+											<img width="300" height="200" src="//orgullpages.wp/wp-content/uploads/2015/10/DSC_3058_fhdr-300x200.jpg" class="attachment-medium wp-post-image" alt="DSC_3058_fhdr" />										</div>
+									</div>
+
+								</header>
+
+
+
+
+
+								<footer class="article-footer cf">
+
+
+                  					                  				
+
+
+									         											  <p class="tags">
+											  											   <span class="tag ranchero"><a href="http://orgullpages.wp/tag/ranchero/">ranchero</a></span>
+											   											  											   <span class="tag trabajar"><a href="http://orgullpages.wp/tag/trabajar/">trabajar</a></span>
+											   											  											   <span class="tag uvas"><a href="http://orgullpages.wp/tag/uvas/">uvas</a></span>
+											   											  											</p>
+											
+
+									   
+																		 </footer>
+							</article>
+
+
+							
+
+							<article id="post-63" class="tag-post-wrapper post-wrapper "class="cf post-63 post type-post status-publish format-standard has-post-thumbnail hentry category-historia tag-manos tag-uvas tag-vino" role="article">
+
+								<header class="article-header">
+
+									<div class="row title">
+										<div class="title-wrapper">
+											<h1 class="entry-title"><a href="http://orgullpages.wp/2015/10/20/bus-di-bea-dolupta-taspiet-incti-dolupta-ipsus-2/" rel="bookmark" title="Bus di bea dolupta taspiet incti dolupta ipsus">Bus di bea dolupta taspiet incti dolupta ipsus</a></h1>
+										</div>
+									</div>
+									<div class="row image">
+										<div class="image-wrapper col-xs-8 col-xs-offset-2">
+
+											<img width="300" height="200" src="//orgullpages.wp/wp-content/uploads/2015/10/Manos-Vendimia-300x200.jpg" class="attachment-medium wp-post-image" alt="Manos-Vendimia" />										</div>
+									</div>
+
+								</header>
+
+
+
+
+
+								<footer class="article-footer cf">
+
+
+                  					                  				
+
+
+									         											  <p class="tags">
+											  											   <span class="tag manos"><a href="http://orgullpages.wp/tag/manos/">manos</a></span>
+											   											  											   <span class="tag uvas"><a href="http://orgullpages.wp/tag/uvas/">uvas</a></span>
+											   											  											   <span class="tag vino"><a href="http://orgullpages.wp/tag/vino/">vino</a></span>
+											   											  											</p>
+											
+
+									   
+																		 </footer>
+							</article>
+
+
+							</div>	
+									
+							
+						</main>
+
+
+				</div>
+
+				
+			</div>
+
+			<script>
+			$(function(){
+
+      if($('.tag').hasClass('uvas')){
+        $('.uvas').addClass('active-tag');
+        $('.uvas a').prepend('<span class="eliminate"><object data="http://orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/images/tag-x.svg" type="image/svg+xml"></object></span>');
+        $('.active-tag a').click(function() {
+           window.location.href = 'http://orgullpages.wp#main-anchor';
+            return false;
+        });
+      };
+      
+      });
+			</script>
+
+
+
+
+						<script type="text/javascript">
+		jQuery( 'body' ).wrapInner( '<div class="animsition"></div>' ).removeClass( 'animsition' );
+		</script>
+		<link rel='stylesheet' id='menu_style-css'  href='//orgullpages.wp/wp-content/plugins/dc-full-screen-responsive-menu/css/fullscreenmenu.css' type='text/css' media='all' />
+<style id='menu_style-inline-css' type='text/css'>
+div.fullscreenmenu{
+		background: #fafafa !important;
+	}
+	div.fullscreenmenu ul.nav-menu li a{
+		color: #333333!important;
+		font-family: "Exo", serif;
+	}
+</style>
+<link rel='stylesheet' id='font_style-css'  href='//fonts.googleapis.com/css?family=Exo' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var infinite_scroll = "{\"loading\":{\"msgText\":\"\",\"finishedMsg\":\"\",\"img\":\"http:\\\/\\\/orgullpages.wp\\\/wp-content\\\/uploads\\\/2015\\\/11\\\/load1.jpg\"},\"nextSelector\":\".next\",\"navSelector\":\".pagination\",\"itemSelector\":\".post-wrapper\",\"contentSelector\":\".posts\",\"debug\":true,\"behavior\":\"masonry\",\"callback\":\"(function($) {\\r\\nvar $container = $('.posts'); \\\/\\\/ this is the content selector\\r\\n$container.imagesLoaded( function() {\\r\\nif(viewport.width >= 992){\\r\\n$(window).on( 'resize', function () {\\r\\n    $('.post-wrapper').width( $('.posts').width() \\\/ 2 );\\r\\n}).resize();\\r\\n}else{\\r\\n  $('.post-wrapper').width($('.posts').width);\\r\\n}\\r\\n\\r\\n $container.masonry({\\r\\n        itemSelector: '.post-wrapper' \\\/\\\/ this is the item selector\\r\\n});\\r\\n});\\r\\n})(jQuery);\"}";
+/* ]]> */
+</script>
+<script type='text/javascript' src='//orgullpages.wp/wp-content/plugins/infinite-scroll/js/front-end/jquery.infinitescroll.js'></script>
+<script type='text/javascript' src='//orgullpages.wp/wp-content/plugins/infinite-scroll/behaviors/masonry-isotope.js'></script>
+<script type='text/javascript' src='//orgullpages.wp/wp-content/plugins/wp-ultimate-post-grid/vendor/isotope/isotope.pkgd.min.js'></script>
+<script type='text/javascript' src='//orgullpages.wp/wp-content/plugins/wp-ultimate-post-grid/vendor/imagesloaded/imagesloaded.pkgd.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wpupg_public = {"ajax_url":"http:\/\/orgullpages.wp\/wp-admin\/admin-ajax.php?wpupg_ajax=1","animationSpeed":"0.8s","nonce":"55573a59a1","rtl":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='//orgullpages.wp/wp-content/plugins/wp-ultimate-post-grid/js/grid.js'></script>
+<script type='text/javascript' src='//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/js/scripts.js'></script>
+<script type='text/javascript' src='//orgullpages.wp/wp-content/plugins/dc-full-screen-responsive-menu/js/fullscreenmenu.js'></script>
+<script type="text/javascript">
+// Because the `wp_localize_script` method makes everything a string
+infinite_scroll = jQuery.parseJSON(infinite_scroll);
+
+jQuery( infinite_scroll.contentSelector ).infinitescroll( infinite_scroll, function(newElements, data, url) { eval(infinite_scroll.callback); });
+</script>
+
+
+	</body>
+	
+	<script src="//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/bower_components/masonry/dist/masonry.pkgd.min.js"></script>
+	<script src="//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
+	<script src="//orgullpages.wp/wp-content/themes/eddiemachado-bones-9db85e4/library/bower_components/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+
+
+</html> <!-- end of site. what a ride! -->
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced
+Database Caching 11/22 queries in 0.010 seconds using disk
+Object Caching 1144/1194 objects using disk
+Content Delivery Network via N/A
+Application Monitoring using New Relic
+
+ Served from: orgullpages.wp @ 2015-11-06 08:23:57 by W3 Total Cache -->

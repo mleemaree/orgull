@@ -5,10 +5,10 @@
 				<div id="inner-content" class="wrap cf">
 
 					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main">
-						<h1 class="archive-title"><span><?php _e( 'Search Results for:', 'bonestheme' ); ?></span> <?php echo esc_attr(get_search_query()); ?></h1>
+					
 
 
-									<div class="container no-res-cont">
+									<div class="container no-res-cont" style="height:0;">
 										<div class="row">
 											<div class="col-xs-12 cent">
 												<h1 id="nores"><?php
@@ -45,19 +45,21 @@
 										</div>
 									</div>
 									<div class="row image">
-										<div class="col-xs-2"></div>
-										<div class="image-wrapper col-xs-8">
-											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php 
 
-											$image = get_field('image');
+										<div class="image-wrapper col-xs-8 col-xs-offset-2">
+											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+
+											<?php 
+
+											$image = the_post_thumbnail('medium');
 
 											if( !empty($image) ): ?>
 
-												<img class="post-img img img-responsive" style="width:100%;" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+												<img class="post-img img img-responsive"  src="<?php echo $image['url']; ?>" />
 
 											<?php endif; ?></a>
 										</div>
-										<div class="col-xs-2"></div>
+
 									</div>
 
 								</header>

@@ -116,6 +116,10 @@ jQuery(document).ready(function($) {
    * You can remove this if you don't need it
   */
   loadGravatars();
+
+
+//============HOMEPAGE MASONRY
+
 if(viewport.width >= 992){
 $(window).on( 'resize', function () {
     $('.post-wrapper').width( $('.posts').width() / 2 );
@@ -147,31 +151,51 @@ $container.imagesLoaded( function() {
 })(jQuery);
 
 
-
-$('#main-tag').masonry({
-  // options
-  itemSelector: '.tag-post-wrapper'
-
+//__________PRODUCTORS MASONRY
+$('.prod-cont').masonry({
+  columnWidth:'.productor',
+  itemSelector: '.productor'
 });
+
+(function($) {
+var $container = $('.prod-cont'); // this is the content selector
+$container.imagesLoaded( function() {
+    $container.masonry({
+        itemSelector: '.productor' // this is the item selector
+    });
+});
+})(jQuery);
 
 
 //SKROLLR INIT
 
-
-(function() {
-    $(document).ready(function(){skrollr.init();});
-})();
+var s = skrollr.init();
 
 
 
 //=================mousewheel
-$('.landings').on('mousewheel', function(event) {
-    console.log(event.deltaX, event.deltaY, event.deltaFactor);
-});
+
 
 //=============GSAP STUFF
+//=======SINGLE POST
+ $('.hers')
+    .hover(function(){
+      TweenMax.to(".soc", 0.2, {x:40, ease: Power1.easeIn, yoyo: true}, 0.2);
+      return false;
+      },function(){
+      TweenMax.to(".soc", 0.2, {x:-150, ease: Power1.easeOut}, 0.2);
+      return false;
+      
+  });
+
+  var $qsorig = $('#orig');
+
+var tween = TweenMax.from($qsorig, 0.5, {x:-50, ease: Power1.easeIn}, 0.2);
+
+
+   
 //-------------qui som page
- TweenMax.to("#camins-img", 6, { 
+ /*TweenMax.to("#camins-img", 6, { 
   rotation:360, 
   repeat: -1, 
   yoyo: true, 
@@ -193,13 +217,31 @@ TweenMax.to("#pa-img", 2, {
   repeat:-1,
   yoyo:true,
   ease: Sine.easeInOut, y: 0
+});*/
+
+//down arrow
+$("#down-arrow").delay(2000).fadeIn(500);
+$("#orig").delay(2000).fadeIn(500);
+
+//----MODAL
+
+    $(".modal-fullscreen").on('show.bs.modal', function () {
+  setTimeout( function() {
+    $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+  }, 0);
+});
+$(".modal-fullscreen").on('hidden.bs.modal', function () {
+  $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
+      $("#s").focus();
 });
 
+$('.modal').on('shown.bs.modal', function() {
+  $(this).find('[autofocus]').focus();
+});
 
-
-
-
-$('input').focus();
+$('#cursor').click(function(){
+  $('html,body').animate({scrollTop: ($('#wayward-up')).offset().top}, 'slow');
+});
 
 }); /* end of as page load scripts */
 

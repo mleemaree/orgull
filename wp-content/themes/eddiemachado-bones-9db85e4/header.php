@@ -41,17 +41,22 @@
 
 
 		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/bower_components/bootstrap/dist/css/bootstrap.min.css">
 
 		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+		<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/library/bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+
+		<!--fullpage.jks ======-->
+
+		
 
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="<?php echo get_template_directory_uri(); ?>/library/bower_components/jquery/dist/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<script src=" <?php echo get_template_directory_uri(); ?>/library/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+		<!--<script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/alton/jquery.alton.js"></script>-->
+		<script src="<?php echo get_template_directory_uri(); ?>/library/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
 		<script src="<?php echo get_template_directory_uri(); ?>/library/bower_components/skrollr/dist/skrollr.min.js"></script>
-
 <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 
 	</head>
@@ -63,7 +68,7 @@
 				<div id="inner-header">
 
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<a href="<?php echo get_option('home'); ?>" class="svg">
+					<a href="<?php echo get_option('home'); ?>" class="has-svg">
 						<object id="menu-logo" class="menu-logo pull-left" data="<?php echo get_template_directory_uri(); ?>/library/images/menu-logo.svg" type="image/svg+xml"></object>
 					</a>
 
@@ -98,7 +103,7 @@
 				</div>
 
 				<!-- Modal fullscreen -->
-<div class="modal modal-fullscreen fade" id="modal-fullscreen" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal modal-fullscreen fade bottom" id="modal-fullscreen" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
       <div class="modal-body search-body">
         <?php get_search_form(); ?>

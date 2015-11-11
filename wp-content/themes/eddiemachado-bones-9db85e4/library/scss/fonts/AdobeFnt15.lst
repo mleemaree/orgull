@@ -1,0 +1,97 @@
+%!Adobe-FontList 1.15
+%Locale:0x409
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:DalaFloda-Italic
+FamilyName:Dala Floda
+StyleName:Italic
+MenuName:Dala Floda Roman
+StyleBits:1
+WeightClass:400
+WidthClass:5
+AngleClass:1
+FullName:Dala Floda Italic
+WritingScript:Roman
+OutlineFileName:\Dala Floda-Italic.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:188788
+FileModTime:1291164622
+NameArray:0,Mac,18,Dala Floda Roman Italic
+NameArray:0,Mac,4,Dala Floda Italic
+NameArray:0,Win,1,Dala Floda Roman
+NameArray:0,Win,16,Dala Floda
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:DalaFloda-Roman
+FamilyName:Dala Floda
+StyleName:Roman
+MenuName:Dala Floda Roman
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Dala Floda Roman
+WritingScript:Roman
+OutlineFileName:\Dala Floda-Roman.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:193036
+FileModTime:1291164652
+NameArray:0,Mac,4,Dala Floda Roman
+NameArray:0,Win,1,Dala Floda Roman
+NameArray:0,Win,16,Dala Floda
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Karla-Regular
+FamilyName:Karla
+StyleName:Regular
+MenuName:Karla
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Karla
+WritingScript:Roman
+OutlineFileName:\Karla-Regular.ttf
+DataFormat:sfntData
+FileLength:16816
+FileModTime:1444121024
+NameArray:0,Mac,4,Karla
+NameArray:0,Win,1,Karla
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:SourceSansPro-Regular
+FamilyName:Source Sans Pro
+StyleName:Regular
+MenuName:Source Sans Pro
+StyleBits:0
+WeightClass:400
+WidthClass:5
+AngleClass:0
+FullName:Source Sans Pro
+WritingScript:Roman
+OutlineFileName:\SourceSansPro-Regular.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+FileLength:100844
+FileModTime:1429107070
+DesignSize:100
+NameArray:0,Mac,4,Source Sans Pro
+NameArray:0,Win,1,Source Sans Pro
+%EndFont
+

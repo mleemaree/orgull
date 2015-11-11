@@ -2,12 +2,17 @@
 
 <?php get_header(); ?>
 
-<div class="container">
-	<div class="row title qs">
+<div class="container skrollr-body">
+<div id="orig" class="skrollable skrollable-between" data-200-top="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
+	<div class="row title qs top">
 		<div class="words col-xs-12 col-sm-8 col-sm-offset-1 col-md-7 col-md-offset-1">
 			<h1 class="titulo tit">
 				<?php the_field("titulo", 118); ?>
 			</h1>
+		</div>
+	</div>
+	<div class="row tit-tex">
+		<div class="tex col-xs-12 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1">
 			<span class="seguent tex">
 				<?php the_field("sequent", 118); ?>
 			</span>
@@ -15,24 +20,29 @@
 		<!--less offset-->
 		<div class="hidden-xs col-sm-3 col-md-8"></div>
 	</div>
-
-	<div class="row title-2 qs">
+</div>
+<div class="skrollable skrollable-between" data-50-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
+	<div class="row title-2 qs top skrollable skrollable-between">
 		<div class="words col-xs-12 col-sm-8 col-sm-offset-3 col-md-6 col-md-offset-5">
 			<h1 class="titulo-2 tit">
 				<?php the_field("titulo_2", 118); ?>
 			</h1>
-			<span class="seguent tex">
-				<?php the_field("siguent", 118); ?>
-			</span>
 		</div>
 		<!-- less offset -->
 		<div class="hidden-xs col-sm-1"></div>
 	</div>
-
+	<div class="row tit-tex">
+		<div class="tex col-xs-12 col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-5">
+			<span class="seguent tex">
+				<?php the_field("siguent", 118); ?>
+			</span>
+		</div>
+	</div>
+</div>
 	<!--FUET YUMMM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
 	<div class="row fuet qs">
-		<div class="words col-xs-12 col-sm-5 col-sm-offset-1">
+		<div class="words col-xs-12 col-sm-5 col-sm-offset-1"  data-50-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
 			<h1 class="tit">
 				<?php the_field("titulo_fuet", 118); ?>
 			</h1>
@@ -42,7 +52,7 @@
 		</div>
 		<!-- less offset -->
 		<div class="hidden-xs col-sm-2"></div>
-		<div id="fuet-img" class="image col-xs-12 col-sm-4 pull-right">
+		<div id="fuet-img" class="image col-xs-12 col-sm-4 pull-right" data-50-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
 			<?php 
 
 			$image = get_field('image_fuet');
@@ -58,7 +68,7 @@
 	<!--CAMINS!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
 	<div class="row camins qs">
-	<div id="camins-img" class="image col-xs-12 col-sm-4 col-sm-offset-1">
+	<div id="camins-img" class="image col-xs-12 col-sm-4 col-sm-offset-1"  data-50-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
 			<?php 
 
 			$image = get_field('imagen_camins');
@@ -71,7 +81,7 @@
 		</div>
 		<!-- less offset -->
 		<div class="hidden-xs col-sm-1"></div>
-		<div class="words col-xs-12 col-sm-5 col-sm-offset-1">
+		<div class="words col-xs-12 col-sm-5 col-sm-offset-1" data-50-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
 			<h1 class="tit">
 				<?php the_field("titulo_camins", 118); ?>
 			</h1>
@@ -84,7 +94,7 @@
 	<!--PA YUMMM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
 	<div class="row pa qs">
-		<div class="pa-palab col-xs-12 col-sm-5 col-sm-offset-1">
+		<div class="pa-palab col-xs-12 col-sm-5 col-sm-offset-1"  data-50-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
 			<h1 class="tit">
 				<?php the_field("titulo_pa", 118); ?>
 			</h1>
@@ -94,7 +104,7 @@
 		</div>
 		<!-- less offset -->
 		<div class="hidden-xs col-sm-2"></div>
-		<div id="pa-img" class="pa-img col-xs-12 col-sm-4 pull-right">
+		<div id="pa-img" class="pa-img col-xs-12 col-sm-4 pull-right" data-50-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
 			<?php 
 
 			$image = get_field('imagen_pa');
@@ -110,7 +120,7 @@
 	<!-- LLET ============================= -->
 
 	<div class="row llet qs">
-	<div id="llet-img" class="image col-xs-12 col-sm-4 col-sm-offset-1">
+	<div id="llet-img" class="image col-xs-12 col-sm-4 col-sm-offset-1"  data-50-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
 			<?php 
 
 			$image = get_field('imagen_llet');
@@ -123,7 +133,7 @@
 		</div>
 		<!-- less offset -->
 		<div class="hidden-xs col-sm-1"></div>
-		<div class="words col-xs-12 col-sm-5 col-sm-offset-1">
+		<div class="words col-xs-12 col-sm-5 col-sm-offset-1" data-50-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
 			<h1 class ="tit">
 				<?php the_field("titulo_llet", 118); ?>
 			</h1>
@@ -136,7 +146,7 @@
 	<!-- OLI ========================= -->
 
 	<div class="row oli qs">
-		<div class="words col-xs-12 col-sm-5 col-sm-offset-1">
+		<div class="words col-xs-12 col-sm-5 col-sm-offset-1" data-50-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
 			<h1 class="tit">
 				<?php the_field("titulo_loli", 118); ?>
 			</h1>
@@ -146,7 +156,7 @@
 		</div>
 		<!-- less offset -->
 		<div class="hidden-xs col-sm-2"></div>
-		<div id="oli-img" class="image col-xs-12 col-sm-4 pull-right">
+		<div id="oli-img" class="image col-xs-12 col-sm-4 pull-right" data-50-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
 			<?php 
 
 			$image = get_field('imagen_loli');

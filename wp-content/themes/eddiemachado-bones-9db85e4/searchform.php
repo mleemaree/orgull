@@ -1,12 +1,13 @@
-
-<div class="social-icons">
-        <img class="social-icon" src="<?php echo get_template_directory_uri(); ?>/library/images/facebook.png" alt="facebook">
-        <img class="social-icon" src="<?php echo get_template_directory_uri(); ?>/library/images/twitter.png" alt="twitter">
-        <img class="social-icon" src="<?php echo get_template_directory_uri(); ?>/library/images/instagram.png" alt="instagram">
+<div class="search-cont">
+<div class="align">
+    <div class="social-icons">
+        <a href="<?php _e('','bonestheme'); ?>" class="has-svg" ><object data="<?php echo get_template_directory_uri(); ?>/library/images/facebook-im.svg" type="image/svg+xml"></object></a>
+        <a href="<?php _e('','bonestheme'); ?>" class="has-svg" ><object data="<?php echo get_template_directory_uri(); ?>/library/images/twitter-im.svg" type="image/svg+xml"></object></a>
+        <a href="<?php _e('','bonestheme'); ?>" class="has-svg" ><object data="<?php echo get_template_directory_uri(); ?>/library/images/instagram.svg" type="image/svg+xml"></object></a>       
     </div>
     <?php $img = plugins_url('../images/close.png', __FILE__);?>
     <div class="navcontent">
-        <div ><a href='#' id="close-icono" data-dismiss="modal"><img src="<?php echo get_template_directory_uri(); ?>/library/images/close.png" class="cimg"/></a></div>
+       <div><a href='#' id="close-icono" class="has-svg" data-dismiss="modal"><object data="<?php echo get_template_directory_uri(); ?>/library/images/close.svg" type="image/svg+xml"></object></a></div>
         <?php
         $menu_list = '<ul id="menu-' . $menu_id . '" class="nav-menu">';
         
@@ -23,13 +24,21 @@
 	    	<div id="svert" class="row">
 		    	<div class="col-xs-11">
 			        <label for="s" class="screen-reader-text"><?php _e('','bonestheme'); ?></label>
-			        <input type="search" id="s" class="" name="s" value="" />
+			        <input type="search" id="s" class="" name="s" value="" autofocus />
 
 			    </div>
-			    <div class="col-xs-1">
-			        <button type="submit" id="searchsubmit" ><img class="" src="" alt="search-icon"><a href="<?php _e('','bonestheme'); ?>"><object data="<?php echo get_template_directory_uri(); ?>/library/images/search.svg" type="image/svg+xml"></object></a></button>
-		        </div>
+			    <div class="col-xs-1 eglass">
+			        <button type="submit" id="searchsubmit" ><object data="<?php echo get_template_directory_uri(); ?>/library/images/search.svg" type="image/svg+xml"></object></button>
+                </div>
 		    </div>
 	    </form>
     </div>
-<script>$(document).ready(function () {$('#s').focus(); });</script>
+</div>
+</div>
+
+<script>
+     $(document).ready(function () {
+            setTimeout("$('#s').focus();", 500);
+
+        });
+</script>

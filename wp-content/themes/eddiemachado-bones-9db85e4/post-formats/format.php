@@ -11,48 +11,61 @@
                  *
                  * Again, If you want to remove post formats, just delete the post-formats
                  * folder and replace the function below with the contents of the "format.php" file.
+
                 */
               ?>
+
+
 <div class="single-post-wrapper container">
 
-              <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+<?php
+    if(get_next_post() == 0) {?>
+        <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
 
                 <header class="article-header entry-header">
                 <div class="row">
                   <div class="col-xs-12 col-sm-6 col-sm-offset-2">
                     <h1 class="single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
                   </div>
-                  <div class="col-xs-12 col-sm-7 col-sm-offset-2">
+                  <div id="image" class="col-xs-12 col-sm-7 col-sm-offset-2">
                     <?php 
 
-                    $image = get_field('image');
-
-                    if( !empty($image) ): ?>
-
-                      <img class="img img-responsive single-post-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-                    <?php endif; ?>
-                  </div>
-                  <div class="col-xs-12 col-sm-7 col-sm-offset-3">
-                    <p class="post-text"><?php the_field("text_area") ?></p>
-                  </div>
-
-                <div class="second-image col-xs-12 col-sm-7 col-sm-offset-2">
-                  <?php 
-
-                  $image = get_field('second_image');
+                  $image =  the_post_thumbnail('');
 
                   if( !empty($image) ): ?>
 
-                    <img class="img img-responsive single-post-img" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                    <img class="img img-responsive single-post-img" src="<?php echo $image['url']; ?>" />
 
                   <?php endif; ?>
-                </div>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 hers">
+                  <div id="obj">
+                    <h4 id="comp-word">Compartir</h4>
+                    <object id="compartir" data="<?php echo get_template_directory_uri(); ?>/library/images/compartir.svg" type="image/svg+xml"></object>
+
+
+ 
+                    <ul id="social-iconos">
+                      <li class="soc">
+                          <object data="<?php echo get_template_directory_uri(); ?>/library/images/facebook.svg" type="image/svg+xml"></object>
+                      </li>
+                      <li class="soc">
+                          <object data="<?php echo get_template_directory_uri(); ?>/library/images/twitter.svg" type="image/svg+xml"></object>
+                      </li>
+                      <li class="soc">
+                          <object data="<?php echo get_template_directory_uri(); ?>/library/images/mail.svg" type="image/svg+xml"></object>
+                      </li>
+                    </ul>
+                   </div> 
+                </div><!--row-->
+<div class="hide"></div>
+
+
 
 
                 </header> <?php // end article header ?>
 
-                <section class="entry-content cf" itemprop="articleBody">
+                <section class="entry-content cf col-xs-12 col-sm-7 col-sm-offset-3" itemprop="articleBody">
                   <?php
                     // the content (pretty self explanatory huh)
                     the_content();
@@ -77,6 +90,116 @@
                     ) );
                   ?>
                 </section> <?php // end article section ?>
+              <div class="article-footer single-foot col-xs-12 col-sm-7 col-sm-offset-2">
+                 <?php $tags = get_the_tags();
+                      if( $tags ) : ?>
+                        <p class="tags">
+                        <?php foreach( $tags as $tag ) { ?>
+                         <span class="<?php echo $tag->slug; ?>"><a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a></span>
+                        <?php } ?>
+                      </p>
+                      
+                  <?php endif; ?>
+                </div>
+
+                <footer class="single-post-footer">
+
+                  <div class="navigation row">
+                    <div class="links next-post-link col-xs-12 pull-right">   
+                      <?php previous_post_link('%link', 'Següent', TRUE); ?>
+                    </div>
+                  </div>
+
+                </footer> <?php // end article footer ?>
+
+              </article> <?php // end article ?>
+
+
+
+</div>
+     <?php   }else{?>
+
+
+              <article id="post-<?php the_ID(); ?>" <?php post_class('cf'); ?> role="article" itemscope itemprop="blogPost" itemtype="http://schema.org/BlogPosting">
+
+                <header class="article-header entry-header">
+                <div class="row">
+                  <div class="col-xs-12 col-sm-6 col-sm-offset-2">
+                    <h1 class="single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
+                  </div>
+                  <div id="image" class="col-xs-12 col-sm-7 col-sm-offset-2">
+                    <?php 
+
+                  $image =  the_post_thumbnail('');
+
+                  if( !empty($image) ): ?>
+
+                    <img class="img img-responsive single-post-img" src="<?php echo $image['url']; ?>" />
+
+                  <?php endif; ?>
+                  </div>
+                  <div class="col-xs-12 col-sm-3 hers">
+                  <div id="obj">
+                    <h4 id="comp-word">Compartir</h4>
+                    <object id="compartir" data="<?php echo get_template_directory_uri(); ?>/library/images/compartir.svg" type="image/svg+xml"></object>
+                  </div>
+ 
+                    <ul id="social-iconos">
+                      <li class="soc">
+                          <object data="<?php echo get_template_directory_uri(); ?>/library/images/facebook.svg" type="image/svg+xml"></object>
+                      </li>
+                      <li class="soc">
+                          <object data="<?php echo get_template_directory_uri(); ?>/library/images/twitter.svg" type="image/svg+xml"></object>
+                      </li>
+                      <li class="soc">
+                          <object data="<?php echo get_template_directory_uri(); ?>/library/images/mail.svg" type="image/svg+xml"></object>
+                      </li>
+                    </ul>
+                   </div> 
+                </div><!--row-->
+
+
+
+
+
+                </header> <?php // end article header ?>
+
+                <section class="entry-content cf col-xs-12 col-sm-7 col-sm-offset-3" itemprop="articleBody">
+                  <?php
+                    // the content (pretty self explanatory huh)
+                    the_content();
+
+                    /*
+                     * Link Pages is used in case you have posts that are set to break into
+                     * multiple pages. You can remove this if you don't plan on doing that.
+                     *
+                     * Also, breaking content up into multiple pages is a horrible experience,
+                     * so don't do it. While there are SOME edge cases where this is useful, it's
+                     * mostly used for people to get more ad views. It's up to you but if you want
+                     * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
+                     *
+                     * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
+                     *
+                    */
+                    wp_link_pages( array(
+                      'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
+                      'after'       => '</div>',
+                      'link_before' => '<span>',
+                      'link_after'  => '</span>',
+                    ) );
+                  ?>
+                </section> <?php // end article section ?>
+              <div class="article-footer single-foot col-xs-12 col-sm-7 col-sm-offset-2">
+                 <?php $tags = get_the_tags();
+                      if( $tags ) : ?>
+                        <p class="tags">
+                        <?php foreach( $tags as $tag ) { ?>
+                         <span class="<?php echo $tag->slug; ?>"><a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a></span>
+                        <?php } ?>
+                      </p>
+                      
+                  <?php endif; ?>
+                </div>
 
                 <footer class="single-post-footer">
 
@@ -93,4 +216,9 @@
 
               </article> <?php // end article ?>
 
+
+
 </div>
+
+<?php }?>
+

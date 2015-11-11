@@ -186,7 +186,6 @@ class Infinite_Scroll {
 			//array of option conversions in the form of from => to
 			$map = array(
 				'js_calls' => 'callback',
-				'image' => 'img',
 				'text' => 'msgText',
 				'donetext' => 'finishedMsg',
 				'content_selector' => 'contentSelector',
@@ -267,15 +266,7 @@ class Infinite_Scroll {
 			$this->presets->migrate();
 		}
 
-		//migrate loading image
-		if ($from < '2.6') {
-			$old = get_option("infinite_scroll");
-			$new = $old;
-			$new["loading"]["img"] = $old["img"];
-			unset($new["img"]);
-
-			$this->options->set_options($new);
-		}
+		
 	}
 
 
