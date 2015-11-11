@@ -1,3 +1,4 @@
+       <div ><a id="close-icono" class='animateddrawer stay' href='#' onClick='location.href="http://orgullpages.wp#main-anchor"; return false'><span></span></a></div>
 
               <?php
                 /*
@@ -28,6 +29,10 @@
                     <h1 class="single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
                   </div>
                   <div id="image" class="col-xs-12 col-sm-7 col-sm-offset-2">
+                  <?php if(get_field('video')){
+                   the_field('video');
+                   }else{?>
+
                     <?php 
 
                   $image =  the_post_thumbnail('');
@@ -37,13 +42,16 @@
                     <img class="img img-responsive single-post-img" src="<?php echo $image['url']; ?>" />
 
                   <?php endif; ?>
+                  <?php  }; ?>
+
                   </div>
+          
                   <div class="col-xs-12 col-sm-3 hers">
                   <div id="obj">
                     <h4 id="comp-word">Compartir</h4>
                     <object id="compartir" data="<?php echo get_template_directory_uri(); ?>/library/images/compartir.svg" type="image/svg+xml"></object>
 
-
+ <div class="white-block"></div>
  
                     <ul id="social-iconos">
                       <li class="soc">
@@ -126,6 +134,10 @@
                     <h1 class="single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
                   </div>
                   <div id="image" class="col-xs-12 col-sm-7 col-sm-offset-2">
+                  <?php if(get_field('video')){
+                   the_field('video');
+                   }else{?>
+
                     <?php 
 
                   $image =  the_post_thumbnail('');
@@ -135,13 +147,14 @@
                     <img class="img img-responsive single-post-img" src="<?php echo $image['url']; ?>" />
 
                   <?php endif; ?>
-                  </div>
+                  <?php  }; ?>
+                </div>
                   <div class="col-xs-12 col-sm-3 hers">
                   <div id="obj">
                     <h4 id="comp-word">Compartir</h4>
                     <object id="compartir" data="<?php echo get_template_directory_uri(); ?>/library/images/compartir.svg" type="image/svg+xml"></object>
 
-
+ <div class="white-block"></div>
  
                     <ul id="social-iconos">
                       <li class="soc">
@@ -222,6 +235,10 @@
                     <h1 class="single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
                   </div>
                   <div id="image" class="col-xs-12 col-sm-7 col-sm-offset-2">
+                     <?php if(get_field('video')){
+                   the_field('video');
+                   }else{?>
+
                     <?php 
 
                   $image =  the_post_thumbnail('');
@@ -231,7 +248,8 @@
                     <img class="img img-responsive single-post-img" src="<?php echo $image['url']; ?>" />
 
                   <?php endif; ?>
-                  </div>
+                  <?php  }; ?>
+                </div>
                   <div class="col-xs-12 col-sm-3 hers">
                   <div id="obj">
                     <h4 id="comp-word">Compartir</h4>

@@ -199,6 +199,13 @@ $('.animateddrawer').click(function(){
 
 });
    
+$('·back-icono').click(function(){
+  $('#close-icono-stay').hide();
+});
+
+
+
+
 //-------------qui som page
  /*TweenMax.to("#camins-img", 6, { 
   rotation:360, 

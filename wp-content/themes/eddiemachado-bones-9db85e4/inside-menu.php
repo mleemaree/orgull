@@ -22,7 +22,7 @@
     <?php $img = plugins_url('../images/close.png', __FILE__);?>
     <div class="navcontent">
  		<a href='#' id="back-icono" class="has-svg" onClick='menu1.togglemenu(); return false'><object data="<?php echo get_template_directory_uri(); ?>/library/images/back-arrow.svg" type="image/svg+xml"></object></a>
-        <div ><a id="close-icono-stay" class='animateddrawer' href='#' onClick='menu1.togglemenu(); return false'><span></span></a></div>
+        <div ><a id="close-icono-stay" class='animateddrawer stay' href='#' onClick='location.href="http://orgullpages.wp#main-anchor"; return false'><span></span></a></div>
         <?php
         $menu_list = '<ul id="menu-' . $menu_id . '" class="nav-menu">';
         
