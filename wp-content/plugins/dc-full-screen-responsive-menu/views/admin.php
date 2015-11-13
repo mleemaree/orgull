@@ -72,11 +72,7 @@ if(isset($link['menu_effect'])){
         <th>Google Font:</th>
         <td><input type="text"  value='<?php echo $txtfont; ?>' id="menu_text_font" name="menu_text_font" ></td>
       </tr>
-      <tr>
-        <th><input type="checkbox"  value="1" id="menu_author_show" name="menu_author_show" <?php if($author_show== 1){ ?> checked="checked" <?php }?>>
-          Tiny link to Author</th>
-        <td><input type="hidden"  value='Author @DARTCreations <a href="http://www.dart-creations.com">Wordpress Full Screen Menu by DART Creations</a>' id="menu_author_desc" name="menu_author_desc" size="115"></td>
-      </tr>
+      
       <tr>
         <th colspan="2"> <input type="submit" value="Submit" class="button button-primary" id="submit" name="submit">
         </th>

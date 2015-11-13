@@ -8,7 +8,7 @@
     <?php $img = plugins_url('../images/close.png', __FILE__);?>
     <div class="navcontent">
        <div><a href='#' id="close-icono" class="has-svg" data-dismiss="modal"><object data="<?php echo get_template_directory_uri(); ?>/library/images/close.svg" type="image/svg+xml"></object></a></div>
-       <div><a href='#' id="sclose-icono" class="has-svg" data-dismiss="modal"><span id="right"></span><span id="left"></span></a></div>
+       <div><a href='#'  id="sclose-icono" class="has-svg" data-dismiss="modal"><span id="right"></span><span id="left"></span></a></div>
         <?php
         $menu_list = '<ul id="menu-' . $menu_id . '" class="nav-menu">';
         
@@ -25,7 +25,7 @@
 	    	<div id="svert" class="row">
 		    	<div class="col-xs-11">
 			        <label for="s" class="screen-reader-text"><?php _e('','bonestheme'); ?></label>
-			        <input type="search" id="s" class="" name="s" value="" autofocus />
+			        <input type="search" id="s" class="" name="s" value="" autocomplete="off" autofocus />
 
 			    </div>
 			    <div class="col-xs-1 eglass">

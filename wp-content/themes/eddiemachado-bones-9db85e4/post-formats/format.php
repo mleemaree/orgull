@@ -25,10 +25,10 @@
 
                 <header class="article-header entry-header">
                 <div class="row">
-                  <div class="col-xs-12 col-sm-6 col-sm-offset-2">
+                  <div class="col-xs-12 col-md-6 col-md-offset-2">
                     <h1 class="single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
                   </div>
-                  <div id="image" class="col-xs-12 col-sm-7 col-sm-offset-2">
+                  <div id="image" class="col-xs-12 col-md-7 col-md-offset-2">
                   <?php if(get_field('video')){
                    the_field('video');
                    }else{?>
@@ -45,8 +45,8 @@
                   <?php  }; ?>
 
                   </div>
-          
-                  <div class="col-xs-12 col-sm-3 hers">
+                  <div class="col-xs-12 col-sm-3">
+                  <div class="hers">
                   <div id="obj">
                     <h4 id="comp-word">Compartir</h4>
                     <object id="compartir" data="<?php echo get_template_directory_uri(); ?>/library/images/compartir.svg" type="image/svg+xml"></object>
@@ -64,7 +64,9 @@
                           <object data="<?php echo get_template_directory_uri(); ?>/library/images/mail.svg" type="image/svg+xml"></object>
                       </li>
                     </ul>
-                   </div> 
+                   </div>
+                  </div> 
+                  </div>
                 </div><!--row-->
 <div class="hide"></div>
 
@@ -113,8 +115,8 @@
                 <footer class="single-post-footer">
 
                   <div class="navigation row">
-                    <div class="links next-post-link col-xs-12 pull-right">   
-                      <?php previous_post_link('%link', 'Següent', TRUE); ?>
+                    <div class="links next-post-link col-xs-12">   
+                      <?php previous_post_link('%link', 'Següent', FALSE); ?>
                     </div>
                   </div>
 
@@ -130,10 +132,10 @@
 
                 <header class="article-header entry-header">
                 <div class="row">
-                  <div class="col-xs-12 col-sm-6 col-sm-offset-2">
+                  <div class="col-xs-12 col-md-6 col-md-offset-2">
                     <h1 class="single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
                   </div>
-                  <div id="image" class="col-xs-12 col-sm-7 col-sm-offset-2">
+                  <div id="image" class="col-xs-12 col-md-7 col-md-offset-2">
                   <?php if(get_field('video')){
                    the_field('video');
                    }else{?>
@@ -216,8 +218,8 @@
                 <footer class="single-post-footer">
 
                   <div class="navigation row">
-                    <div class="links next-post-link col-xs-12 pull-right">   
-                      <?php next_post_link('%link', 'Anterior', TRUE); ?>
+                    <div class="links next-post-link col-xs-12">   
+                      <?php next_post_link('%link', 'Anterior', FALSE); ?>
                     </div>
                   </div>
 
@@ -231,10 +233,10 @@
 
                 <header class="article-header entry-header">
                 <div class="row">
-                  <div class="col-xs-12 col-sm-6 col-sm-offset-2">
+                  <div class="col-xs-12 col-md-6 col-md-offset-2">
                     <h1 class="single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
                   </div>
-                  <div id="image" class="col-xs-12 col-sm-7 col-sm-offset-2">
+                  <div id="image" class="col-xs-12 col-md-7 col-md-offset-2">
                      <?php if(get_field('video')){
                    the_field('video');
                    }else{?>
@@ -338,18 +340,27 @@
                   <?php endif; ?>
                 </div>
 
-                <footer class="single-post-footer">
 
+
+
+
+<?php if (!isset($_GET['isProductor']) || !$_GET['isProductor'] ) {
+  ?>
+  <footer class="single-post-footer">
                   <div class="navigation row">
                     <div class="links previous-post-link col-xs-6 pull-left">
-                      <?php next_post_link('%link', 'Anterior', TRUE); ?> 
+                      <?php next_post_link('%link', 'Anterior', FALSE); ?> 
                     </div> 
                     <div class="links next-post-link col-xs-6 pull-right">   
-                      <?php previous_post_link('%link', 'Següent', TRUE); ?>
+                      <?php previous_post_link('%link', 'Següent', FALSE); ?>
                     </div>
                   </div>
 
-                </footer> <?php // end article footer ?>
+                </footer> 
+<?php
+}?>
+
+                <?php // end article footer ?>
 
               </article> <?php // end article ?>
 

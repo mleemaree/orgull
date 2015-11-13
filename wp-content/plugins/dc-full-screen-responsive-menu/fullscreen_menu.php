@@ -62,7 +62,7 @@ function dc_fullscreen_menu_add_nav_class($output) {
 		$menu_author_show = $link['menu_author_show'];
 		$menu_author_desc = $link['menu_author_desc'];
 		include(plugin_dir_path( __FILE__ ).'views/menu.php');
-		$output= "<div ><a class='animateddrawer' href='#' onClick='menu1.togglemenu(); return false'><span></span></a></div>";
+		$output= "<div ><a class='animateddrawer' href='#' data-dismiss='modal' onClick='menu1.togglemenu(); return false'><span></span></a></div>";
 		if($menu_author_show == 1){
 			$output.="<!-- ". $menu_author_desc." -->";
 		}

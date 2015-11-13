@@ -1,5 +1,5 @@
-<div class="social-icons">
-        <a href="<?php _e('','bonestheme'); ?>" class="has-svg" ><object data="<?php echo get_template_directory_uri(); ?>/library/images/facebook-im.svg" type="image/svg+xml"></object></a>
+<div class="social-iconts">
+        <a href="https://www.facebook.com/orgullpages/" class="has-svg" ><object data="<?php echo get_template_directory_uri(); ?>/library/images/facebook-im.svg" type="image/svg+xml"></object></a>
         <a href="<?php _e('','bonestheme'); ?>" class="has-svg" >
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                      width="17.01px" height="13.819px" viewBox="0 0 17.01 13.819" enable-background="new 0 0 17.01 13.819" xml:space="preserve">
@@ -21,8 +21,12 @@
     </div>
     <?php $img = plugins_url('../images/close.png', __FILE__);?>
     <div class="navcontent">
- 		<a href='#' id="back-icono" class="has-svg" onClick='menu1.togglemenu(); return false'><object data="<?php echo get_template_directory_uri(); ?>/library/images/back-arrow.svg" type="image/svg+xml"></object></a>
-        <div ><a id="close-icono-stay" class='animateddrawer stay' href='#' onClick='location.href="http://orgullpages.wp#main-anchor"; return false'><span></span></a></div>
+
+            <a id="back-icono" class="has-svg" onClick='menu1.togglemenu();'><object data="<?php echo get_template_directory_uri(); ?>/library/images/back-arrow.svg" type="image/svg+xml"></object></a>
+            <a id="close-icono-stay" class='animateddrawer stay' href='#' onClick='location.href="http://orgullpages.wp#main-anchor"; return false'><span></span></a>
+            
+
+
         <?php
         $menu_list = '<ul id="menu-' . $menu_id . '" class="nav-menu">';
         
@@ -33,4 +37,7 @@
         }
         echo $menu_list .= '</ul>';
         ?>
-    </div>
+   <!-- </div>-->
+
+
+ 

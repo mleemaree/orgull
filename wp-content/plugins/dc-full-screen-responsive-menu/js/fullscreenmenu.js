@@ -56,12 +56,18 @@
 				$navcontent.css({top:0})
 				$menu.addClass('open')
 				$toggler.addClass('open')
+				$('#mc-log').fadeOut("fast", 0)
+				$('#sf-btn').fadeTo("fast", 0)
+				$('.social-icons').fadeTo("slow",1)
 				state = 'open'
 			}
 			else if (action == 'close' || (typeof action == 'undefined' && state == 'open')){
 				$body.css({overflow: 'auto'})
 				$menu.removeClass('open')
 				$toggler.removeClass('open')
+				$('#sf-btn').fadeTo("slow",1)
+				$('#mc-log').fadeIn("fast", 0)
+				$('.social-icons').fadeOut("fast", 0)
 				state = 'closed'
 			}
 		}

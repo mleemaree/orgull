@@ -14,10 +14,10 @@
     <?php while( have_rows('productor') ): the_row(); ?>
 
 	<div class="col-xs-12 col-sm-6 col-md-4 productor">
-    <a href="<?php the_sub_field('link'); ?>">
+    <a href="<?php the_sub_field('link'); ?>?isProductor=true">
         <div class="row prod-img">
         	<div class="col-xs-12">
-        		<img class="prod-imag" src="<?php the_sub_field('imagen');?>" />
+        		<img class="prod-imag img" src="<?php the_sub_field('imagen');?>" />
                 <div class="hover-elem">
                     <object data="<?php echo get_template_directory_uri(); ?>/library/images/plus.svg" class="prod-plus" type="image/svg+xml"></object>
                     <p class="prod-entre">Veure entrevista</p>

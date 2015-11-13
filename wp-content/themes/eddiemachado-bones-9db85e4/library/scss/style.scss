@@ -38,7 +38,7 @@ the whole project.
 // import mixins
 @import "partials/mixins";
 
-// the grid
+// the grid 
 @import "partials/grid";
 
 // the base
@@ -271,6 +271,7 @@ a:focus{
 	z-index:4;
 	width:100%;
 	top:0;
+	z-index:99999999;
 }
 
 .animateddrawer.special span{
@@ -341,6 +342,28 @@ a:focus{
 	}
 }
 
+        .contact-cont{
+            display:none;
+        }
+
+        .news-cont{
+            display:none;
+        }
+
+        .leg-not{
+            display:none;
+            text-align:left;
+        }
+
+        .legal{
+            overflow:scroll;
+            position:fixed !important;
+            height:100%;
+            width:682px !important;
+            padding-bottom:500px;
+            margin-left:15%;
+        }
+
 /* .modal-fullscreen SEARCH FORM */
 
 .modal.fade:not(.in) .modal-dialog {
@@ -389,6 +412,15 @@ a svg {
   left: 0;
 }
 
+
+#facebook::after{
+	 content: ""; 
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+}
 
 
 object{
@@ -441,13 +473,37 @@ object{
 }
 
 #back-icono{
+	display:none;
 	position:absolute;
 	right:75px;
 	top:25px;
-	z-index:5;
 }
 
 .social-icons{
+	display:none;
+	position:absolute;
+	top:25px;
+	left:25px;
+	z-index:6;
+	text-align:left;
+	width:15%;
+	img{
+		padding:15px;
+	}
+	li{
+		display:inline-block;
+		padding:0.35%;
+		&:last-child{
+			padding: 0.339%;
+		}
+	}
+	a{
+		padding: 0px 8px;
+	}
+}
+
+.social-iconts{
+	display:none;
 	position:absolute;
 	top:25px;
 	left:25px;
@@ -466,6 +522,7 @@ object{
 	a{
 		padding: 0px 8px;
 	}
+	display:block;
 }
 
 
@@ -483,6 +540,7 @@ div.fullscreenmenu{
 	vertical-align: middle;
 	position:relative;
 	bottom:6%;
+	width:100%;
 	li{
 	border-bottom:0 !important;
 	line-height: 1;
@@ -809,23 +867,11 @@ blockquote{
 
 
 
+
+
 .grid-item { width: 200px; background-color:aqua; }
 .grid-item--width2 { width: 400px; background-color:purple; }
 
-
-
-@media (max-width: 991px) {
-  
-	.post-wrapper{
-		width: 100%;
-
-	}
-}
-
-.hers{
-	position:relative;
-	top:10px;
-}
 
 #social-iconos{
 	position:relative;
@@ -904,9 +950,11 @@ blockquote{
 }
 
 .hers{
-	height:30px;
-	width:100px;
+	height:100px;
+	width:200px;
 	-webkit-backface-visibility: hidden;
+	position:relative;
+	top:10px;
 }
 
 /*============SEARCH PAGE =========*/
@@ -1010,6 +1058,7 @@ blockquote{
 
 .notes-title{
 	font-size:80px;
+	padding-bottom:40px;
 }
 
 .nlt{
@@ -1017,9 +1066,6 @@ blockquote{
 	line-height: 26px;
 	margin-bottom:30px;
 	margin-top:50px;
-	&:first-child{
-		margin-top:80px;
-	}
 }
 
 .nlit{
@@ -1028,6 +1074,7 @@ blockquote{
 	font-size:20px;
 	line-height:26px;
 	margin:25px 0;
+
 }
 
 .legal p{
@@ -1062,7 +1109,6 @@ blockquote{
 	.align{
 		display:table-cell;
 		vertical-align: middle;
-		padding-bottom:40px;
 	}
 	button{
 		margin-bottom: 40px;
@@ -1170,7 +1216,7 @@ input[type="checkbox"]:checked + label span {
     color: rgba(243,160,171,1);
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"], input[type="tel"] {
   @include input-placeholder {
     color: $black;
   }
@@ -1255,6 +1301,11 @@ textarea {
 	}
 }
 
+.prod-imag{
+	width:100%;
+	height:auto;
+}
+
 .prod-arrow{
 	margin-top:20px;
 }
@@ -1285,4 +1336,44 @@ textarea {
 	margin:0 0 30px 0;
 }
 
+/*MEDIA QUERIES=============*/
 
+
+@media(max-width:767px){
+	.links{
+		font-size:80px;
+	}
+
+	.productor{
+		left:25% !important;
+	}
+
+	.qs .image{
+		padding:0 15px;
+	}
+
+}
+
+@media (max-width: 991px) {
+  
+	.post-wrapper{
+		width: 100%;
+	}
+
+	.links{
+		font-size:80px;
+	}
+
+
+	.prod-cont{
+		width:100% !important;
+	}
+
+	.productor{
+		width:48% !important;
+	}
+
+	#image{
+		padding:5% 0;
+	}
+}
