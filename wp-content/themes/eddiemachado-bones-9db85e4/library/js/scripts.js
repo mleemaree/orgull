@@ -305,7 +305,9 @@ $('#cursor').click(function(){
 
 /*AJAX forms============*/
 
+/*contact form*/
 
+$(document).ready(function(){
 $(function() {
 
   // Get the form.
@@ -324,7 +326,7 @@ $(function() {
 
     // Submit the form using AJAX.
     $.ajax({
-      type: 'POST',
+      type: $(form).attr('method'),
       url: $(form).attr('action'),
       data: formData
     })
@@ -332,6 +334,8 @@ $(function() {
       // Make sure that the formMessages div has the 'success' class.
       $(formMessages).removeClass('error');
       $(formMessages).addClass('success');
+      $('.contact-cont').fadeOut();
+      $('.conf-cont').delay(500).fadeIn();
 
       // Set the message text.
       $(formMessages).text(response);
@@ -358,6 +362,11 @@ $(function() {
     });
 
   });
+
+});
+
+
+
 
 });
 

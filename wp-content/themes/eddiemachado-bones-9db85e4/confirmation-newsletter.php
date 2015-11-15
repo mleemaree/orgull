@@ -2,7 +2,6 @@
 
 <?php get_header( ); ?>
 
-<?php get_footer(); ?>
 <script>
 $('.animateddrawer').addClass('open');
 </script>

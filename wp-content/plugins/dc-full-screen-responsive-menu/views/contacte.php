@@ -1,4 +1,4 @@
-    <div class="container contact-cont">
+<div class="container contact-cont">
         <div class="align">
             <div class="row pads">
                 <div class="col-xs-12 col-md-8 col-md-offset-2 cent">
@@ -6,7 +6,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-6 col-md-offset-3">
-                <form id="ajax-contact" class="contact" action="contact.php">
+                <form id="ajax-contact" class="contact" method="post" action="mailer.php">
                     <div class="row">
                         <div class="col-xs-12 col-sm-6"><input type="text" id="nom" name="nom" placeholder="Nom" class="required form-control" autocomplete="off" required /></div>
                         <div class="col-xs-12 col-sm-6"><input type="text" id="poblacio" name="poblacio" placeholder="Població"></div>
@@ -38,10 +38,25 @@
                         </div>
                     </div>
                 </form>
-
-                <!--success message-->
+                <!--error messages-->
                 <div id="form-messages"></div>
-
             </div>  
         </div>
     </div>
+ <!--success message-->
+                <div id="form-messages"></div>
+                <div class="conf-cont container">
+                    <div class="align">
+                        <div class="row pads">
+                            <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
+                                <h2 class="conf-title cent">Gràcies per confiar en nosaltres!
+                    Ens posarem en contacte amb tu al més aviat possible.</h2>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12 col-md-2 col-md-offset-5" style="text-align:center;">
+                                <button type="button" id="conf-accept" onclick="location.href='http://orgullpages.wp#main-anchor'">Aceptar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div><!--container-->
