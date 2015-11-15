@@ -37,5 +37,3 @@
         </div>
     </div>
 </div><!--container-->
-
-<div id="form-messages"></div>
