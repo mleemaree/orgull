@@ -307,7 +307,6 @@ $('#cursor').click(function(){
 
 /*contact form*/
 
-$(document).ready(function(){
 $(function() {
 
   // Get the form.
@@ -366,9 +365,26 @@ $(function() {
 });
 
 
+//NEwsletter
 
+$('#email-form').on('submit', function(event){
+  event.preventDefault();
+  var form = $(this);
+  $.ajax($('form').attr('action'),{
+    type: $('form').attr('method'),
+    data: form.serialize()
+  })
+  .done(function(response) {
+    $('.news-cont').fadeOut();
+    $('.conf-news').delay(500).fadeIn();
+
+    //Clear form
+    $('#email').val('');
+  });
 
 });
+
+
 
 
 
