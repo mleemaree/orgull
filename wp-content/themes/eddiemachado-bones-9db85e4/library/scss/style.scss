@@ -203,8 +203,16 @@ body, .container, div{
 	}
 }
 
-.cookie-close, .eye, #cookies{
-	display:inline-block;
+#eye{
+	float:right;
+}
+
+.cookie-text{
+	width:66.6666%;
+}
+
+#cookie-close svg{
+	float:right;
 }
 
 

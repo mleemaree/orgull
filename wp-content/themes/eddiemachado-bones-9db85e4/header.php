@@ -150,31 +150,32 @@
 
 <div id="cookies" class="container-fluid">
 	<div class="row">
-			<div class="eye pull-left">
-				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-					 width="31.748px" height="31.748px" viewBox="0 0 31.748 31.748" enable-background="new 0 0 31.748 31.748" xml:space="preserve">
-				<g>
-					<path fill="#333333" d="M15.874,31.374c-8.547,0-15.5-6.953-15.5-15.5s6.953-15.5,15.5-15.5s15.5,6.953,15.5,15.5
-						S24.421,31.374,15.874,31.374z M15.874,1.374c-7.995,0-14.5,6.505-14.5,14.5s6.505,14.5,14.5,14.5s14.5-6.505,14.5-14.5
-						S23.869,1.374,15.874,1.374z"/>
-					<path fill="#333333" d="M15.874,23.938c-5.012,0-9.531-3.172-11.244-7.894l-0.062-0.17l0.062-0.17
-						c1.713-4.722,6.232-7.894,11.245-7.894c5.011,0,9.529,3.172,11.243,7.894l0.062,0.17l-0.062,0.17
-						C25.404,20.766,20.886,23.938,15.874,23.938z M5.634,15.874c1.616,4.233,5.708,7.064,10.24,7.064c4.532,0,8.624-2.831,10.24-7.064
-						c-1.616-4.233-5.708-7.064-10.239-7.064C11.342,8.809,7.25,11.64,5.634,15.874z M15.875,18.874c-1.654,0-3-1.346-3-3s1.346-3,3-3
-						s3,1.346,3,3S17.529,18.874,15.875,18.874z M15.875,13.874c-1.103,0-2,0.897-2,2s0.897,2,2,2s2-0.897,2-2
-						S16.978,13.874,15.875,13.874z"/>
-				</g>
-				</svg>
-
-			</div>
-			<div class="text"><span>
+			<div class="hidden-xs col-sm-2"></div>
+				<div class="col-xs-1 col sm-1">
+					<svg version="1.1" id="eye" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+						 width="31.748px" height="31.748px" viewBox="0 0 31.748 31.748" enable-background="new 0 0 31.748 31.748" xml:space="preserve">
+					<g>
+						<path fill="#333333" d="M15.874,31.374c-8.547,0-15.5-6.953-15.5-15.5s6.953-15.5,15.5-15.5s15.5,6.953,15.5,15.5
+							S24.421,31.374,15.874,31.374z M15.874,1.374c-7.995,0-14.5,6.505-14.5,14.5s6.505,14.5,14.5,14.5s14.5-6.505,14.5-14.5
+							S23.869,1.374,15.874,1.374z"/>
+						<path fill="#333333" d="M15.874,23.938c-5.012,0-9.531-3.172-11.244-7.894l-0.062-0.17l0.062-0.17
+							c1.713-4.722,6.232-7.894,11.245-7.894c5.011,0,9.529,3.172,11.243,7.894l0.062,0.17l-0.062,0.17
+							C25.404,20.766,20.886,23.938,15.874,23.938z M5.634,15.874c1.616,4.233,5.708,7.064,10.24,7.064c4.532,0,8.624-2.831,10.24-7.064
+							c-1.616-4.233-5.708-7.064-10.239-7.064C11.342,8.809,7.25,11.64,5.634,15.874z M15.875,18.874c-1.654,0-3-1.346-3-3s1.346-3,3-3
+							s3,1.346,3,3S17.529,18.874,15.875,18.874z M15.875,13.874c-1.103,0-2,0.897-2,2s0.897,2,2,2s2-0.897,2-2
+							S16.978,13.874,15.875,13.874z"/>
+					</g>
+					</svg>
+				</div>
+			<div class="cookie-text col-xs-10 col-sm-6">
+			<span>
 				En aquest web fem servir galetes pròpies i de tercers per millorar els nostres 
 				serveis i mostrar-vos informació relacionada amb les vostres preferències mitjançant 
 				l’anàlisi dels vostres hàbits de navegació.  Si continueu navegant, considerem que 
 				n’accepteu l’ús. podeu canviar la configuració o obtenir més informació <a href="">aquí.</a>
 			</span></div>
-			<div id="cookie-close pull-right">
-				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+			<div id="cookie-close" class="pull-right col-xs-3">
+				<svg version="1.1" id="cookcls" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 					 width="19.843px" height="19.842px" viewBox="0 0 19.843 19.842" enable-background="new 0 0 19.843 19.842" xml:space="preserve">
 				<g>
 					
