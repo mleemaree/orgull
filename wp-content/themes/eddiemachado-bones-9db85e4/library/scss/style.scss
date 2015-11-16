@@ -321,6 +321,7 @@ a:focus{
 
 .animateddrawer{
 	@include transition-duration(200ms);
+	z-index:49;
 }
 
 #search-icono{
@@ -337,11 +338,19 @@ a:focus{
 	box-shadow:none;
 	position:relative;
 	top:3px;
+	left:0;
+	opacity:1;
+	display:inline-block;
 	&:focus{
 		outline:none;
 	}
 }
 
+
+.mover{
+	left:50px !important;
+	opacity:0 !important;
+}
       
 
         .leg-not{
@@ -427,7 +436,7 @@ object{
 }
 
 .menu-lines {
-	margin:15px 25px 0 0;
+	margin:15px 26px 0 0;
 	div{
 	display:inline-block;
 	margin: -15% 0;
