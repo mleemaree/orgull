@@ -180,15 +180,18 @@ if (s.isMobile()) {
 
 //=============GSAP STUFF
 //=======SINGLE POST
+$(window).load(function(){
  $('.hers')
     .hover(function(){
-      TweenMax.to(".soc", 0.2, {x:40, ease: Power1.easeIn, yoyo: true}, 0.2);
+      TweenMax.to(".soc", 0.5, {x:40}, 0.5);
       return false;
       },function(){
-      TweenMax.to(".soc", 0.2, {x:-150, ease: Power1.easeOut}, 0.2);
+      TweenMax.to(".soc", 0.5, {x:-150, ease: Power1.easeInOut}, 0.5);
       return false;
       
   });
+
+})
 
   var $qsorig = $('#orig');
 
@@ -419,7 +422,7 @@ $(function() {
 
       // Clear the form.
 
-      $('#email').val('');
+      $('#em').val('');
 
     })
     .fail(function(data) {
@@ -440,14 +443,21 @@ $(function() {
 });
 
 
-$('.animateddrawer, ·sf-btn').click(function(){
-  $('.conf-news, .conf-cont').fadeOut();
+
+$('.animateddrawer, #sf-btn, #back-icono').click(function(){
+  $('.conf-news, .conf-cont').fadeOut("fast");
 })
 
 
 
 
 
+$(document).on("click","#conf-accept, #conf-news", function(e) {
+       document.location.href='http://orgullpages.wp#main-anchor';
+       menu1.togglemenu();
+       $('#back-icono').fadeOut();
+
+ });
 
 
 

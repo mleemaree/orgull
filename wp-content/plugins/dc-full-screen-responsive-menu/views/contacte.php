@@ -54,7 +54,7 @@
                         </div>
                         <div class="row">
                             <div class="col-xs-12 col-md-2 col-md-offset-5" style="text-align:center;">
-                                <button type="button" id="conf-accept" onclick="location.href='http://orgullpages.wp#main-anchor'">Aceptar</button>
+                                <button type="button" id="conf-accept">Aceptar</button>
                             </div>
                         </div>
                     </div>

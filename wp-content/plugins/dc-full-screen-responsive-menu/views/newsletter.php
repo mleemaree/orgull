@@ -8,7 +8,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
-                    <input id="em" type="email" placeholder="El teu correu electrònic">
+                    <input id="em" type="email" name="email" autocomplete="off" placeholder="El teu correu electrònic">
                 </div>
             </div>
             <div class="row">
@@ -20,7 +20,6 @@
 
     </div>
 </div><!--container-->
-
 <!-- SUCCESS-->
 <div class="conf-news container">
     <div class="align">
@@ -32,7 +31,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12 col-md-2 col-md-offset-5" style="text-align:center;">
-                <button type="button" onclick="location.href='http://orgullpages.wp#main-anchor'" id="conf-news">Aceptar</button>
+                <button type="button" id="conf-news">Aceptar</button>
             </div>
         </div>
     </div>

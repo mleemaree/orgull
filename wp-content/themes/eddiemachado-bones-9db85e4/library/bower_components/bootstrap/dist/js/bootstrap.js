@@ -972,6 +972,9 @@ if (typeof jQuery === 'undefined') {
     this.checkScrollbar()
     this.setScrollbar()
     this.$body.addClass('modal-open')
+    $('.animateddrawer').addClass('open');
+    $('#sf-btn').addClass('mover');
+
 
     this.escape()
     this.resize()
@@ -1083,6 +1086,8 @@ if (typeof jQuery === 'undefined') {
       that.resetAdjustments()
       that.resetScrollbar()
       that.$element.trigger('hidden.bs.modal')
+      $('.animateddrawer').removeClass('open');
+    $('#sf-btn').removeClass('mover');
     })
   }
 

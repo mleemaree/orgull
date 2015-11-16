@@ -192,6 +192,22 @@ body, .container, div{
 	-ms-overflow-style: none;
 }
 
+#cookies{
+	position:fixed !important;
+	bottom: 50px !important;
+	height:80px;
+	background: rgb(242,109,126) !important;
+	z-index:99999999999999 !important;
+	div{
+		background: rgb(242,109,126) !important;
+	}
+}
+
+.cookie-close, .eye, #cookies{
+	display:inline-block;
+}
+
+
 ::-webkit-scrollbar { 
     display: none; 
 }
@@ -778,6 +794,7 @@ div.fullscreenmenu{
 .single-title{
 	font-family:$dala;
 	font-size:55px;
+	line-height:51px;
 	padding:3% 0;
 }
 
@@ -958,6 +975,7 @@ blockquote{
 	-webkit-backface-visibility: hidden;
 	position:relative;
 	top:10px;
+	right:20px;
 }
 
 /*============SEARCH PAGE =========*/
@@ -1140,6 +1158,10 @@ blockquote{
 	input{
 	border:none;
 	}
+}
+
+#em:visited{
+	background: $white;
 }
 
 .cent{

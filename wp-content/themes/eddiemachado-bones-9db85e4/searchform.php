@@ -5,10 +5,9 @@
         <a href="<?php _e('','bonestheme'); ?>" class="has-svg" ><object data="<?php echo get_template_directory_uri(); ?>/library/images/twitter-im.svg" type="image/svg+xml"></object></a>
         <a href="<?php _e('','bonestheme'); ?>" class="has-svg" ><object data="<?php echo get_template_directory_uri(); ?>/library/images/instagram.svg" type="image/svg+xml"></object></a>       
     </div>
-    <?php $img = plugins_url('../images/close.png', __FILE__);?>
     <div class="navcontent">
-       <div><a href='#' id="close-icono" class="has-svg" data-dismiss="modal"><object data="<?php echo get_template_directory_uri(); ?>/library/images/close.svg" type="image/svg+xml"></object></a></div>
-       <div><a href='#'  id="sclose-icono" class="has-svg" data-dismiss="modal"><span id="right"></span><span id="left"></span></a></div>
+       
+    
         <?php
         $menu_list = '<ul id="menu-' . $menu_id . '" class="nav-menu">';
         

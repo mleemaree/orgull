@@ -15,11 +15,7 @@
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
         $tel = preg_replace('/[^0-9]/', '', $_POST['tel']);
         $message = trim($_POST["comentari"]);
-        $merge_vars = array('FNAME'=>$name, 'LNAME'=>'',
-                  'GROUPINGS'=>array(
-                        array('city'=>$city, 'tel'=>$tel)
-                          )
-                      );
+        $merge_vars = array('FNAME'=>$name, 'LNAME'=>'');
         // Check that data was sent to the mailer.
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
