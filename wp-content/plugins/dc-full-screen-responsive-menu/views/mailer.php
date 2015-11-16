@@ -1,15 +1,18 @@
 <?php
 
+ // My modifications to mailer script from:
+    // http://blog.teamtreehouse.com/create-ajax-contact-form
+    // Added input sanitizing to prevent injection
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        require_once 'PHPMailer/PHPMailerAutoload.php';
         // Get the form fields and remove whitespace.
         $name = strip_tags(trim($_POST["nom"]));
-                $name = str_replace(array("\r","\n"),array(" "," "),$name);
+            $name = str_replace(array("\r","\n"),array(" "," "),$name);
         $city = strip_tags(trim($_POST["poblacio"]));
-        $tel = preg_replace('/[^0-9]/', '', $_POST['tel']);
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
+        $tel = preg_replace('/[^0-9]/', '', $_POST['tel']);
         $message = trim($_POST["comentari"]);
- 
         // Check that data was sent to the mailer.
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
@@ -19,22 +22,40 @@
         }
         // Set the recipient email address.
         // FIXME: Update this to your desired email address.
-        $recipient = "emily@epikture.com";
+        $recipient = "lee@mleemaree.com";
         // Set the email subject.
         $subject = "New contact from $name";
         // Build the email content.
         $email_content = "Name: $name\n";
-        $email_content .= "Poblaciò: $poblacio\n";
         $email_content .= "Email: $email\n\n";
-        $email_content .= "Telefon: $tel\n";
         $email_content .= "Message:\n$message\n";
         // Build the email headers.
         $email_headers = "From: $name <$email>";
+
+        $mailer = mail($recipient, $subject, $email_content, $email_headers);
         // Send the email.
-        if (mail($recipient, $subject, $email_content, $email_headers)) {
+        if ($mailer) {
             // Set a 200 (okay) response code.
             http_response_code(200);
-            
+            require_once 'PHPMailer/PHPMailerAutoload.php';
+            $mail = new PHPMailer;
+            //$mail->SMTPDebug = 3;                               // Enable verbose debug output
+
+            $mail->setFrom($email, 'Mailer');
+            $mail->addAddress('lee@mleemaree.com', 'Joe User');     // Add a recipient
+
+            $mail->Subject = "From: $name <$email>";
+            $mail->Body    = "Message:\n$message\n";
+            $mail->Body = "Poblaciò:\n$city\n";
+            $mail->Body = "Telefòn:\n$tel\n";
+            $mail->AltBody = "Message:\n$message\n";
+
+            if(!$mail->send()) {
+                echo 'Message could not be sent.';
+                echo 'Mailer Error: ' . $mail->ErrorInfo;
+            } else {
+                echo 'Message has been sent';
+            }
         } else {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
@@ -45,4 +66,8 @@
         http_response_code(403);
         echo "There was a problem with your submission, please try again.";
     }
+
+
+    
+
 ?>
