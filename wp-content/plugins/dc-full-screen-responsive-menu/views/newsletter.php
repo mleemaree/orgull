@@ -1,6 +1,6 @@
 <div class="news-cont container">
     <div class="align">
-        <form id="email-form" method="post" action="subscribe.php" accept-charset="utf-8">
+        <form id="email-form" method="post" action="<?php echo get_template_directory_uri(); ?>/subscribe.php" accept-charset="utf-8">
             <div class="row pads">
                 <div class="col-xs-12 col-sm-8 col-sm-offset-2 col-md-4 col-md-offset-4">
                     <h2 class="news-title cent">Rep al teu mail les últimes notícies d’Orgull Pagès</h2>

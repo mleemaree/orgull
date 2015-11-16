@@ -342,17 +342,7 @@ a:focus{
 	}
 }
 
-        .contact-cont{
-            display:none;
-        }
-
-        .news-cont{
-            display:none;
-        }
-
-        .conf-cont {
-        	display:none;
-    	}
+      
 
         .leg-not{
             display:none;
@@ -1122,7 +1112,19 @@ blockquote{
 	}
 }
 
+.contact-cont{
+            display:none;
+        }
 
+        .news-cont{
+            display:none;
+        }
+
+        .conf-cont, .conf-news {
+        	display:none;
+        	@include transition-duration(500ms);
+
+    	}
 
 .search-cont{
 	margin:0 auto;

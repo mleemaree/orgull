@@ -20,8 +20,8 @@
  * ( source: http://andylangton.co.uk/blog/development/get-viewport-size-width-and-height-javascript )
 */
 function updateViewportDimensions() {
-	var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0],x=w.innerWidth||e.clientWidth||g.clientWidth,y=w.innerHeight||e.clientHeight||g.clientHeight;
-	return { width:x,height:y };
+  var w=window,d=document,e=d.documentElement,g=d.getElementsByTagName('body')[0],x=w.innerWidth||e.clientWidth||g.clientWidth,y=w.innerHeight||e.clientHeight||g.clientHeight;
+  return { width:x,height:y };
 }
 // setting the viewport width
 var viewport = updateViewportDimensions();
@@ -33,12 +33,12 @@ var viewport = updateViewportDimensions();
  * ( source: http://stackoverflow.com/questions/2854407/javascript-jquery-window-resize-how-to-fire-after-the-resize-is-completed )
 */
 var waitForFinalEvent = (function () {
-	var timers = {};
-	return function (callback, ms, uniqueId) {
-		if (!uniqueId) { uniqueId = "Don't call this twice without a uniqueId"; }
-		if (timers[uniqueId]) { clearTimeout (timers[uniqueId]); }
-		timers[uniqueId] = setTimeout(callback, ms);
-	};
+  var timers = {};
+  return function (callback, ms, uniqueId) {
+    if (!uniqueId) { uniqueId = "Don't call this twice without a uniqueId"; }
+    if (timers[uniqueId]) { clearTimeout (timers[uniqueId]); }
+    timers[uniqueId] = setTimeout(callback, ms);
+  };
 })();
 
 // how long to wait before deciding the resize has stopped, in ms. Around 50-100 should work ok.
@@ -67,8 +67,8 @@ var timeToWaitForLast = 100;
  *    // if we're on the home page, we wait the set amount (in function above) then fire the function
  *    if( is_home ) { waitForFinalEvent( function() {
  *
- *	// update the viewport, in case the window size has changed
- *	viewport = updateViewportDimensions();
+ *  // update the viewport, in case the window size has changed
+ *  viewport = updateViewportDimensions();
  *
  *      // if we're above or equal to 768 fire this off
  *      if( viewport.width >= 768 ) {
@@ -102,7 +102,7 @@ function loadGravatars() {
   jQuery('.comment img[data-gravatar]').each(function(){
     jQuery(this).attr('src',jQuery(this).attr('data-gravatar'));
   });
-	}
+  }
 } // end function
 
 
@@ -214,7 +214,6 @@ $('·back-icono').click(function(){
   yoyo: true, 
   ease: Sine.easeInOut, y: 0
 });
-
  TweenMax.from("#fuet-img", 1, {
   scaleX:0.7, 
   scaleY:0.7,
@@ -223,7 +222,6 @@ $('·back-icono').click(function(){
   yoyo:true,
   ease: Elastic.easeInOut.config(1, 0.3), y: 0 
 });
-
 TweenMax.to("#pa-img", 2, {
   rotation:20, 
   transformOrigin:"50% 100%",
@@ -334,7 +332,9 @@ $(function() {
       $(formMessages).removeClass('error');
       $(formMessages).addClass('success');
       $('.contact-cont').fadeOut();
-      $('.conf-cont').delay(500).fadeIn();
+      $('.conf-cont').delay(500).css({
+      'display':'table'
+    });
 
       // Set the message text.
       $(formMessages).text(response);
@@ -367,7 +367,7 @@ $(function() {
 
 //NEwsletter
 
-$('#email-form').on('submit', function(event){
+/*$('#email-form').on('submit', function(event){
   event.preventDefault();
   var form = $(this);
   $.ajax($('form').attr('action'),{
@@ -382,9 +382,67 @@ $('#email-form').on('submit', function(event){
     $('#email').val('');
   });
 
+});*/
+$(function() {
+
+  // Get the form.
+  var form = $('#email-form');
+
+  // Get the messages div.
+  var formMessages = $('#form-messages');
+
+  // Set up an event listener for the contact form.
+  $(form).submit(function(e) {
+    // Stop the browser from submitting the form.
+    e.preventDefault();
+
+    // Serialize the form data.
+    var formData = $(form).serialize();
+
+    // Submit the form using AJAX.
+    $.ajax({
+      type: $(form).attr('method'),
+      url: $(form).attr('action'),
+      data: formData
+    })
+    .done(function(response) {
+      // Make sure that the formMessages div has the 'success' class.
+      $(formMessages).removeClass('error');
+      $(formMessages).addClass('success');
+    $('.news-cont').fadeOut();
+    $('.conf-news').delay(500).css({
+      'display':'table'
+    });
+
+      // Set the message text.
+      $(formMessages).text(response);
+
+      // Clear the form.
+
+      $('#email').val('');
+
+    })
+    .fail(function(data) {
+      // Make sure that the formMessages div has the 'error' class.
+      $(formMessages).removeClass('success');
+      $(formMessages).addClass('error');
+
+      // Set the message text.
+      if (data.responseText !== '') {
+        $(formMessages).text(data.responseText);
+      } else {
+        $(formMessages).text('Oops! An error occured and your message could not be sent.');
+      }
+    });
+
+  });
+
 });
 
 
+$('.animateddrawer, ·sf-btn').click(function(){
+  $('.conf-news, .conf-cont').fadeOut();
+})
 
 
 

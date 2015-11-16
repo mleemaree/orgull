@@ -6,7 +6,7 @@
                 </div>
             </div>
             <div class="col-xs-12 col-md-6 col-md-offset-3">
-                <form id="ajax-contact" class="contact" method="post" action="mailer.php">
+                <form id="ajax-contact" class="contact" method="post" action="<?php echo get_template_directory_uri(); ?>/mailer.php">
                     <div class="row">
                         <div class="col-xs-12 col-sm-6"><input type="text" id="nom" name="nom" placeholder="Nom" class="required form-control" autocomplete="off" required /></div>
                         <div class="col-xs-12 col-sm-6"><input type="text" id="poblacio" name="poblacio" placeholder="Població"></div>
@@ -44,7 +44,6 @@
         </div>
     </div>
  <!--success message-->
-                <div id="form-messages"></div>
                 <div class="conf-cont container">
                     <div class="align">
                         <div class="row pads">

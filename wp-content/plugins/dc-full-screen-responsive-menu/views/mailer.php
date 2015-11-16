@@ -5,8 +5,8 @@
     // Added input sanitizing to prevent injection
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        require_once 'PHPMailer/PHPMailerAutoload.php';
-        require_once 'inc/MCAPI.class.php';
+    require_once '<?php echo get_template_directory_uri(); ?>/library/PHPMailer/PHPMailerAutoload';
+        require_once '<?php echo get_template_directory_uri(); ?>/library/inc/MCAPI.class.php';
         $api = new MCAPI('9be060065ba208a49d8695378aaa6bef-us12');
         // Get the form fields and remove whitespace.
         $name = strip_tags(trim($_POST["nom"]));
