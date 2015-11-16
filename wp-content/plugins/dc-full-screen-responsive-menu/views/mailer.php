@@ -6,6 +6,8 @@
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         require_once 'PHPMailer/PHPMailerAutoload.php';
+        require_once 'inc/MCAPI.class.php';
+        $api = new MCAPI('9be060065ba208a49d8695378aaa6bef-us12');
         // Get the form fields and remove whitespace.
         $name = strip_tags(trim($_POST["nom"]));
             $name = str_replace(array("\r","\n"),array(" "," "),$name);
@@ -13,6 +15,11 @@
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
         $tel = preg_replace('/[^0-9]/', '', $_POST['tel']);
         $message = trim($_POST["comentari"]);
+        $merge_vars = array('FNAME'=>$name, 'LNAME'=>'',
+                  'GROUPINGS'=>array(
+                        array('city'=>$city, 'tel'=>$tel)
+                          )
+                      );
         // Check that data was sent to the mailer.
         if ( empty($name) OR empty($message) OR !filter_var($email, FILTER_VALIDATE_EMAIL)) {
             // Set a 400 (bad request) response code and exit.
@@ -33,8 +40,19 @@
         $email_headers = "From: $name <$email>";
 
         $mailer = mail($recipient, $subject, $email_content, $email_headers);
+
+        $retval = $api->listSubscribe( 
+        'c3ad951a26', 
+        $email, 
+        $merge_vars, 
+        'html', 
+        false, 
+        true,
+        true 
+        );
+
         // Send the email.
-        if ($mailer) {
+        if ($mailer && $api->errorCode) {
             // Set a 200 (okay) response code.
             http_response_code(200);
             require_once 'PHPMailer/PHPMailerAutoload.php';
