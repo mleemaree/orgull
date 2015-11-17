@@ -67,7 +67,7 @@
             opacity: 0.2}, 350);
         $(this).find('.hover-elem').animate({
             opacity:1,
-            top:'-=50px'            }, 350);
+            top:'-=50px'}, 350);
     },function(){
         $(this).find('.prod-emp, .prod-prof, .prod-nem,.prod-imag').animate({
             opacity: 1,

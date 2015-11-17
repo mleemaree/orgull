@@ -30,7 +30,25 @@
                   </div>
                   <div id="image" class="col-xs-12 col-md-7 col-md-offset-2">
                   <?php if(get_field('video')){
-                   the_field('video');
+                      // get iframe HTML
+$iframe = get_field('video');
+
+
+// use preg_match to find iframe src
+preg_match('/src="(.+?)"/', $iframe, $matches);
+$src = $matches[1];
+
+
+// add extra params to iframe src
+$params = array(
+    'showinfo'    => 0,
+);
+
+$new_src = add_query_arg($params, $src);
+
+$iframe = str_replace($src, $new_src, $iframe);
+echo $iframe;
+                   //the_field('video');
                    }else{?>
 
                     <?php 
@@ -137,7 +155,25 @@
                   </div>
                   <div id="image" class="col-xs-12 col-md-7 col-md-offset-2">
                   <?php if(get_field('video')){
-                   the_field('video');
+                      // get iframe HTML
+$iframe = get_field('video');
+
+
+// use preg_match to find iframe src
+preg_match('/src="(.+?)"/', $iframe, $matches);
+$src = $matches[1];
+
+
+// add extra params to iframe src
+$params = array(
+    'showinfo'    => 0,
+);
+
+$new_src = add_query_arg($params, $src);
+
+$iframe = str_replace($src, $new_src, $iframe);
+echo $iframe;
+                   //the_field('video');
                    }else{?>
 
                     <?php 
@@ -237,11 +273,28 @@
                     <h1 class="single-title" itemprop="headline" rel="bookmark"><?php the_title(); ?></h1>
                   </div>
                   <div id="image" class="col-xs-12 col-md-7 col-md-offset-2">
-                     <?php if(get_field('video')){
-                   the_field('video');
-                   }else{?>
+                     <?php 
+$iframe = get_field('video');
+                     if($iframe){
+                   //the_field('video');
+                   
 
-                    <?php 
+
+// use preg_match to find iframe src
+preg_match('/src="(.+?)"/', $iframe, $matches);
+$src = $matches[1];
+
+
+// add extra params to iframe src
+$params = array(
+    'showinfo'    => 0,
+);
+
+$new_src = add_query_arg($params, $src);
+
+$iframe = str_replace($src, $new_src, $iframe);
+echo $iframe;
+                   }else{
 
                   $image =  the_post_thumbnail('');
 

@@ -145,16 +145,20 @@
                   					
 
 									        <?php $tags = get_the_tags();
+									        $count = 0;
 											if( $tags ) : ?>
 											  <p class="tags">
-											  <?php foreach( $tags as $tag ) { ?>
+											  <?php foreach( $tags as $tag ) { 
+											  	$count++;
+												if ($count <= 3 ) {?>
+
 											   <span class="<?php echo $tag->slug; ?>"><a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a></span>
-											  <?php } ?>
+											  <?php }} ?>
 											</p>
 											
-											<?php endif; ?>
+											
 
-
+<?php endif; ?>
 								</footer>
 
 							</article>
@@ -184,7 +188,47 @@
 							<?php endif; ?>
 
 
+<div id="cookies" class="container-fluid">
+	<div class="inner-cook">
+			<div class="hidden-xs col-sm-2"></div>
+				<div class="col-xs-1 dd">
+					<object data="<?php echo get_template_directory_uri(); ?>/library/images/eye.svg" type="image/svg+xml"></object>
+				</div>
+			<div class="cookie-text col-xs-10 col-sm-6">
+			<span>
+				En aquest web fem servir galetes pròpies i de tercers per millorar els nostres 
+				serveis i mostrar-vos informació relacionada amb les vostres preferències mitjançant 
+				l’anàlisi dels vostres hàbits de navegació.  Si continueu navegant, considerem que 
+				n’accepteu l’ús. podeu canviar la configuració o obtenir més informació <a id="cookie-link" href="<?php echo get_page_link(194); ?>">aquí.</a>
+			</span></div>
+			<div class="col-xs-3"></div>
+	</div>
+	<div id="cookie-close">
+				<svg version="1.1" id="cookcls" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+					 width="19.843px" height="19.842px" viewBox="0 0 19.843 19.842" enable-background="new 0 0 19.843 19.842" xml:space="preserve">
+				<g>
+					
+						<rect x="-1.475" y="8.922" transform="matrix(0.7071 0.7071 -0.7071 0.7071 9.9215 -4.109)" fill="#333333" width="22.791" height="2"/>
+					
+						<rect x="8.921" y="-1.476" transform="matrix(0.7071 0.7071 -0.7071 0.7071 9.9212 -4.1096)" fill="#333333" width="2" height="22.793"/>
+				</g>
+				</svg>
 
+		</div>
+	
+</div>
+
+<script type="text/javascript">
+var cookie = document.cookie;
+if (cookie.indexOf('visited=', 0) == -1) {
+    var expiration = new Date();
+    expiration.setDate(expiration.getDate()+1);
+    document.cookie = 'visited=1;expires=' + expiration + ';path=/';
+
+    var element = document.getElementById('cookies');
+    element.style.display = 'table';
+}
+</script>
 
 
 <?php get_footer(); ?>

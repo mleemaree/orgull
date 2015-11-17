@@ -4,7 +4,7 @@
             <h1 class="notes-title">Notes Legals</h1>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="padding:35px;">
         <div class="col-xs-12 col-sm-8 legal">
         <h3 class="nlt">Informació general</h3>
             <p>En compliment de la llei 34/2002, d’11 de juliol, de serveis de la societat de la informació i del comerç electrònic:

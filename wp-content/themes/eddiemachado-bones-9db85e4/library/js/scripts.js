@@ -460,6 +460,14 @@ $(document).on("click","#conf-accept, #conf-news", function(e) {
  });
 
 
+$(window).load(function(){
+  $('#cookies').addClass('open');
+});
+
+$('#cookcls').click(function(){
+  $('#cookies').removeClass('open').addClass('close');
+});
+
 
 
 

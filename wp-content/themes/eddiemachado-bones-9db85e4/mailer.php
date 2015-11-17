@@ -5,7 +5,7 @@
     // Added input sanitizing to prevent injection
     // Only process POST reqeusts.
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        require_once 'library/PHPMailer/PHPMailerAutoload.php';
+        
         require_once 'library/inc/MCAPI.class.php';
         $api = new MCAPI('9be060065ba208a49d8695378aaa6bef-us12');
         // Get the form fields and remove whitespace.
@@ -54,27 +54,10 @@
 
             // Set a 200 (okay) response code.
             http_response_code(200);
-            require_once 'library/PHPMailer/PHPMailerAutoload.php';
-            $mail = new PHPMailer;
-            //$mail->SMTPDebug = 3;                               // Enable verbose debug output
-
-            $mail->setFrom($email, 'Mailer');
-            $mail->addAddress('lee@mleemaree.com', 'Joe User');     // Add a recipient
-
-            $mail->Subject = "From: $name <$email>";
-            $mail->Body    = "Message:\n$message\n" . "Poblaciò:\n$city\n" . "Telefòn:\n$tel\n";
-            $mail->AltBody = "Message:\n$message\n";
-
-            if(!$mail->send()) {
-                echo 'Message could not be sent.';
-                echo 'Mailer Error: ' . $mail->ErrorInfo;
-            } else {
-                echo 'Message has been sent';
-            }
         } if ($api ->errorCode) {
             // Set a 500 (internal server error) response code.
             http_response_code(500);
-            
+            echo '500';
         }
     } else {
         // Not a POST request, set a 403 (forbidden) response code.

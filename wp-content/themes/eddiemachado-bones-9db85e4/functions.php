@@ -259,5 +259,9 @@ function remove_width_attribute( $html ) {
    return $html;
 }
 
+if(in_category('productors')){
+      wp_set_post_tags( $post_ID, 'productor', true );
+      echo 'POL';
+  };
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
