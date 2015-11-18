@@ -13,7 +13,7 @@
 
 				<?php echo $image['url'];?>
 
-			<?php endif; ?>)
+			<?php endif; ?>) no-repeat;
 
 
 		}
@@ -21,6 +21,8 @@
 		#menu-container{
 			display:none;
 		}
+
+
 	</style>
 
 </head>
@@ -57,8 +59,8 @@
 
 		<div class="row">
 		<a href="<?php the_field ('link', 15); ?>">
-			<div class="main-logo col-xs-10 col-xs-offset-1" style="background-size:115%;
-		background-position:50% 47%;">
+			<div class="main-logo col-xs-10 col-xs-offset-1" style="background-size:cover;
+		background-position:50% 47%; background-color:rgba(250,250,250,1);">
 			
 			<?php 
 					$term = get_field('tax', 15);
@@ -102,7 +104,7 @@
 
 <div id="wayward-up" style="height:50px;"></div>
 
-<section class="container posts" id="main-anchor">
+<section class="posts container" id="main-anchor">
 
 
 
@@ -120,18 +122,42 @@
 									</div>
 									<div class="row image">
 
-										<div class="image-wrapper col-xs-8 col-xs-offset-2">
+										<div class="image-wrapper col-xs-12 col-sm-8 col-sm-offset-2">
+
+											
 											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+											<div class="post-vid">
+												<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													 width="16.609px" height="33.219px" viewBox="0 0 16.609 33.219" style="enable-background:new 0 0 16.609 33.219;"
+													 xml:space="preserve">
+												<polygon style="fill:#FAFAFA;" points="0,0 0,33.219 16.609,16.61 "/>
+												</svg>
+												<svg class="vid-cr">
+												  <circle cx="60" cy="60" r="50" stroke="rgba(250,250,250,1)" stroke-width="4" fill-opacity="0"/>
+												</svg>
+													
 
-											<?php 
 
-											$image = the_post_thumbnail('large');
+											</div>
+											<?php if(get_field('video') || !empty($image)){
+												 $image =  the_post_thumbnail('');?>
+													<script>
+														$('.post-vid').show();
 
-											if( !empty($image) ): ?>
+													</script>
+							                  <?php }else{?>
 
-												<img class="post-img img img-responsive"  src="<?php echo $image['url']; ?>" />
+							                    <?php 
 
-											<?php endif; ?></a>
+							                  $image =  the_post_thumbnail('');
+
+							                  if( !empty($image) ): ?>
+
+							                    <img class="img img-responsive single-post-img" src="<?php echo $image['url']; ?>" />
+
+							                  <?php endif; ?>
+							                  <?php  }; ?></a>
+
 										</div>
 
 									</div>
@@ -150,7 +176,7 @@
 											  <p class="tags">
 											  <?php foreach( $tags as $tag ) { 
 											  	$count++;
-												if ($count <= 3 ) {?>
+												if ($count <= 5 ) {?>
 
 											   <span class="<?php echo $tag->slug; ?>"><a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a></span>
 											  <?php }} ?>
@@ -190,18 +216,18 @@
 
 <div id="cookies" class="container-fluid">
 	<div class="inner-cook">
-			<div class="hidden-xs col-sm-2"></div>
-				<div class="col-xs-1 dd">
+			<div class="hidden-xs hidden-sm col-md-2"></div>
+				<div class="col-xs-1 col-sm-2 col-md-1 eye dd">
 					<object data="<?php echo get_template_directory_uri(); ?>/library/images/eye.svg" type="image/svg+xml"></object>
 				</div>
-			<div class="cookie-text col-xs-10 col-sm-6">
+			<div class="cookie-text col-xs-10 col-sm-8 col-md-6">
 			<span>
 				En aquest web fem servir galetes pròpies i de tercers per millorar els nostres 
 				serveis i mostrar-vos informació relacionada amb les vostres preferències mitjançant 
 				l’anàlisi dels vostres hàbits de navegació.  Si continueu navegant, considerem que 
 				n’accepteu l’ús. podeu canviar la configuració o obtenir més informació <a id="cookie-link" href="<?php echo get_page_link(194); ?>">aquí.</a>
 			</span></div>
-			<div class="col-xs-3"></div>
+			<div class="col-xs-2 col-sm-2 col-md-3"></div>
 	</div>
 	<div id="cookie-close">
 				<svg version="1.1" id="cookcls" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

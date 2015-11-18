@@ -27,7 +27,7 @@ $menu_items = wp_get_nav_menu_items($menu_id);
         foreach ( (array) $menu_items as $key => $menu_item ) {
             $title = $menu_item->title;
             $url = $menu_item->url;
-            $menu_list .= '<li><a href="' . $url . '">' . $title . '</a></li>';
+            $menu_list .= '<li><div class="sm-lk"><a href="' . $url . '"><span>'. $title . '</span></a></div></li>';
         }
         echo $menu_list .= '</ul>';
         ?>

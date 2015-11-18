@@ -265,7 +265,7 @@ object svg{
 
 #cookie-close svg{
 	float:right;
-	margin: 19.735px 2.735px 0 0;
+	margin: 19.735px 4.735px 0 0;
 }
 
 
@@ -408,6 +408,7 @@ a:focus{
 	height:28px;
 }
 
+
 #sf-btn{
 	background-image:none;
 	background:none;
@@ -485,24 +486,19 @@ a svg {
   display: inline-block;
 }
 
-.has-svg::after, button::after {
+.has-svg::after, button::after , .active-tag::after{
   content: ""; 
   position: absolute; 
   top: 0; 
   right: 0; 
   bottom: 0; 
   left: 0;
+  cursor:pointer;
 }
 
 
-#facebook::after{
-	 content: ""; 
-  position: absolute; 
-  top: 0; 
-  right: 0; 
-  bottom: 0; 
-  left: 0;
-}
+
+
 
 
 object{
@@ -635,12 +631,19 @@ div.fullscreenmenu{
 	}
 }
 
+.sm-lk{
+		width:25%;
+		margin:0 auto;
+	}
+
 #under-menu{
 	position:absolute;
 	bottom:20px;
 	box-shadow:none;
 	border:none;
 	background:none;
+	right:-5px;
+	padding-left:0;
 }
 
 #um li{
@@ -649,6 +652,8 @@ div.fullscreenmenu{
 	font-size:16px;
 	padding:2%;
 	color: $black;
+	cursor:pointer;
+	@include stretchy(1px);
 }
 
 .hentry{
@@ -677,7 +682,7 @@ div.fullscreenmenu{
 .main-logo{
 	height:400px;
 	width: 100%;
-	display: table;
+	display:table;
 }
 
 .main-logo::after{
@@ -706,7 +711,7 @@ div.fullscreenmenu{
 	font-size:80px;
 	text-align:center;
 	color:white;
-	width:585px;
+	width:auto;
 	margin: 0 auto;
 	overflow-wrap:break-word;
 	z-index:4;
@@ -793,6 +798,32 @@ div.fullscreenmenu{
 	}
 }
 
+.post-vid{
+		position:absolute;
+		z-index:2;
+		top:44%;
+		right:0;
+		left:0;
+		margin: auto auto;
+		display:none;
+		background:transparent !important;
+	}
+
+.vid-cr{
+	position: absolute;
+    top: -117%;
+    left: 0;
+    right: 5px;
+    margin: auto;
+    width:120px;
+	height:120px;
+	@include transition-duration(400ms);
+	&:hover{
+		-webkit-transform: scale(0.9, 0.9);
+		@include transition-duration(400ms);
+	}
+}	
+
 .image-wrapper{
 	text-align:center;
 }
@@ -800,12 +831,17 @@ div.fullscreenmenu{
 .article-footer{
 	text-align:center;
 	padding:20px;
+	span{
+		line-height:2.5;
+		white-space: normal;
+	}
 	a{
 		font-family:$ssp;
-		color:black;
+		color:$black;
+		white-space: normal !important;
 		text-transform: capitalize;
 		padding: 0.5% 2%;
-		margin: 0 0.8%;
+		margin: 0 0.4%;
 		border: 1px solid $black;
 		@include border-radius(5px);
 		@include transition-duration(500ms);
@@ -824,10 +860,18 @@ div.fullscreenmenu{
 	}
 }
 
+.hover{
+	background:$black;
+	color:$white;
+}
+
 .single-foot{
 	text-align:left;
 	padding-top:35px;
 	padding-bottom:150px;
+	span{
+		line-height:1.7;
+	}
 }
 
 .pagination{
@@ -857,7 +901,23 @@ div.fullscreenmenu{
 
 .tags a{
 	font-size:12px;
+	white-space: nowrap !important;
+
 }
+
+#tagx{
+	pointer-events:none;
+}
+
+.dlkd{
+	display: inline-block;
+    background: aqua !important;
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    bottom: 28px;
+}
+
 
 /* ================= SINGLE POST ===============*/
 
@@ -1007,17 +1067,21 @@ blockquote{
 	color: rgba(133,133,133,1);
 	z-index: 3;
 	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
 }
 
 #obj{
 	display:inline;
 	padding-left:45px;
 	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
 }
 
 #compartir{
 	z-index:3;
 	position:absolute;
+		-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
 }
 
 #obj::after{
@@ -1047,6 +1111,7 @@ blockquote{
 	height:100px;
 	width:200px;
 	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility:hidden;
 	position:relative;
 	top:10px;
 	right:20px;
@@ -1361,7 +1426,7 @@ textarea {
 #nores{
 	font-size:80px;
 	line-height:56px;
-	margin-top: 70px;
+	margin-top: 140px;
 }
 
 #has-searched{
@@ -1452,28 +1517,21 @@ textarea {
 	margin:0 0 30px 0;
 }
 
+
+
 /*MEDIA QUERIES=============*/
 
 
-@media(max-width:767px){
-	.links{
-		font-size:80px;
-	}
 
-	.productor{
-		left:25% !important;
-	}
-
-	.qs .image{
-		padding:0 15px;
-	}
-
-}
 
 @media (max-width: 991px) {
   
 	.post-wrapper{
-		width: 100%;
+		width: 95%;	
+	}
+
+	.prod-cont{
+		padding: 0 25px;
 	}
 
 	.links{
@@ -1486,10 +1544,200 @@ textarea {
 	}
 
 	.productor{
-		width:48% !important;
+		width:48% ;
 	}
 
 	#image{
 		padding:5% 0;
 	}
+
+	.social-icons{
+		width:50%;
+	}
+
+	.legal{
+		margin-left:5%;
+	}
+
+	#back-icono{
+		right: 78px;
+   	 	top: 27px;
+	}
+
+
 }
+
+@media(min-width:500px) and (max-width:991){
+	.post-vid{
+		top:36%;
+	}
+}
+
+@media(max-width:767px){
+
+	.inner-cook{
+		padding:0;
+	}
+
+	.cookie-text{
+		padding-right:0 !important;
+		padding-top:19.735px;
+		padding-bottom:19.735px;
+	}
+	
+	.post-wrapper{
+		left:10px !important;
+	}
+
+	.links{
+		font-size:80px;
+	}
+
+	.productor{
+		left: 0 !important;
+		width:100% !important;
+	}
+
+	.hover-elem{
+		top:150px;
+		left:140px;
+	}
+
+	.qs .image{
+		padding:0 15px;
+	}
+
+	#s{
+		height:50px;
+		font-size:50px;
+	}
+
+	.tit{
+		padding:20px 0;
+	}
+
+	.social-icons{
+		width:50%;
+	}
+
+	.main-logo{
+		display:block;
+	}
+
+	.hashtag{
+		position:relative;
+		line-height:8em;
+		font-size:50px;
+	}
+
+	.links{
+		font-size:35px;
+	}
+
+	.alignleft{
+		right:0;
+	}
+
+	.menu-lines{
+		margin-right:30px;
+	}
+
+	.sm-lk{
+		width:33%;
+		margin:0 auto;
+	}
+
+	#under-menu{
+		bottom:50px;
+	}
+
+	.fullscreenmenu{
+		
+	}
+
+	#oli-words{
+		padding-bottom:50px;
+	}
+
+	iframe{
+		width:100%;
+		height:250px;
+	}
+	
+	#back-icono{
+		right: 78px;
+   	 	top: 27px;
+	}
+
+	.legal{
+		margin-left:0;
+		width:100% !important;
+		padding-right:40px !important;
+	}
+
+	.entry-title{
+		padding:0 15px;
+		width:100%;
+	}
+
+	.imp .entry-title{
+		padding:0;
+		a{
+			font-size:46px;
+			line-height:42px;
+		}
+	}
+
+	.imp .title-wrapper{
+		top:21px;
+	}
+
+	.image-wrapper{
+		padding: 0;
+		img{
+			padding: 0 15px;
+		}
+	}
+	
+	.navcontent{
+		left:8px;
+	}
+
+	div.fullscreenmenu ul.nav-menu li a{
+		font-size:50px !important;
+		line-height:1.5;
+	}
+
+	#sf-btn{
+		left:10px;
+	}
+
+	.menu-logo{
+		margin-left:15px;
+	}
+
+	#nores{
+		font-size: 60px;
+	}
+
+	#has-searched{
+		margin-top: 0;
+	}
+	.hers{
+		padding-top:10px;
+	}
+
+	.searchie{
+	left: 8px !important;
+	}
+
+	.hashtag-wrap{
+		display:block;
+	}
+	
+	#prod-header{
+		font-size: 60px;
+	}
+
+}
+

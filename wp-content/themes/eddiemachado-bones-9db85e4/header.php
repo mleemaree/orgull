@@ -100,7 +100,7 @@
 			            </g>
 			            </svg>
 			        </a></li>
-			        <li><a href="https://instagram.com/orgullpages/" class="has-svg"><object data="<?php echo get_template_directory_uri(); ?>/library/images/instagram.svg" type="image/svg+xml"></object></a></li>    
+			        <li id="instagram"><a href="https://instagram.com/orgullpages/"><object data="<?php echo get_template_directory_uri(); ?>/library/images/instagram.svg" type="image/svg+xml"></object></a></li>    
 			    </ul>
     		</div>
 

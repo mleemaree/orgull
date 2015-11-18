@@ -22,12 +22,12 @@
     <div id="searching" class="container pads">
 		<form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url( '/' ); ?>">
 	    	<div id="svert" class="row">
-		    	<div class="col-xs-11">
+		    	<div class="col-xs-8 col-sm-10 col-md-11">
 			        <label for="s" class="screen-reader-text"><?php _e('','bonestheme'); ?></label>
 			        <input type="search" id="s" class="" name="s" value="" autocomplete="off" autofocus />
 
 			    </div>
-			    <div class="col-xs-1 eglass">
+			    <div class="col-xs-4 col-sm-2 col-md-1 eglass">
 			        <button type="submit" id="searchsubmit" ><object data="<?php echo get_template_directory_uri(); ?>/library/images/search.svg" type="image/svg+xml"></object></button>
                 </div>
 		    </div>

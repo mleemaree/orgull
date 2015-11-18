@@ -25,17 +25,40 @@
 									</div>
 									<div class="row image">
 
-										<div class="image-wrapper col-xs-8 col-xs-offset-2">
+										<div class="image-wrapper col-xs-12 col-sm-8 col-sm-offset-2">
 											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-											<?php 
+											<div class="post-vid">
+												<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+													 width="16.609px" height="33.219px" viewBox="0 0 16.609 33.219" style="enable-background:new 0 0 16.609 33.219;"
+													 xml:space="preserve">
+												<polygon style="fill:#FAFAFA;" points="0,0 0,33.219 16.609,16.61 "/>
+												</svg>
+												<svg class="vid-cr">
+												  <circle cx="60" cy="60" r="50" stroke="rgba(250,250,250,1)" stroke-width="4" fill-opacity="0"/>
+												</svg>
+													
 
-											$image = the_post_thumbnail('medium');
 
-											if( !empty($image) ): ?>
+											</div>
+											<?php if(get_field('video') || !empty($image)){
+												 $image =  the_post_thumbnail('');?>
+													<script>
+														$('.post-vid').show();
 
-												<img class="post-img img img-responsive"  src="<?php echo $image['url']; ?>" />
+													</script>
+							                  <?php }else{?>
 
-											<?php endif; ?>
+							                    <?php 
+
+							                  $image =  the_post_thumbnail('');
+
+							                  if( !empty($image) ): ?>
+
+							                    <img class="img img-responsive single-post-img" src="<?php echo $image['url']; ?>" />
+
+							                  <?php endif; ?>
+							                  <?php  }; ?></a>
+
 											</a>
 										</div>
 									</div>
@@ -46,27 +69,29 @@
 
 
 
-								<footer class="article-footer cf">
+					<footer class="article-footer cf">
 
 
-                  					<?php if( has_tag() ) { ?>
-                  				
+                  					
 
-
-									         <?php $tags = get_the_tags();
+									        <?php $tags = get_the_tags();
+									        $count = 0;
 											if( $tags ) : ?>
 											  <p class="tags">
-											  <?php foreach( $tags as $tag ) { ?>
+											  <?php foreach( $tags as $tag ) { 
+											  	$count++;
+												if ($count <= 5 ) {?>
+
 											   <span class="tag <?php echo $tag->slug; ?>"><a href="<?php echo get_tag_link($tag->term_id); ?>"><?php echo $tag->name; ?></a></span>
-											   <?php //find tag needs to exist here?>
-											  <?php } ?>
+											  <?php }} ?>
 											</p>
-											<?php endif; ?>
+											
+											
 
-<?php echo $cat->$slug; ?>
+<?php endif; ?>
+						
 
-									   
-									<?php } ?>
+						
 									 </footer>
 							</article>
 
@@ -107,7 +132,7 @@
 
 
 				</div>
-
+<?php echo(single_tag_title( '', false ) ); ?>
 				
 			</div>
 
@@ -116,11 +141,12 @@
 
       if($('.tag').hasClass('<?php echo(single_tag_title( '', false ) ); ?>')){
         $('.<?php echo(single_tag_title( '', false ) ); ?>').addClass('active-tag');
-        $('.<?php echo(single_tag_title( '', false ) ); ?> a').prepend('<span class="eliminate"><object data="<?php echo get_template_directory_uri(); ?>/library/images/tag-x.svg" type="image/svg+xml"></object></span>');
-        $('.active-tag').on('click', 'a', function() {
+        $('.<?php echo(single_tag_title( '', false ) ); ?> a').prepend('<span class="eliminate"><object id="tagx" data="<?php echo get_template_directory_uri(); ?>/library/images/tag-x.svg" type="image/svg+xml"></object></span>');
+        $('.active-tag').on('click', function() {
            window.location.href = 'http://orgullpages.wp#main-anchor';
             return false;
         });
+
       };
       
       });

@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div class="container skrollr-body">
+<div class="container" id="skrollr-body">
 <div id="orig" class="skrollable skrollable-between" data-200-top="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
 	<div class="row title qs top">
 		<div class="words col-xs-12 col-sm-8 col-sm-offset-1 col-md-7 col-md-offset-1">
@@ -158,7 +158,7 @@
 
 			<?php endif; ?>
 		</div>
-		<div class="words col-xs-12 col-sm-5 col-sm-offset-1 col-sm-pull-4" data-50-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
+		<div id="oli-words" class="words col-xs-12 col-sm-5 col-sm-offset-1 col-sm-pull-4" data-50-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
 			<h1 class="tit">
 				<?php the_field("titulo_loli", 118); ?>
 			</h1>
