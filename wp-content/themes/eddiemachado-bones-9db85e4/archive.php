@@ -131,9 +131,7 @@
 						</main>
 
 
-				</div>
-<?php echo(single_tag_title( '', false ) ); ?>
-				
+				</div>				
 			</div>
 
 			<script>

@@ -40,16 +40,20 @@
 	});
 
 
+$('.cursor-wrap').click(function(){
+  $('html,body').animate({scrollTop: ($('#wayward-up')).offset().top}, 'slow');
+});
 
 </script>
 
 <div id="home">
+<div class="cursor-wrap">
 <div id="cursor">
 	<section class="container landings header">
 		<div class="row logo-wrapper">
 			<div class="col-xs-12">
 				<div id="logo">
-					<object data="<?php echo get_template_directory_uri(); ?>/library/images/orgull-logo.svg" type="image/svg+xml"></object>
+					<object id="logo-svg" data="<?php echo get_template_directory_uri(); ?>/library/images/orgull-logo.svg" type="image/svg+xml"></object>
 				</div>
 			</div>
 		</div>
@@ -59,7 +63,7 @@
 
 		<div class="row">
 		<a href="<?php the_field ('link', 15); ?>">
-			<div class="main-logo col-xs-10 col-xs-offset-1" style="background-size:cover;
+			<div class="main-logo col-xs-12 col-sm-10 col-sm-offset-1" style="background-size:cover;
 		background-position:50% 47%; background-color:rgba(250,250,250,1);">
 			
 			<?php 
@@ -75,6 +79,7 @@
 			</div>
 		</a>
 	</section>
+	</div>
 
 </div>
 <div class="pageWrapper" style="height:250px;" id="waypoint"></div>
@@ -126,37 +131,38 @@
 
 											
 											<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-											<div class="post-vid">
-												<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-													 width="16.609px" height="33.219px" viewBox="0 0 16.609 33.219" style="enable-background:new 0 0 16.609 33.219;"
-													 xml:space="preserve">
-												<polygon style="fill:#FAFAFA;" points="0,0 0,33.219 16.609,16.61 "/>
-												</svg>
-												<svg class="vid-cr">
-												  <circle cx="60" cy="60" r="50" stroke="rgba(250,250,250,1)" stroke-width="4" fill-opacity="0"/>
-												</svg>
-													
+												<div class="post-vid">
+													<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+														 width="16.609px" height="33.219px" viewBox="0 0 16.609 33.219" style="enable-background:new 0 0 16.609 33.219;"
+														 xml:space="preserve">
+													<polygon style="fill:#FAFAFA;" points="0,0 0,33.219 16.609,16.61 "/>
+													</svg>
+													<svg class="vid-cr">
+													  <circle cx="60" cy="60" r="50" stroke="rgba(250,250,250,1)" stroke-width="4" fill-opacity="0"/>
+													</svg>
+														
 
 
-											</div>
-											<?php if(get_field('video') || !empty($image)){
-												 $image =  the_post_thumbnail('');?>
-													<script>
-														$('.post-vid').show();
+												</div>
+												<?php if(get_field('video') || !empty($image)){
+													 $image =  the_post_thumbnail('');?>
+														<script>
+															$('.post-vid').show();
 
-													</script>
-							                  <?php }else{?>
+														</script>
+								                  <?php }else{?>
 
-							                    <?php 
+								                    <?php 
 
-							                  $image =  the_post_thumbnail('');
+								                  $image =  the_post_thumbnail('');
 
-							                  if( !empty($image) ): ?>
+								                  if( !empty($image) ): ?>
 
-							                    <img class="img img-responsive single-post-img" src="<?php echo $image['url']; ?>" />
+								                    <img class="img img-responsive single-post-img" src="<?php echo $image['url']; ?>" />
 
-							                  <?php endif; ?>
-							                  <?php  }; ?></a>
+								                  <?php endif; ?>
+								                  <?php  }; ?>
+							                  </a>
 
 										</div>
 
@@ -192,6 +198,7 @@
 						
 						<?php endwhile; ?>
 
+		
 					</section><!--post container-------->
 </div><!--FULLPAGE END -->
 
@@ -243,6 +250,7 @@
 		</div>
 	
 </div>
+
 
 <script type="text/javascript">
 var cookie = document.cookie;

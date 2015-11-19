@@ -161,6 +161,7 @@ $white: rgba(250,250,250,1);
 /*FONTS=========*/
 
 @include font-face("dala floda", font-files("Dala Floda-Roman.otf", "Dala Floda-Italic.otf"));
+@include font-face("dala floda i", font-files("Dala Floda-Italic.otf"), '', italic);
 @include font-face("source sans pro", font-files("SourceSansPro-Regular.otf"));
 @include font-face("PT Serif", font-files("PT_Serif-Web-Regular.ttf", "PT_Serif-Web-BoldItalic.ttf", "PT_Serif-Web-Italic.ttf", "PT_Serif-Web-Bold.ttf"));
 
@@ -186,6 +187,10 @@ $white: rgba(250,250,250,1);
 
 
 /*GENERAL */
+
+i{
+	font-family: "dala floda i";
+}
 
 body, .container, div{
 	background-color:$white !important;
@@ -310,14 +315,14 @@ a:focus{
 }
 
 .tex{
-	font-family: $ssp;
+	font-family: $pt;
 	font-size: 20px;
 	line-height:26px;	
 }
 
 .qs{
 	padding-top:100px;
-	.image{
+	.image-qs{
 		padding: 2% 0;
 	}
 	&:first-child{
@@ -486,7 +491,7 @@ a svg {
   display: inline-block;
 }
 
-.has-svg::after, button::after , .active-tag::after{
+.has-svg::after, button::after {
   content: ""; 
   position: absolute; 
   top: 0; 
@@ -495,11 +500,6 @@ a svg {
   left: 0;
   cursor:pointer;
 }
-
-
-
-
-
 
 object{
 	z-index:-1;
@@ -632,7 +632,7 @@ div.fullscreenmenu{
 }
 
 .sm-lk{
-		width:25%;
+		width:33%;
 		margin:0 auto;
 	}
 
@@ -653,7 +653,6 @@ div.fullscreenmenu{
 	padding:2%;
 	color: $black;
 	cursor:pointer;
-	@include stretchy(1px);
 }
 
 .hentry{
@@ -674,8 +673,8 @@ div.fullscreenmenu{
 	font-size:45px;
 	white-space: nowrap;
 	text-align:center;
-	padding-top:60px;
-	padding-bottom:95px;
+	padding-top:5vh;
+	padding-bottom:10vh;
 	margin:0 !important;
 }
 
@@ -725,12 +724,25 @@ div.fullscreenmenu{
 	margin-bottom:10%;
 }
 
-#cursor{
+.cursor-wrap{
 	cursor: url(../images/down-arrow.png), auto;
+	pointer-events: auto;
+}
+
+#cursor{
+	height:100vh;
+	display:table;
+	margin:0 auto;
+}
+
+#logo-svg{
+	pointer-events:none;
 }
 
 .landings{
-	height:100vh;
+	display:table-cell;
+	vertical-align: middle;
+	margin: 0 auto;
 	padding-bottom:200px;
 }
 
@@ -819,7 +831,7 @@ div.fullscreenmenu{
 	height:120px;
 	@include transition-duration(400ms);
 	&:hover{
-		-webkit-transform: scale(0.9, 0.9);
+		-webkit-transform: scale(0.92, 0.92);
 		@include transition-duration(400ms);
 	}
 }	
@@ -1033,6 +1045,11 @@ blockquote{
 	bottom:20px;
 	visibility:hidden;
 	z-index: 1;
+	-webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
 	li{
 		display:inline-block;
 		padding:0 10px;
@@ -1073,15 +1090,18 @@ blockquote{
 #obj{
 	display:inline;
 	padding-left:45px;
-	-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
+	-webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+   	backface-visibility: hidden;
 }
 
 #compartir{
 	z-index:3;
 	position:absolute;
-		-webkit-transform: translateZ(0);
-	-moz-transform: translateZ(0);
+	-webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
 }
 
 #obj::after{
@@ -1527,7 +1547,7 @@ textarea {
 @media (max-width: 991px) {
   
 	.post-wrapper{
-		width: 95%;	
+		width: 91%;	
 	}
 
 	.prod-cont{
@@ -1563,6 +1583,11 @@ textarea {
 		right: 78px;
    	 	top: 27px;
 	}
+	
+	.sm-lk{
+		width:100%;
+		margin:0 auto;
+	}
 
 
 }
@@ -1584,10 +1609,6 @@ textarea {
 		padding-top:19.735px;
 		padding-bottom:19.735px;
 	}
-	
-	.post-wrapper{
-		left:10px !important;
-	}
 
 	.links{
 		font-size:80px;
@@ -1603,31 +1624,18 @@ textarea {
 		left:140px;
 	}
 
-	.qs .image{
-		padding:0 15px;
-	}
-
 	#s{
 		height:50px;
 		font-size:50px;
 	}
 
-	.tit{
-		padding:20px 0;
-	}
 
 	.social-icons{
 		width:50%;
 	}
 
 	.main-logo{
-		display:block;
-	}
-
-	.hashtag{
-		position:relative;
-		line-height:8em;
-		font-size:50px;
+		display:table;
 	}
 
 	.links{
@@ -1636,15 +1644,6 @@ textarea {
 
 	.alignleft{
 		right:0;
-	}
-
-	.menu-lines{
-		margin-right:30px;
-	}
-
-	.sm-lk{
-		width:33%;
-		margin:0 auto;
 	}
 
 	#under-menu{
@@ -1730,14 +1729,39 @@ textarea {
 	.searchie{
 	left: 8px !important;
 	}
-
-	.hashtag-wrap{
-		display:block;
-	}
 	
 	#prod-header{
 		font-size: 60px;
 	}
 
+	.hashtag{
+		font-size:50px;
+	}
+
+	/*QUISOM*/
+	.tit{
+		font-size:40px;
+		padding:20px 0 60px 0;
+	}
+
+	.tex{
+		font-size:17px;
+		line-height:25px;
+	}
+	
+		.prod-imag{
+		display: block;
+	    max-height: 118px;
+	    width: 125px;
+	    float: right;
+	    position: absolute;
+	    top: 30px; 
+	    z-index: 5;
+	    right: 15px;
+	}
+
+	.qs{
+		padding-top: 60px;
+	}
 }
 

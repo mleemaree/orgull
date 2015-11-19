@@ -3,177 +3,101 @@
 <?php get_header(); ?>
 
 <div class="container" id="skrollr-body">
-<div id="orig" class="skrollable skrollable-between" data-200-top="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
+<!--<div id="orig" class="skrollable skrollable-between" data-200-top="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
 	<div class="row title qs top">
-		<div class="words col-xs-12 col-sm-8 col-sm-offset-1 col-md-7 col-md-offset-1">
+		<div class="words col-xs-12 col-md-8 col-md-offset-1 col-md-7 col-md-offset-1">
 			<h1 class="titulo tit">
 				<?php the_field("titulo", 118); ?>
 			</h1>
 		</div>
 	</div>
 	<div class="row tit-tex">
-		<div class="tex col-xs-12 col-sm-5 col-sm-offset-1 col-md-5 col-md-offset-1">
+		<div class="tex col-xs-12 col-md-5 col-md-offset-1 col-md-5 col-md-offset-1">
 			<span class="seguent tex">
 				<?php the_field("sequent", 118); ?>
 			</span>
 		</div>
 		<!--less offset-->
-		<div class="hidden-xs col-sm-3 col-md-8"></div>
+	<!--	<div class="hidden-xs col-md-3 col-md-8"></div>
 	</div>
 </div>
 <div class="skrollable skrollable-between" data-50-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
 	<div class="row title-2 qs top skrollable skrollable-between">
-		<div class="words col-xs-12 col-sm-8 col-sm-offset-3 col-md-6 col-md-offset-5">
+		<div class="words col-xs-12 col-md-8 col-md-offset-3 col-md-6 col-md-offset-5">
 			<h1 class="titulo-2 tit">
 				<?php the_field("titulo_2", 118); ?>
 			</h1>
 		</div>
 		<!-- less offset -->
-		<div class="hidden-xs col-sm-1"></div>
+<!--		<div class="hidden-xs col-md-1"></div>
 	</div>
 	<div class="row tit-tex">
-		<div class="tex col-xs-12 col-sm-6 col-sm-offset-3 col-md-5 col-md-offset-5">
+		<div class="tex col-xs-12 col-md-6 col-md-offset-3 col-md-5 col-md-offset-5">
 			<span class="seguent tex">
 				<?php the_field("siguent", 118); ?>
 			</span>
 		</div>
 	</div>
-</div>
-	<!--FUET YUMMM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+</div>-->
+	
+<?php if( have_rows('prod') ): ?>
 
-	<div class="row fuet qs">
-		<div id="fuet-img" class="image col-xs-12 col-sm-4 col-sm-push-8 pull-right" data-50-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
-			<?php 
-
-			$image = get_field('image_fuet');
-
-			if( !empty($image) ): ?>
-
-				<img class="img img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-			<?php endif; ?>
+<?php $i= 0; ?>
+	<!--ODD YUMMM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+<?php while( have_rows('prod') ): the_row();?>
+<?php if($i%2 == 0) : ?>
+	<div class="row qs">
+		<div id="<?php the_sub_field('titulo');?>-img" class="image col-xs-12 col-sm-6 col-sm-push-6 col-md-4 col-md-push-8 pull-right" data-100-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
+			<img class="prod-imag img" src="<?php the_sub_field('imagen');?>" />
 		</div>
-		<div class="words col-xs-12 col-sm-5 col-sm-pull-4 col-sm-offset-1"  data-50-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
+		<div class="words col-xs-12 col-sm-5 col-sm-pull-4 col-sm-offset-1 col-md-5 col-md-pull-4 col-md-offset-1"  data-100-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
 			<h1 class="tit">
-				<?php the_field("titulo_fuet", 118); ?>
+				<?php the_sub_field('titulo');?>
 			</h1>
 			<span class="seguent tex">
-				<?php the_field("siguent_fuet", 118); ?>
+				<?php the_sub_field('seguent');?>
 			</span>
 		</div>
 		<!-- less offset -->
-		<div class="hidden-xs col-sm-2"></div>
+		<div class="hidden-xs hidden-sm col-md-2"></div>
 		
 	</div>
 
-	<!--CAMINS!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+<?php else : ?>
+	<!--EVEN!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 
-	<div class="row camins qs">
-	<div id="camins-img" class="image col-xs-12 col-sm-4 col-sm-offset-1"  data-50-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
-			<?php 
-
-			$image = get_field('imagen_camins');
-
-			if( !empty($image) ): ?>
-
-				<img class="img img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-			<?php endif; ?>
+	<div class="row qs">
+	<div id="<?php the_sub_field('titulo');?>-img" class="image-qs col-xs-12 col-sm-6 col-sm-push-6 col-md-4 col-md-offset-1"  data-100-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
+			<img class="prod-imag img" src="<?php the_sub_field('imagen');?>" />
 		</div>
 		<!-- less offset -->
-		<div class="hidden-xs col-sm-1"></div>
-		<div class="words col-xs-12 col-sm-5 col-sm-offset-1" data-50-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
+		<div class="hidden-xs hidden-sm col-md-1"></div>
+		<div class="words col-xs-12 col-sm-6 col-sm-pull-6 col-md-5 col-md-offset-1" data-100-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
 			<h1 class="tit">
-				<?php the_field("titulo_camins", 118); ?>
+				<?php the_sub_field('titulo');?>
 			</h1>
 			<span class="seguent tex">
-				<?php the_field("siguent_camins", 118); ?>
+				<?php the_sub_field('seguent');?>
 			</span>
 		</div>
 	</div>
+<?php endif; ?>
 
-	<!--PA YUMMM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
+<?php $i++; ?>
 
-	<div class="row pa qs">
-		<div id="pa-img" class="pa-img col-xs-12 col-sm-4 col-sm-push-8 pull-right" data-50-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
-			<?php 
+<?php endwhile; ?>
 
-			$image = get_field('imagen_pa');
-
-			if( !empty($image) ): ?>
-
-				<img class="img img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-			<?php endif; ?>
-		</div>
-		<div class="pa-palab col-xs-12 col-sm-5 col-sm-offset-1 col-sm-pull-4"  data-50-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
-			<h1 class="tit">
-				<?php the_field("titulo_pa", 118); ?>
-			</h1>
-			<span class="seguent tex">
-				<?php the_field("siguent_pa", 118); ?>
-			</span>
-		</div>
-		<!-- less offset -->
-		<div class="hidden-xs col-sm-2"></div>
-	</div>
-
-	<!-- LLET ============================= -->
-
-	<div class="row llet qs">
-	<div id="llet-img" class="image col-xs-12 col-sm-4 col-sm-offset-1"  data-50-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
-			<?php 
-
-			$image = get_field('imagen_llet');
-
-			if( !empty($image) ): ?>
-
-				<img class="img img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-			<?php endif; ?>
-		</div>
-		<!-- less offset -->
-		<div class="hidden-xs col-sm-1"></div>
-		<div class="words col-xs-12 col-sm-5 col-sm-offset-1" data-50-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
-			<h1 class ="tit">
-				<?php the_field("titulo_llet", 118); ?>
-			</h1>
-			<span class="seguent tex">
-				<?php the_field("seguent_llet", 118); ?>
-			</span>
-		</div>
-	</div>
-
-	<!-- OLI ========================= -->
-
-	<div class="row oli qs">
-		<div id="oli-img" class="image col-xs-12 col-sm-4 col-sm-push-8 pull-right" data-50-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
-			<?php 
-
-			$image = get_field('imagen_loli');
-
-			if( !empty($image) ): ?>
-
-				<img class="img img-responsive" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-
-			<?php endif; ?>
-		</div>
-		<div id="oli-words" class="words col-xs-12 col-sm-5 col-sm-offset-1 col-sm-pull-4" data-50-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
-			<h1 class="tit">
-				<?php the_field("titulo_loli", 118); ?>
-			</h1>
-			<span class="seguent tex">
-				<?php the_field("seguent_loli", 118); ?>
-			</span>
-		</div>
-		<!-- less offset -->
-		<div class="hidden-xs col-sm-2"></div>
-	</div>
-
-
-
-
+<?php endif; ?>
 
 </div><!--end qui som container-->
+<script src="<?php echo get_template_directory_uri(); ?>/library/bower_components/skrollr/dist/skrollr.min.js"></script>
+<script>
+	//SKROLLR INIT
 
+var s = skrollr.init();
+
+if ($(window).width() <= 991) {
+          skrollr.init().destroy(); // skrollr.init() returns the singleton created above
+        }
+</script>
 <?php get_footer(); ?>
