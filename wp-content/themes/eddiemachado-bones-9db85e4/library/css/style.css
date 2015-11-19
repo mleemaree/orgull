@@ -4576,23 +4576,46 @@ textarea::-webkit-input-placeholder {
     display: block;
     height: auto;
     width: 125px;
-    float: right;
-    position: absolute;
+    position: relative;
     top: 30px;
     z-index: 5;
-    right: 15px;
+    left: 15px;
   }
 
-  /* line 1772, ../scss/style.scss */
+  /* line 1771, ../scss/style.scss */
+  .prod-imag.right {
+    left: 0;
+    float: right !important;
+  }
+
+  /* line 1776, ../scss/style.scss */
+  .words {
+    position: relative;
+    bottom: 100px;
+  }
+
+  /* line 1781, ../scss/style.scss */
+  .trit {
+    position: relative;
+    right: 9%;
+  }
+
+  /* line 1786, ../scss/style.scss */
   .qs {
     padding-top: 60px;
   }
 
-  /* line 1776, ../scss/style.scss */
+  /* line 1790, ../scss/style.scss */
+  .qs-wrap {
+    position: relative;
+    bottom: 80px;
+  }
+
+  /* line 1795, ../scss/style.scss */
   #pa-img {
     top: -65px;
   }
-  /* line 1778, ../scss/style.scss */
+  /* line 1797, ../scss/style.scss */
   #pa-img img {
     top: 0;
   }

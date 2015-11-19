@@ -46,15 +46,16 @@
 	<!--ODD YUMMM!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 <?php while( have_rows('prod') ): the_row();?>
 <?php if($i%2 == 0) : ?>
+<div class="qs-wrap">
 	<div class="row qs">
-		<div id="<?php the_sub_field('id');?>-img" class="image col-xs-12 col-sm-6 col-sm-push-6 col-md-4 col-md-push-8 pull-right" data-100-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
-			<img class="prod-imag img" src="<?php the_sub_field('imagen');?>" />
+		<div id="<?php the_sub_field('id');?>-img" class="rqs image col-xs-12 col-sm-6 col-sm-push-6 col-md-4 col-md-push-8 pull-right" data-100-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
+			<img class="prod-imag right img" src="<?php the_sub_field('imagen');?>" />
 		</div>
-		<div class="words col-xs-12 col-sm-5 col-sm-pull-4 col-sm-offset-1 col-md-5 col-md-pull-4 col-md-offset-1"  data-100-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
-			<h1 class="tit">
+		<div class="words col-xs-11 col-xs-offset-1 col-sm-5 col-sm-pull-4 col-sm-offset-1 col-md-5 col-md-pull-4 col-md-offset-1"  data-100-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
+			<h1 class="tit pull-left">
 				<?php the_sub_field('titulo');?>
 			</h1>
-			<span class="seguent tex">
+			<span class="seguent tex pull-right">
 				<?php the_sub_field('seguent');?>
 			</span>
 		</div>
@@ -62,25 +63,27 @@
 		<div class="hidden-xs hidden-sm col-md-2"></div>
 		
 	</div>
+</div>
 
 <?php else : ?>
 	<!--EVEN!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
-
+<div class="qs-wrap">
 	<div class="row qs">
-	<div id="<?php the_sub_field('titulo');?>-img" class="image-qs col-xs-12 col-sm-6 col-sm-push-6 col-md-4 col-md-offset-1"  data-100-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
-			<img class="prod-imag img" src="<?php the_sub_field('imagen');?>" />
+	<div id="<?php the_sub_field('titulo');?>-img" class="lqs image-qs col-xs-12 col-sm-6 col-sm-push-6 col-md-4 col-md-offset-1"  data-100-bottom="left:-70px; opacity:0.5;" data-center="left:0; opacity:1;">
+			<img class="prod-imag left img" src="<?php the_sub_field('imagen');?>" />
 		</div>
 		<!-- less offset -->
 		<div class="hidden-xs hidden-sm col-md-1"></div>
-		<div class="words col-xs-12 col-sm-6 col-sm-pull-6 col-md-5 col-md-offset-1" data-100-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
-			<h1 class="tit">
+		<div class="words col-xs-11 col-xs-offset-1 col-sm-6 col-sm-pull-6 col-md-5 col-md-offset-1" data-100-bottom="left:70px; opacity:0.5;" data-center="left:0; opacity:1;">
+			<h1 class="tit pull-right trit">
 				<?php the_sub_field('titulo');?>
 			</h1>
-			<span class="seguent tex">
+			<span class="seguent tex pull-left">
 				<?php the_sub_field('seguent');?>
 			</span>
 		</div>
 	</div>
+</div>
 <?php endif; ?>
 
 <?php $i++; ?>

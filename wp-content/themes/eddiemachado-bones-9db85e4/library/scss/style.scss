@@ -1758,19 +1758,38 @@ textarea {
 		line-height:25px;
 	}
 	
-		.prod-imag{
+	.prod-imag{
 		display: block;
 	    height: auto;
 	    width: 125px;
-	    float: right;
-	    position: absolute;
+	    position: relative;
 	    top: 30px; 
 	    z-index: 5;
-	    right: 15px;
+	    left:15px;
 	}
+
+	.prod-imag.right{
+	    left:0;
+	    float:right !important;
+    }
+
+    .words{
+    	position:relative;
+    	bottom:100px;
+    }
+
+    .trit{
+    	position:relative;
+    	right:9%;
+    }
 
 	.qs{
 		padding-top: 60px;
+	}
+
+	.qs-wrap{
+		position:relative;
+		bottom:80px;
 	}
 
 	#pa-img{
