@@ -135,7 +135,8 @@ $(window).on( 'resize', function () {
 }else{
   $('.tag-post-wrapper').width($('#main-tag').width);
 }
-  
+
+if(viewport.width >= 768){  
 $('.posts').masonry({
   // options
   itemSelector: '.post-wrapper'
@@ -149,6 +150,7 @@ $container.imagesLoaded( function() {
     });
 });
 })(jQuery);
+}
 
 //__________PRODUCTORS MASONRY
 if ($(window).width() > 768) {

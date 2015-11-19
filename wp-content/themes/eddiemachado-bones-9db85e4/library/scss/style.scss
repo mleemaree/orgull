@@ -1546,9 +1546,9 @@ textarea {
 
 @media (max-width: 991px) {
   
-	.post-wrapper{
-		width: 91%;	
-	}
+
+	
+
 
 	.prod-cont{
 		padding: 0 25px;
@@ -1596,9 +1596,18 @@ textarea {
 	.post-vid{
 		top:36%;
 	}
+
+
 }
 
 @media(max-width:767px){
+
+	.post-wrapper{
+		width: 100%;
+	    padding-left: 15px;
+	    padding-right: 15px;
+	    left: 0 !important;
+	}
 
 	.inner-cook{
 		padding:0;
@@ -1751,7 +1760,7 @@ textarea {
 	
 		.prod-imag{
 		display: block;
-	    max-height: 118px;
+	    height: auto;
 	    width: 125px;
 	    float: right;
 	    position: absolute;
@@ -1762,6 +1771,13 @@ textarea {
 
 	.qs{
 		padding-top: 60px;
+	}
+
+	#pa-img{
+		top:-65px;
+		img{
+			top:0;
+		}
 	}
 }
 
