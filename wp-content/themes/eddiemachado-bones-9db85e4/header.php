@@ -162,12 +162,48 @@
 
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
+					<div class="nav-content">
+						<button style="z-index:50;" id="sf-btn" type="button" class="btn btn-primary" data-toggle="modal" data-target="#search-fullscreen">
+						    <a href='#search-fullscreen' id="search-icono" class="has-svg" onClick='menu1.togglemenu(); return false'><object data="<?php echo get_template_directory_uri(); ?>/library/images/small-search.svg" type="image/svg+xml"></object></a>
+						</button>
+						<a id="back-icono" class="has-svg"><object data="<?php echo get_template_directory_uri(); ?>/library/images/back-arrow.svg" type="image/svg+xml"></object></a>
+						<div class="ml"><a href='#menu-fullscreen' data-toggle="modal" data-target="#menu-fullscreen" class='animateddrawer'><span></span></a></div>
 
 
-					<nav class="nav pull-right menu-lines" role="navigation">
+						<nav class="nav pull-right menu-lines" role="navigation">
+					</div>
 
+					</nav>
 
-						<?php    /**
+				</div>
+				</div>
+
+				<!-- Modal fullscreen -->
+<div class="modal modal-fullscreen fade bottom" id="search-fullscreen" role="dialog" aria-labelledby="search" aria-hidden="true">
+  <div class="modal-dialog">
+      <div class="modal-body search-body">
+        <?php get_search_form(); ?>
+      </div>
+  </div>
+</div>
+
+<div class="modal modal-fullscreen fade" id="menu-fullscreen" role="dialog" aria-labelledby="menu" aria-hidden="true">
+  <div class="modal-dialog menu-dialog">
+      <div class="modal-body menu-body">
+        
+
+							<?php 
+							$link = get_post_meta(1,'menu_option',true);
+							if($effect == ''){
+							    $effect = 'top';
+							}
+							$menu_items = wp_get_nav_menu_items($menu_id);
+							?>
+							<div class="container fullscreenmenu <?php echo $effect;?>" id="menu">
+    
+
+    <div class="navcontent">
+        <?php    /**
 							* Displays a navigation menu
 							* @param array $args Arguments
 							*/
@@ -183,21 +219,41 @@
 							);
 						
 							wp_nav_menu( $args ); ?>
+    </div>
 
-					</nav>
+    <nav id="under-menu" class="navbar navbar-default col-xs-12">
+        <ul id="um">
+           <li id="mc">Contacte</li>
+           <li id="mn">Newsletter</li>
+           <li id="mnl">Notes legals</li>
+        </ul>
 
-				</div>
-				</div>
+    </nav>
+    
+    
 
-				<!-- Modal fullscreen -->
-<div class="modal modal-fullscreen fade bottom" id="modal-fullscreen" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-      <div class="modal-body search-body">
-        <?php get_search_form(); ?>
+    <?php include('contacte.php'); ?>
+
+    <!--NEWSLETTER-->
+
+    <?php include('newsletter.php'); ?>
+
+
+    <!--LEgAL NOTES -->
+
+    <?php include('noteslegals.php') ?>
+
+
+
+
+
+
+
+</div> <!--container-->
+
       </div>
   </div>
 </div>
-
 
 
 

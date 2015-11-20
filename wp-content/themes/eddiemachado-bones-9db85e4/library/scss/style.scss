@@ -247,9 +247,6 @@ a:focus{
 	}
 }
 
-.dd{
-	margin-left:76px;
-}
 
 object svg{
 	float:right;
@@ -359,6 +356,81 @@ a:focus{
 	z-index:99999999;
 }
 
+.animateddrawer {
+	font-size: 10px; /* Base font size. Adjust this value to modify size of drawer icon */
+	width: 3em;
+	height: 2.8em;
+	outline: none;
+	display: block;
+	position: relative;
+	background: rgba(250,250,250,1);
+	z-index: auto;
+}
+.animateddrawer:before, .animateddrawer:after {
+	position: absolute;
+	content: '';
+	display: block;
+	width: 26px;
+	height: 0.2em; /* height of top and bottom drawer line */
+	background: black;
+	top: 4px;
+	left: 0;
+	opacity: 0.7;
+	-webkit-transition: all 200ms ease-in; /* set transition type and time */
+	transition: all 200ms ease-in;
+}
+
+.animateddrawer.open span:before, .animateddrawer.open span:after{
+	-webkit-transition: all 0ms ease-in; /* set transition type and time */
+	transition: all 0ms ease-in;
+	z-index:999999999999;
+}
+
+
+.animateddrawer:hover:before, .animateddrawer:hover:after{
+	width:36px;
+	-webkit-transition: all 200ms ease-in 200ms; /* set transition type and time */
+	transition: all 200ms ease-in 200ms;
+}
+
+
+.animateddrawer:after {
+	top: auto;
+	bottom: 4px;
+}
+.animateddrawer span {
+	width: 36px;
+	height: 0.2em; /* height of middle drawer line */
+	background: black;
+	position: absolute;
+	left:0;
+	opacity:0.7;
+	top: 50%;
+	right:-6px;
+	margin-top: -0.1em; /* set this to - half of middle drawer line height */
+	-ms-transform-origin: 50% 50%;
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transition: all 100ms ease-in 100ms; /* set transition type and time */
+	transition: all 100ms ease-in 100ms;
+}
+
+.animateddrawer:hover > span{
+	width:30px;
+	-webkit-transition: all 200ms ease-in 200ms; /* set transition type and time */
+	transition: all 200ms ease-in 200ms;
+}
+
+.animateddrawer:active > span{
+	width:40px;
+}
+
+.animateddrawer:active:before, .animateddrawer:active:after{
+	width:30px;
+	-webkit-transition: all 200ms ease-in 200ms; /* set transition type and time */
+	transition: all 200ms ease-in 200ms;
+}
+
 .animateddrawer.special span{
 	opacity:1;
 	@include transition-duration(700ms);
@@ -409,6 +481,31 @@ a:focus{
 	z-index:49;
 }
 
+.cimg {
+  position: relative;
+  width: 26px;
+}
+
+@media(max-width:767px){
+	div.fullscreenmenu ul.nav-menu li a{
+		font-size: 80px;
+		padding:0;
+	}
+}
+
+.menu-body{
+	width:100%;
+	height:100%;
+	text-align:center;
+	display:table;
+}
+
+.menu-dialog{
+	width:100%;
+	height:100%;
+}
+
+
 #search-icono{
 	display:inline-block;
 	position:relative;
@@ -423,14 +520,21 @@ a:focus{
 	border:none;
 	box-shadow:none;
 	position:relative;
-	top:3px;
+	top:15px;
 	left:0;
 	opacity:1;
-	display:inline-block;
+	display:table-cell;
 	&:focus{
 		outline:none;
 	}
 }
+
+.ml{
+	display:table-cell;
+	position:relative;
+	top:23px;
+}
+
 
 
 .mover{
@@ -442,6 +546,7 @@ a:focus{
         .leg-not{
             display:none;
             text-align:left;
+            height:700px;
         }
 
         .legal{
@@ -606,17 +711,25 @@ object{
 	display:block;
 }
 
+.nav-content{
+	float:right;
+	display:table;
+}
 
 .navcontent{
 	display:table;
-	margin: 0 -15px;
+	margin: 0 auto;
+	@include transition-duration(400ms);
 }
 
 div.fullscreenmenu{
 	background-color:$white !important;
+	display:table-cell;
+	vertical-align: middle;	
+	text-align: center;
 }
 
-.nav-menu {
+#main {
 	display:table-cell;
 	vertical-align: middle;
 	position:relative;
@@ -627,6 +740,7 @@ div.fullscreenmenu{
 	line-height: 1;
 		a{
 			font-family: $dala !important;
+			color:$black;
 			font-size:100px;
 			line-height:110px;
 			@include stretchy(5px);
@@ -1766,8 +1880,7 @@ textarea {
 		display: block;
 	    height: auto;
 	    width: 125px;
-	    position: relative;
-	    top: 30px; 
+	    position: relative; 
 	    z-index: 5;
 	    left:15px;
 	}
@@ -1791,9 +1904,13 @@ textarea {
 		padding-top: 0;
 	}
 
+	.eye{
+		position:relative;
+		top:20px;
+	}
+
 	.qs-wrap{
 		position:relative;
-		bottom:250px;
 	}
 
 	#pa-img{

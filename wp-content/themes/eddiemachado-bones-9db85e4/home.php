@@ -220,7 +220,6 @@ $('.cursor-wrap').click(function(){
 
 							<?php endif; ?>
 
-
 <div id="cookies" class="container-fluid">
 	<div class="inner-cook">
 			<div class="hidden-xs hidden-sm col-md-2"></div>

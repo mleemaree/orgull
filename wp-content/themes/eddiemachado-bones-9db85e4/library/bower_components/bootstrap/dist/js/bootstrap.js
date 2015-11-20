@@ -974,6 +974,9 @@ if (typeof jQuery === 'undefined') {
     this.$body.addClass('modal-open')
     $('.animateddrawer').addClass('open');
     $('#sf-btn').addClass('mover');
+    if($('#menu-fullscreen').hasClass('in')){
+      alert('in!');
+    }
 
 
     this.escape()

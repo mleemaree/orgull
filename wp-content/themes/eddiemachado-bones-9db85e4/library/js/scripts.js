@@ -221,10 +221,6 @@ var tween = TweenMax.from($qsorig, 0.5, {x:-50, ease: Power1.easeIn}, 0.2);
 $('.animateddrawer').click(function(){
   $(this).toggleClass('special');
 }); 
-   
-$('·back-icono').click(function(){
-  $('#close-icono-stay').hide();
-});
 
 
 
@@ -258,7 +254,7 @@ $("#orig").delay(2000).fadeIn(500);
 
 //----MODAL
 
-    $(".modal-fullscreen").on('show.bs.modal', function () {
+$(".modal-fullscreen").on('show.bs.modal', function () {
   setTimeout( function() {
     $(".modal-backdrop").addClass("modal-backdrop-fullscreen");
   }, 0);
@@ -270,10 +266,6 @@ $(".modal-fullscreen").on('hidden.bs.modal', function () {
 
 $('.modal').on('shown.bs.modal', function() {
   $(this).find('[autofocus]').focus();
-});
-
-$('#sf-btn').click(function(){
-  $('.animateddrawer').addClass('open');
 });
 
 
@@ -321,6 +313,19 @@ $('.cursor-wrap').click(function(){
             $('#back-icono').fadeIn();
             $('#sf-btn').css('pointer-events','none');
         });
+
+        $('#mc, #mn, #mnl').click(function(){
+          $('.navcontent').fadeOut().css('display', 'none');
+          $('#sf-btn').fadeOut();
+        });
+
+
+$('#back-icono').click(function(){
+  $('.navcontent').delay(800).fadeIn().css('display', 'table');
+});
+
+
+
 
 // ACTIVE TAG CLASS
 
@@ -491,7 +496,6 @@ $('.animateddrawer, #sf-btn, #back-icono').click(function(){
 
 $(document).on("click","#conf-accept, #conf-news", function(e) {
        document.location.href='http://orgullpages.wp#main-anchor';
-       menu1.togglemenu();
        $('#back-icono').fadeOut();
 
  });
