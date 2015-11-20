@@ -307,6 +307,7 @@ a:focus{
 .tit{
 	font-family:$dala;
 	font-size:80px;
+	line-height:80px;
 }
 
 
@@ -325,9 +326,11 @@ a:focus{
 	.image-qs{
 		padding: 2% 0;
 	}
-	&:first-child{
-		padding-top:140px;
-	}
+}
+
+.qs-wrap:first-child .words{
+	opacity:1 !important;
+	padding-top:140px;
 }
 
 .fuet{
@@ -1750,7 +1753,8 @@ textarea {
 	/*QUISOM*/
 	.tit{
 		font-size:40px;
-		padding:20px 0 60px 0;
+		line-height:40px;
+		padding-bottom: 25px;
 	}
 
 	.tex{
@@ -1784,12 +1788,12 @@ textarea {
     }
 
 	.qs{
-		padding-top: 60px;
+		padding-top: 0;
 	}
 
 	.qs-wrap{
 		position:relative;
-		bottom:80px;
+		bottom:250px;
 	}
 
 	#pa-img{
