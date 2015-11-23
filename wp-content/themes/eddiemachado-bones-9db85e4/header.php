@@ -56,7 +56,6 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 		<!--<script src="<?php echo get_template_directory_uri(); ?>/library/js/libs/alton/jquery.alton.js"></script>-->
 		<script src="<?php echo get_template_directory_uri(); ?>/library/bower_components/waypoints/lib/jquery.waypoints.min.js"></script>
-<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
 
 	</head>
 
@@ -179,7 +178,7 @@
 				</div>
 
 				<!-- Modal fullscreen -->
-<div class="modal modal-fullscreen fade bottom" id="search-fullscreen" role="dialog" aria-labelledby="search" aria-hidden="true">
+<div class="modal modal-fullscreen bottom fade in" id="search-fullscreen" role="dialog" aria-labelledby="search">
   <div class="modal-dialog">
       <div class="modal-body search-body">
         <?php get_search_form(); ?>
@@ -187,7 +186,7 @@
   </div>
 </div>
 
-<div class="modal modal-fullscreen fade" id="menu-fullscreen" role="dialog" aria-labelledby="menu" aria-hidden="true">
+<div class="modal modal-fullscreen fade in" id="menu-fullscreen" role="dialog" aria-labelledby="menu">
   <div class="modal-dialog menu-dialog">
       <div class="modal-body menu-body">
         

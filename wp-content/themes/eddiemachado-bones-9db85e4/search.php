@@ -4,7 +4,7 @@
 
 				<div id="inner-content" class="wrap cf">
 
-					<main id="main" role="main">
+					<main id="main" class="main-search" role="main">
 					
 
 

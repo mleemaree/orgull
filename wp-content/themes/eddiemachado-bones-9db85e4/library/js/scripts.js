@@ -276,7 +276,7 @@ $('.cursor-wrap').click(function(){
 /*MENU-----------*/
 
         $('#mc').click(function(){
-            $('.contact-cont').fadeIn().css('display', 'table');
+            $('.contact-cont').delay(500).fadeIn().css('display', 'table');
             $('#menu-35, #um').fadeOut();
             $('#back-icono').fadeIn();
             $('#sf-btn').css('pointer-events','none');
@@ -286,11 +286,11 @@ $('.cursor-wrap').click(function(){
             $('#back-icono').fadeOut();
             $('#sf-btn').css('pointer-events','auto');
             $('.contact-cont, .news-cont, .leg-not').fadeOut();
-            $('#menu-35, #um').fadeIn();
+            $('#menu-35, #um').delay(500).fadeIn();
         });
 
         $('.animateddrawer').click(function(){
-            $('#menu-35, #um').fadeIn();
+            $('#menu-35, #um').delay(500).fadeIn();
             $('.contact-cont, .news-cont, .leg-not').fadeOut();
             $('#back-icono').fadeOut();
 
@@ -509,11 +509,13 @@ $('#cookcls').click(function(){
   $('#cookies').removeClass('open').addClass('close');
 });
 
+$('.animateddrawer').click(function(){
+  $(this).css('z-index','500');
+});
 
-
-
-
-
+$('#sf-btn').click(function(){
+  $('.animateddrawer').css('z-index','0');
+})
 
 
 

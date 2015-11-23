@@ -486,13 +486,6 @@ a:focus{
   width: 26px;
 }
 
-@media(max-width:767px){
-	div.fullscreenmenu ul.nav-menu li a{
-		font-size: 80px;
-		padding:0;
-	}
-}
-
 .menu-body{
 	width:100%;
 	height:100%;
@@ -563,8 +556,9 @@ a:focus{
 /* .modal-fullscreen SEARCH FORM */
 
 .modal.fade:not(.in) .modal-dialog {
-    -webkit-transform: translate3d(0, 25%, 0);
-    transform: translate3d(0, 25%, 0);
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    @include transition-duration(800ms);
 }
 
 .modal-fullscreen {
@@ -593,6 +587,19 @@ a:focus{
   margin-left: auto;
   width: 100%;
 }
+
+
+/*Fades*/
+
+.fader {
+    opacity: 0;
+    @include transition-duration(800ms);
+}
+
+.fader.in{
+	opacity:1;
+}
+
 
 a svg {
   position: relative;
@@ -714,6 +721,9 @@ object{
 .nav-content{
 	float:right;
 	display:table;
+	position:absolute;
+	right:0;
+	top:0;
 }
 
 .navcontent{
@@ -746,6 +756,10 @@ div.fullscreenmenu{
 			@include stretchy(5px);
 		}
 	}
+}
+
+.main-search{
+	display:block !important;
 }
 
 .sm-lk{
@@ -1709,7 +1723,7 @@ textarea {
 
 }
 
-@media(min-width:500px) and (max-width:991){
+@media screen and (min-width:500px) and (max-width:991){
 	.post-vid{
 		top:36%;
 	}
@@ -1717,7 +1731,7 @@ textarea {
 
 }
 
-@media(max-width:767px){
+@media screen and (max-width:767px){
 
 	.post-wrapper{
 		width: 100%;
@@ -1776,8 +1790,9 @@ textarea {
 		bottom:50px;
 	}
 
-	.fullscreenmenu{
-		
+	#main li a{
+		font-size:50px;
+		line-height:65px;
 	}
 
 	#oli-words{
@@ -1791,7 +1806,11 @@ textarea {
 	
 	#back-icono{
 		right: 78px;
-   	 	top: 27px;
+   	 	top: 25px;
+	}
+
+	#comp-word{
+		top:5px;
 	}
 
 	.legal{
@@ -1803,6 +1822,10 @@ textarea {
 	.entry-title{
 		padding:0 15px;
 		width:100%;
+	}
+
+	.cont-title{
+		padding-top:80px;
 	}
 
 	.imp .entry-title{
@@ -1874,6 +1897,8 @@ textarea {
 	.tex{
 		font-size:17px;
 		line-height:25px;
+		padding-bottom: 80px;
+		padding-top:30px;
 	}
 	
 	.prod-imag{
@@ -1883,25 +1908,40 @@ textarea {
 	    position: relative; 
 	    z-index: 5;
 	    left:15px;
+	    bottom:10px;
+	}
+
+	.productor-image{
+		width:100%;
+		left:0;
 	}
 
 	.prod-imag.right{
 	    left:0;
 	    float:right !important;
     }
+	
+	
+	#pa-tex{
+		padding-top:80px;
+	}
 
-    .words{
-    	position:relative;
-    	bottom:100px;
-    }
+	#tit1-tit{
+		margin-left:-8.33333%;
+	}
 
     .trit{
     	position:relative;
     	right:9%;
     }
 
+
 	.qs{
 		padding-top: 0;
+	}
+
+	.image-qs{
+		position:absolute !important;
 	}
 
 	.eye{

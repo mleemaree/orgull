@@ -974,9 +974,8 @@ if (typeof jQuery === 'undefined') {
     this.$body.addClass('modal-open')
     $('.animateddrawer').addClass('open');
     $('#sf-btn').addClass('mover');
-    if($('#menu-fullscreen').hasClass('in')){
-      alert('in!');
-    }
+    $('.social-icons').fadeIn();
+    $('#menu-logo').fadeOut();    
 
 
     this.escape()
@@ -1091,6 +1090,8 @@ if (typeof jQuery === 'undefined') {
       that.$element.trigger('hidden.bs.modal')
       $('.animateddrawer').removeClass('open');
     $('#sf-btn').removeClass('mover');
+        $('.social-icons').fadeOut();
+    $('#menu-logo').fadeIn(); 
     })
   }
 
