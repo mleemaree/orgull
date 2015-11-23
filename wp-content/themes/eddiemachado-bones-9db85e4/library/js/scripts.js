@@ -495,7 +495,7 @@ $('.animateddrawer, #sf-btn, #back-icono').click(function(){
 
 
 $(document).on("click","#conf-accept, #conf-news", function(e) {
-       document.location.href='http://orgullpages.wp#main-anchor';
+       document.location.href='http://orgullpages.bisgrafic.cat#main-anchor';
        $('#back-icono').fadeOut();
 
  });

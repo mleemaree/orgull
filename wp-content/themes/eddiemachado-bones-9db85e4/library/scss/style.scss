@@ -155,7 +155,7 @@ $dala: "dala floda";
 $ssp: "source sans pro";
 $pt: "PT Serif";
 $black: rgba(51,51,51,1);
-$white: rgba(250,250,250,1);
+$white: rgba(250,250,250,1); 
 
 
 /*FONTS=========*/
@@ -222,12 +222,14 @@ a:focus{
 
 #cookies.open{
 	bottom:0;
+	opacity:1;	
 	@include transition-delay(500ms);
 	@include transition-duration(350ms);
 }
 
 #cookies.close{
 	bottom:-90px;
+	opacity:0;
 	@include transition-delay(500ms);
 	@include transition-duration(350ms);
 }
@@ -726,6 +728,11 @@ object{
 	top:0;
 }
 
+@supports (overflow:-webkit-marquee)
+   and (justify-content:inherit) {
+     .nav-content { top:-60px; } 
+}
+
 .navcontent{
 	display:table;
 	margin: 0 auto;
@@ -1073,6 +1080,7 @@ div.fullscreenmenu{
 	font-size:55px;
 	line-height:51px;
 	padding:3% 0;
+	font-weight:300;
 }
 
 .entry-content {
@@ -1815,8 +1823,18 @@ textarea {
 
 	.legal{
 		margin-left:0;
+		position:relative !important;
 		width:100% !important;
-		padding-right:40px !important;
+		padding-left:0;
+		padding-right: 0;
+		p{
+			font-size:16px;
+		}
+	}
+
+	.notes-title{
+		font-size:43px;
+		padding-bottom: 0;
 	}
 
 	.entry-title{
@@ -1854,10 +1872,6 @@ textarea {
 	div.fullscreenmenu ul.nav-menu li a{
 		font-size:50px !important;
 		line-height:1.5;
-	}
-
-	#sf-btn{
-		left:10px;
 	}
 
 	.menu-logo{
@@ -1958,6 +1972,14 @@ textarea {
 		img{
 			top:0;
 		}
+	}
+
+	#s{
+		line-height:20px;
+	}
+
+	.contact-cont{
+		overflow:scroll;
 	}
 }
 

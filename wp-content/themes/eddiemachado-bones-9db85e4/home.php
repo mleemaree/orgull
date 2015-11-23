@@ -226,14 +226,14 @@ $('.cursor-wrap').click(function(){
 				<div class="col-xs-1 col-sm-2 col-md-1 eye dd">
 					<object data="<?php echo get_template_directory_uri(); ?>/library/images/eye.svg" type="image/svg+xml"></object>
 				</div>
-			<div class="cookie-text col-xs-10 col-sm-8 col-md-6">
+			<div class="cookie-text col-xs-10 col-sm-10 col-md-6">
 			<span>
 				En aquest web fem servir galetes pròpies i de tercers per millorar els nostres 
 				serveis i mostrar-vos informació relacionada amb les vostres preferències mitjançant 
 				l’anàlisi dels vostres hàbits de navegació.  Si continueu navegant, considerem que 
 				n’accepteu l’ús. podeu canviar la configuració o obtenir més informació <a id="cookie-link" href="<?php echo get_page_link(194); ?>">aquí.</a>
 			</span></div>
-			<div class="col-xs-2 col-sm-2 col-md-3"></div>
+			<div class="col-xs-2 hidden-sm col-md-3"></div>
 	</div>
 	<div id="cookie-close">
 				<svg version="1.1" id="cookcls" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"

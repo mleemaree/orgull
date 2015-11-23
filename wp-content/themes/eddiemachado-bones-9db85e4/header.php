@@ -83,7 +83,7 @@
 			        </a></li>
 			        <li id="twitter"><a href="https://twitter.com/orgullpages" >
 			            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-			                 width="17.01px" height="13.819px" viewBox="0 0 17.01 13.819" enable-background="new 0 0 17.01 13.819" xml:space="preserve">
+			                 width="17.01px" height="13.819px" viewBox="0 0 17.01 16" enable-background="new 0 0 17.01 13.819" xml:space="preserve">
 			            <g>
 			                <path fill="#333333" d="M14.841,2.299c0.743-0.452,1.24-1.083,1.492-1.889c-0.667,0.403-1.385,0.68-2.153,0.831
 			                    c-0.668-0.717-1.499-1.076-2.493-1.076c-0.932,0.012-1.732,0.346-2.399,1.001C8.621,1.821,8.288,2.62,8.288,3.565

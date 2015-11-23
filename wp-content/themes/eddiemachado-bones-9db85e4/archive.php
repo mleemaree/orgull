@@ -141,7 +141,7 @@
         $('.<?php echo(single_tag_title( '', false ) ); ?>').addClass('active-tag');
         $('.<?php echo(single_tag_title( '', false ) ); ?> a').prepend('<span class="eliminate"><object id="tagx" data="<?php echo get_template_directory_uri(); ?>/library/images/tag-x.svg" type="image/svg+xml"></object></span>');
         $('.active-tag').on('click', function() {
-           window.location.href = 'http://orgullpages.wp#main-anchor';
+           window.location.href = 'http://orgullpages.bisgrafic.cat#main-anchor';
             return false;
         });
 
