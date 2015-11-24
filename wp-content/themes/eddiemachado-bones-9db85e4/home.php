@@ -30,7 +30,7 @@
 		<?php menu ?>
 	</div>
 
-<div id="wayward-down" style="position:relative; top:2px;"></div>
+<div class="destroy" id="wayward-down" style="position:relative; top:2px;"></div>
 
 <script>
 	$('#wayward-down').waypoint(function(direction) {
@@ -79,10 +79,11 @@ $('.cursor-wrap').click(function(){
 			</div>
 		</a>
 	</section>
-	</div>
+	</div><!--cursorwrap-->
 
-</div>
+
 <div class="pageWrapper" style="height:250px;" id="waypoint"></div>
+</div>
 <script>
 	$('.arrow-wrapper').click(function(){
 		$('#menu-container').fadeIn("slow");
@@ -109,6 +110,25 @@ $('.cursor-wrap').click(function(){
 
 <div id="wayward-up" style="height:50px;"></div>
 
+	<?php 
+	the_field('activate_header',15);
+	$landing = get_field('activate_header',15);
+	if(!$landing):
+	 ?>
+	<script>
+		
+		$('.cursor-wrap, .pageWrapper, #wayward-down, #wayward-up').hide();
+		$('#menu-container').show();
+		if($('div').hasClass('destroy')){
+			Waypoint.destroyAll()
+		}
+	</script>
+	<style>
+	 	#menu-container{
+	 		display:block !important;
+	 	}
+	</style>
+		<?php endif; ?>
 <section class="posts container" id="main-anchor">
 
 
