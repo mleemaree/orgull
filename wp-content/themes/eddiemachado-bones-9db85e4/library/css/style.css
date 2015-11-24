@@ -4449,7 +4449,7 @@ textarea::-webkit-input-placeholder {
 .hover-elem {
   position: absolute;
   top: 125px;
-  left: 116px;
+  left: 103px;
   z-index: 2;
   text-align: center;
   background-color: transparent !important;
@@ -4790,9 +4790,10 @@ textarea::-webkit-input-placeholder {
     position: relative;
     z-index: 5;
     bottom: 10px;
+    width: 100%;
   }
 
-  /* line 1938, ../scss/style.scss */
+  /* line 1939, ../scss/style.scss */
   .prod-imag.qs {
     display: block;
     height: auto;
@@ -4803,74 +4804,74 @@ textarea::-webkit-input-placeholder {
     bottom: 10px;
   }
 
-  /* line 1948, ../scss/style.scss */
+  /* line 1949, ../scss/style.scss */
   .prod-imag.right {
     left: 0;
     float: right !important;
   }
 
-  /* line 1953, ../scss/style.scss */
+  /* line 1954, ../scss/style.scss */
   #comp-word {
     top: 5px;
   }
 
-  /* line 1957, ../scss/style.scss */
+  /* line 1958, ../scss/style.scss */
   #pa-tex {
     padding-top: 80px;
   }
 
-  /* line 1962, ../scss/style.scss */
+  /* line 1963, ../scss/style.scss */
   #tit1-tit {
     margin-left: -8.33333%;
   }
 
-  /* line 1966, ../scss/style.scss */
+  /* line 1967, ../scss/style.scss */
   .trit {
     position: relative;
     right: 9%;
   }
 
-  /* line 1972, ../scss/style.scss */
+  /* line 1973, ../scss/style.scss */
   .qs {
     padding-top: 0;
   }
 
-  /* line 1976, ../scss/style.scss */
+  /* line 1977, ../scss/style.scss */
   .image-qs {
     position: absolute !important;
   }
 
-  /* line 1980, ../scss/style.scss */
+  /* line 1981, ../scss/style.scss */
   .eye {
     position: relative;
     top: 20px;
   }
 
-  /* line 1985, ../scss/style.scss */
+  /* line 1986, ../scss/style.scss */
   .qs-wrap {
     position: relative;
   }
 
-  /* line 1989, ../scss/style.scss */
+  /* line 1990, ../scss/style.scss */
   #pa-img {
     top: -65px;
   }
-  /* line 1991, ../scss/style.scss */
+  /* line 1992, ../scss/style.scss */
   #pa-img img {
     top: 0;
   }
 
-  /* line 1996, ../scss/style.scss */
+  /* line 1997, ../scss/style.scss */
   #s {
     line-height: 20px;
   }
 
-  /* line 2000, ../scss/style.scss */
+  /* line 2001, ../scss/style.scss */
   .contact-cont {
     overflow: scroll;
   }
 
-  /* line 2004, ../scss/style.scss */
+  /* line 2005, ../scss/style.scss */
   .cont-title {
     padding-top: 100px;
   }

@@ -117,7 +117,7 @@ $('.cursor-wrap').click(function(){
 	 ?>
 	<script>
 		
-		$('.cursor-wrap, .pageWrapper, #wayward-down, #wayward-up').hide();
+		$('.cursor-wrap, .pageWrapper, #wayward-down, #wayward-up').hide().waypoint('destroy');
 		$('#menu-container').show();
 		if($('div').hasClass('destroy')){
 			Waypoint.destroyAll()

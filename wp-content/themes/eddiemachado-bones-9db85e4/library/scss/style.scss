@@ -1628,7 +1628,7 @@ textarea {
 .hover-elem{
 	position:absolute;
 	top:125px;
-	left:116px;
+	left:103px;
 	z-index:2;
 	text-align:center;
 	background-color: transparent !important;
@@ -1933,6 +1933,7 @@ textarea {
 	    position: relative; 
 	    z-index: 5;
 	    bottom:10px;
+	    width:100%;
 	}
 
 	.prod-imag.qs{

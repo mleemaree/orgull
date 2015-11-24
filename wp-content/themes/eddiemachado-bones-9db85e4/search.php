@@ -17,7 +17,7 @@
 													$search = new WP_Query("s=$s & showposts=-1");
 													if($search->have_posts() && ($post->post_type=='post')) : while($search->have_posts()) : $search->the_post();	
 															$search_count++;
-													endwhile; endif;
+													
 
 													echo $search_count;
 													
@@ -34,8 +34,8 @@
 
 						<div class="container posts">
 					
-							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-							<?php if (is_search() && ($post->post_type=='page')) continue; ?>
+							<?php if ($search->have_posts() && ($post->post_type=='post')) : while ($search->have_posts()) : $search->the_post(); ?>
+		
 							<article id="post-<?php the_ID(); ?>" class="post-wrapper searchie <?php if (get_field("important")){echo "imp";} ?>"<?php post_class( 'cf' ); ?> role="article">
 
 								<header class="article-header">
@@ -118,8 +118,7 @@
 											
 											
 
-<?php endif; ?>
-						
+										<?php endif; ?>		
 
 						
 									 </footer>
