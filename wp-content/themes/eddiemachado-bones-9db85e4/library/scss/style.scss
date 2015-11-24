@@ -344,6 +344,10 @@ a:focus{
 	margin: 15% 0;
 }
 
+#pa-words{
+		top:200px;
+	}
+
 /* -------------------- HOME -------------- */
 
 .skrollr-body{
@@ -1648,9 +1652,10 @@ textarea {
 	}
 }
 
-.prod-imag{
+.prod-imag.qs{
 	width:100%;
 	height:auto;
+	left:30px;
 }
 
 .prod-arrow{
@@ -1911,6 +1916,10 @@ textarea {
 		padding-bottom: 25px;
 	}
 
+	#pa-words{
+		top:0;
+	}
+
 	.tex{
 		font-size:17px;
 		line-height:25px;
@@ -1949,9 +1958,6 @@ textarea {
 		padding-top:80px;
 	}
 
-	#pa-words{
-		top:200px;
-	}
 
 	#tit1-tit{
 		margin-left:-8.33333%;

@@ -212,6 +212,11 @@ $(window).load(function(){
 
 })
 
+
+if ($(window).width() > 767) {
+var photo = $(".qs-wrap:first-of-type");
+TweenLite.to(photo, 0.5, {x:40});
+}
   var $qsorig = $('#orig');
 
 var tween = TweenMax.from($qsorig, 0.5, {x:-50, ease: Power1.easeIn}, 0.2);
@@ -495,7 +500,7 @@ $('.animateddrawer, #sf-btn, #back-icono').click(function(){
 
 
 $(document).on("click","#conf-accept, #conf-news", function(e) {
-       document.location.href='http://orgullpages.bisgrafic.cat#main-anchor';
+       document.location.href='http://orgullpages.bisgrafic.cat';
        $('#back-icono').fadeOut();
 
  });

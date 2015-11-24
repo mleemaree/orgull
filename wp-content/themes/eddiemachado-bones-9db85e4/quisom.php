@@ -51,7 +51,7 @@
 		<div id="<?php the_sub_field('id');?>-img" class="rqs image-qs col-xs-12 col-sm-5 col-sm-push-6 col-md-4 col-md-push-8 pull-right" data-100-bottom="left:70px; opacity:0.5;" data-180-center="left:0; opacity:1;">
 			<img class="prod-imag right img" src="<?php the_sub_field('imagen');?>" />
 		</div>
-		<div class="words col-xs-11 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-sm-pull-4 col-sm-offset-1 col-md-5 col-md-pull-4 col-md-offset-1"  data-100-bottom="left:-70px; opacity:0.5;" data-180-center="left:0; opacity:1;">
+		<div id="<?php the_sub_field('id');?>-words" class="words col-xs-11 col-xs-offset-1 col-sm-6 col-sm-offset-0 col-sm-pull-4 col-sm-offset-1 col-md-5 col-md-pull-4 col-md-offset-1"  data-100-bottom="left:-70px; opacity:0.5;" data-180-center="left:0; opacity:1;">
 			<h1 id="<?php the_sub_field('id');?>-tit" class="tit pull-left">
 				<?php the_sub_field('titulo');?>
 			</h1>
@@ -69,12 +69,12 @@
 	<!--EVEN!!!!!!!!!!!!!!!!!!!!!!!!!!!-->
 <div class="qs-wrap">
 	<div class="row qs">
-	<div id="<?php the_sub_field('titulo');?>-img" class="lqs image-qs col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-1"  data-100-bottom="left:-70px; opacity:0.5;" data-180-center="left:0; opacity:1;">
+	<div id="<?php the_sub_field('id');?>-img" class="lqs image-qs col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-1"  data-100-bottom="left:-70px; opacity:0.5;" data-180-center="left:0; opacity:1;">
 			<img class="prod-imag left img" src="<?php the_sub_field('imagen');?>" />
 		</div>
 		<!-- less offset -->
 		<div class="hidden-xs hidden-sm col-md-1"></div>
-		<div class="words col-xs-11 col-xs-offset-1 col-sm-5  col-md-5 col-md-offset-1" data-100-bottom="left:70px; opacity:0.5;" data-180-center="left:0; opacity:1;">
+		<div id="<?php the_sub_field('id');?>-words" class="words col-xs-11 col-xs-offset-1 col-sm-5  col-md-5 col-md-offset-1" data-100-bottom="left:70px; opacity:0.5;" data-180-center="left:0; opacity:1;">
 			<h1 id="<?php the_sub_field('id');?>-tit" class="tit pull-right trit">
 				<?php the_sub_field('titulo');?>
 			</h1>
