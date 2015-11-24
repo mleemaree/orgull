@@ -316,11 +316,14 @@ $('.cursor-wrap').click(function(){
 
         $('#mc, #mn, #mnl').click(function(){
           $('.navcontent').fadeOut().css('display', 'none');
-          $('#sf-btn').fadeOut();
         });
 
 
-
+if($('.animateddrawer').hasClass('open')){
+  $('#sf-btn').fadeOut();
+}else{
+  $('#sf-btn').fadeIn();
+}
 
 
 
