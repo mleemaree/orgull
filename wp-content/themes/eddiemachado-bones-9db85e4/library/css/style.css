@@ -4869,4 +4869,9 @@ textarea::-webkit-input-placeholder {
   .contact-cont {
     overflow: scroll;
   }
+
+  /* line 2004, ../scss/style.scss */
+  .cont-title {
+    padding-top: 100px;
+  }
 }
