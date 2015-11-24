@@ -15,11 +15,12 @@
 													$search_count = 0;
 
 													$search = new WP_Query("s=$s & showposts=-1");
-													if($search->have_posts()) : while($search->have_posts()) : $search->the_post();	
-													$search_count++;
+													if($search->have_posts() && ($post->post_type=='post')) : while($search->have_posts()) : $search->the_post();	
+															$search_count++;
 													endwhile; endif;
 
 													echo $search_count;
+													
 													?> resultats
 												</h1>
 											</div>	
