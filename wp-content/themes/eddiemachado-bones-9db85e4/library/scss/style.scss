@@ -330,6 +330,10 @@ a:focus{
 	padding-top:140px;
 }
 
+.qs-wrap:last-child{
+	padding-bottom:100px;
+}
+
 .fuet{
 	padding-top:132px;
 }
@@ -722,8 +726,13 @@ object{
 	float:right;
 	display:table;
 	position:absolute;
-	right:0;
 	top:0;
+	right:0;
+}
+
+@supports (overflow:-webkit-marquee)
+   and (justify-content:inherit) {
+     .nav-content { top:-60px; } 
 }
 
 .navcontent{
@@ -756,10 +765,6 @@ div.fullscreenmenu{
 			@include stretchy(5px);
 		}
 	}
-}
-
-.main-search{
-	display:block !important;
 }
 
 .sm-lk{
@@ -1723,7 +1728,7 @@ textarea {
 
 }
 
-@media screen and (min-width:500px) and (max-width:991){
+@media(min-width:500px) and (max-width:991){
 	.post-vid{
 		top:36%;
 	}
@@ -1731,7 +1736,7 @@ textarea {
 
 }
 
-@media screen and (max-width:767px){
+@media(max-width:767px){
 
 	.post-wrapper{
 		width: 100%;
@@ -1806,11 +1811,7 @@ textarea {
 	
 	#back-icono{
 		right: 78px;
-   	 	top: 25px;
-	}
-
-	#comp-word{
-		top:5px;
+   	 	top: 27px;
 	}
 
 	.legal{
@@ -1822,10 +1823,6 @@ textarea {
 	.entry-title{
 		padding:0 15px;
 		width:100%;
-	}
-
-	.cont-title{
-		padding-top:80px;
 	}
 
 	.imp .entry-title{
@@ -1851,13 +1848,13 @@ textarea {
 		left:8px;
 	}
 
+	#s{
+		line-height:20px;
+	}
+
 	div.fullscreenmenu ul.nav-menu li a{
 		font-size:50px !important;
 		line-height:1.5;
-	}
-
-	#sf-btn{
-		left:10px;
 	}
 
 	.menu-logo{
@@ -1904,6 +1901,14 @@ textarea {
 	.prod-imag{
 		display: block;
 	    height: auto;
+	    position: relative; 
+	    z-index: 5;
+	    bottom:10px;
+	}
+
+	.prod-imag.qs{
+		display: block;
+	    height: auto;
 	    width: 125px;
 	    position: relative; 
 	    z-index: 5;
@@ -1911,19 +1916,21 @@ textarea {
 	    bottom:10px;
 	}
 
-	.productor-image{
-		width:100%;
-		left:0;
-	}
-
 	.prod-imag.right{
 	    left:0;
 	    float:right !important;
     }
 	
+	#comp-word{
+		top:5px;
+	}
 	
 	#pa-tex{
 		padding-top:80px;
+	}
+
+	#pa-words{
+		top:200px;
 	}
 
 	#tit1-tit{
