@@ -20,9 +20,11 @@
         <div class="row prod-img">
         	<div class="col-xs-12">
         		<img class="prod-imag productor-image img" src="<?php the_sub_field('imagen');?>" />
-                <div class="hover-elem">
-                    <object data="<?php echo get_template_directory_uri(); ?>/library/images/plus.svg" class="prod-plus" type="image/svg+xml"></object>
-                    <p class="prod-entre">Veure entrevista</p>
+                <div class="he-w">
+                    <div class="hover-elem">
+                        <object data="<?php echo get_template_directory_uri(); ?>/library/images/plus.svg" class="prod-plus" type="image/svg+xml"></object>
+                        <p class="prod-entre">Veure entrevista</p>
+                    </div>
                 </div>
             </div>
         </div>

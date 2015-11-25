@@ -72,15 +72,15 @@ echo $iframe;
  <div class="white-block"></div>
  
                     <ul id="social-iconos">
-                      <li class="soc">
+                      <li class="soc"><a href="https://www.facebook.com/orgullpages/">
                           <object data="<?php echo get_template_directory_uri(); ?>/library/images/facebook.svg" type="image/svg+xml"></object>
-                      </li>
-                      <li class="soc">
+                      </li></a>
+                      <li class="soc"><a href="https://twitter.com/orgullpages">
                           <object data="<?php echo get_template_directory_uri(); ?>/library/images/twitter.svg" type="image/svg+xml"></object>
-                      </li>
-                      <li class="soc">
+                      </li></a>
+                      <li class="soc"><a href="mailto:youremailaddress">
                           <object data="<?php echo get_template_directory_uri(); ?>/library/images/mail.svg" type="image/svg+xml"></object>
-                      </li>
+                      </li></a>
                     </ul>
                    </div>
                   </div> 
@@ -195,15 +195,15 @@ echo $iframe;
  <div class="white-block"></div>
  
                     <ul id="social-iconos">
-                      <li class="soc">
+                      <li class="soc"><a href="https://www.facebook.com/orgullpages/">
                           <object data="<?php echo get_template_directory_uri(); ?>/library/images/facebook.svg" type="image/svg+xml"></object>
-                      </li>
-                      <li class="soc">
+                      </li></a>
+                      <li class="soc"><a href="https://twitter.com/orgullpages">
                           <object data="<?php echo get_template_directory_uri(); ?>/library/images/twitter.svg" type="image/svg+xml"></object>
-                      </li>
-                      <li class="soc">
+                      </li></a>
+                      <li class="soc"><a href="mailto:youremailaddress">
                           <object data="<?php echo get_template_directory_uri(); ?>/library/images/mail.svg" type="image/svg+xml"></object>
-                      </li>
+                      </li></a>
                     </ul>
                    </div> 
                 </div><!--row-->
@@ -314,15 +314,15 @@ echo $iframe;
                   <div class="white-block"></div>
  
                     <ul id="social-iconos">
-                      <li class="soc">
+                      <li class="soc"><a href="https://www.facebook.com/orgullpages/">
                           <object data="<?php echo get_template_directory_uri(); ?>/library/images/facebook.svg" type="image/svg+xml"></object>
-                      </li>
-                      <li class="soc">
+                      </li></a>
+                      <li class="soc"><a href="https://twitter.com/orgullpages">
                           <object data="<?php echo get_template_directory_uri(); ?>/library/images/twitter.svg" type="image/svg+xml"></object>
-                      </li>
-                      <li class="soc">
+                      </li></a>
+                      <li class="soc"><a href="mailto:youremailaddress">
                           <object data="<?php echo get_template_directory_uri(); ?>/library/images/mail.svg" type="image/svg+xml"></object>
-                      </li>
+                      </li></a>
                     </ul>
                    </div> 
                 </div><!--row-->

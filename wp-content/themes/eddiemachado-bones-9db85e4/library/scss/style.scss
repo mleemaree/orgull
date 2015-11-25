@@ -1192,7 +1192,7 @@ blockquote{
 #social-iconos{
 	position:relative;
 	left:60px;
-	bottom:20px;
+	bottom:80px;
 	visibility:hidden;
 	z-index: 1;
 	-webkit-transform: translatez(0);
@@ -1209,6 +1209,11 @@ blockquote{
 		}
 	}
 }
+
+.soc object{
+    pointer-events:none;
+}
+
 
 #image{
 	z-index:3;
@@ -1652,7 +1657,7 @@ textarea {
 	}
 }
 
-.prod-imag.qs{
+.prod-imag.qis{
 	width:100%;
 	height:auto;
 	left:30px;
@@ -1936,14 +1941,14 @@ textarea {
 	    width:100%;
 	}
 
-	.prod-imag.qs{
+	.prod-imag.qis{
 		display: block;
 	    height: auto;
 	    width: 125px;
 	    position: relative; 
 	    z-index: 5;
 	    left:15px;
-	    bottom:10px;
+	    bottom:10px; 
 	}
 
 	.prod-imag.right{
@@ -1959,12 +1964,7 @@ textarea {
 		padding-top:80px;
 	}
 
-
-	#tit1-tit{
-		margin-left:-8.33333%;
-	}
-
-    .trit{
+    .trit, .tlit{
     	position:relative;
     	right:9%;
     }
@@ -2005,5 +2005,11 @@ textarea {
 	.cont-title{
 		padding-top:100px;
 	}
+
+	.hover-elem{
+		display:none;
+	}
+
+
 }
 

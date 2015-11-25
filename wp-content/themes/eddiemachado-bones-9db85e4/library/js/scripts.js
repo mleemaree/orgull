@@ -295,7 +295,7 @@ $('.cursor-wrap').click(function(){
         });
 
         $('.animateddrawer').click(function(){
-            $('.navcontent, #um').delay(500).fadeIn();
+            $('.navcontent, #um').fadeIn();
             $('.contact-cont, .news-cont, .leg-not').fadeOut();
             $('#back-icono').fadeOut();
 
